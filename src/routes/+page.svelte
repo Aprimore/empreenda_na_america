@@ -1,12 +1,10 @@
-<script lang="ts">
-	// import og_image from '$lib/assets/images/og_image.webp';
-	// import Hero from '$lib/components/Home/Hero.svelte';
+<script>
 	import Section1 from '$lib/components/Fontes/INTER/Section1.svelte';
 	import Section2 from '$lib/components/Fontes/INTER/Section2.svelte';
-	// import Navbar from '$lib/components/Navbar.svelte';
-	// import Navbar2 from '$lib/components/Navbar2.svelte';
+	import { t } from '$lib/translations';
 </script>
 
-<!-- <Hero /> -->
+<!-- <Language /> -->
+
 <Section1 />
 <Section2 />

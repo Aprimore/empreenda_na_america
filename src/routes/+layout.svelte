@@ -1,45 +1,31 @@
 <script>
+	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 	import Navbar from '$lib/components/Navbar.svelte';
-	// import {
-	// 	OG_IMAGE_HEIGHT,
-	// 	OG_IMAGE_WIDTH,
-	// 	SITE_DESCRIPTION,
-	// 	SITE_TITLE,
-	// 	SITE_URL
-	// } from '$lib/siteConfig';
-	// import og_image from '../lib/assets/images/og_image.webp';
+	import { currentLocale } from '$lib/store.js';
+	import { loadTranslations, locale } from '$lib/translations';
 	import '../app.css';
+	import LanguageSwitcher from './../lib/components/LanguageSwitcher.svelte';
+	
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
+	
+	export const load = async ({ url }) => {
+		const { pathname } = url;
+
+		let defaultLocale = 'en';
+		if (browser && currentLocale.get()) {
+			defaultLocale = currentLocale.get();
+		}
+
+		const initLocale = locale.get() || defaultLocale;
+		await loadTranslations(initLocale, pathname);
+		return {};
+	};
 </script>
 
-<!-- <svelte:head>
-	<title>{getPageTitle(pagePath)}</title>
-	<link rel="canonical" href={SITE_URL + pagePath} />
-	<meta property="og:url" content={SITE_URL} />
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={SITE_TITLE} />
-	<meta name="description" content={SITE_DESCRIPTION} />
-	<meta property="og:description" content={SITE_DESCRIPTION} />
-	<meta property="og:image" content={og_image} />
-	<meta property="og:image:width" content={OG_IMAGE_WIDTH} />
-	<meta property="og:image:height" content={OG_IMAGE_HEIGHT} />
-	<meta name="twitter:image" content={og_image} />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={SITE_TITLE} />
-	<meta name="twitter:description" content={SITE_DESCRIPTION} />
-</svelte:head> -->
-
-<!-- <ViewTransition /> -->
-<!-- <ParaglideJS {i18n}> -->
-<main>
-	<Navbar />
-	<slot />
-</main>
-
-<!-- <Footer /> -->
-<!-- </ParaglideJS> -->
+<Navbar />
+<slot />
 
 <style>
 	/* Zoom responsiveness */
