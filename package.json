@@ -27,5 +27,8 @@
     "lint": "prettier --check .",
     "format": "prettier --write ."
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "sveltekit-i18n": "^2.4.2"
+  }
 }
