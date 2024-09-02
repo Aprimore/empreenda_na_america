@@ -32,7 +32,7 @@
 	}
 
 	h2 {
-		font-family: 'Inter', sans-serif;
+		font-family: 'Lora', serif;
 		font-optical-sizing: auto;
 		font-weight: 400; /* Regular weight for body text */
 		font-style: normal;
