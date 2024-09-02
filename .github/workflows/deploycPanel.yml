@@ -8,27 +8,27 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18' # or the Node.js version you're using
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # or the Node.js version you're using
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build SvelteKit app
-      run: npm run build
+      - name: Build SvelteKit app
+        run: npm run build
 
-    - name: Upload to HostGator
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
-      with:
-        local-dir: './build'
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        remote-dir: '/home2/aprim916/empreendanaamerica.com/nb/'
+      - name: Upload to HostGator
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          local-dir: './build'
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          remote-dir: '/home2/aprim916/empreendanaamerica.com/nb/'
