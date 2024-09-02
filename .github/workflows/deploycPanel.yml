@@ -27,8 +27,8 @@ jobs:
       - name: Upload to HostGator
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          local-dir: './build'
+          local-dir: './build/'
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          remote-dir: '/home2/aprim916/empreendanaamerica.com/nb/'
+          server-dir: '/home2/aprim916/empreendanaamerica.com/nb/'
