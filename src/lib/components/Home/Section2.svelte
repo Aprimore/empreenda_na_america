@@ -8,8 +8,7 @@
 		// ebook3,
 		ebook3_webp,
 		// ebook4,
-		ebook4_webp,
-		ebook5
+		ebook4_webp
 	} from '$lib';
 	import BtnHotmart from '$lib/components/BtnHotmart.svelte';
 	import { t } from '$lib/translations';
@@ -84,7 +83,7 @@
 				<h3 class="text-2xl text-center p-3">{$t('EBOOK_EXTRACT')}</h3>
 				<img
 					class="object-contain max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
-					src={ebook5}
+					src={ebook4_webp}
 					alt=""
 				/>
 				<div class="ml-auto w-fit mt-3">
@@ -132,6 +131,4 @@
 		font-weight: 400; /* Regular weight for body text */
 		font-style: normal;
 	}
-
-
 </style>
