@@ -1,13 +1,13 @@
 <script lang="ts">
 	// import * as m from '$lib/paraglide/messages';
 	import {
-		ebook1,
+		// ebook1,
 		ebook1_webp,
-		ebook2,
+		// ebook2,
 		ebook2_webp,
-		ebook3,
+		// ebook3,
 		ebook3_webp,
-		ebook4,
+		// ebook4,
 		ebook4_webp,
 		ebook5
 	} from '$lib';
@@ -127,9 +127,11 @@
 	}
 
 	h3 {
-		font-family: 'Inter', sans-serif;
+		font-family: 'Lora', serif;
 		font-optical-sizing: auto;
 		font-weight: 400; /* Regular weight for body text */
 		font-style: normal;
 	}
+
+
 </style>

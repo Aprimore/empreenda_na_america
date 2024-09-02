@@ -1,3 +1,4 @@
+//@ts-nocheck
 // localStore.js
 import { writable } from 'svelte/store';
 

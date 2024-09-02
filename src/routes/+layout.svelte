@@ -10,18 +10,18 @@
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
 	
-	export const load = async ({ url }) => {
-		const { pathname } = url;
+	// export const load = async ({ url }) => {
+	// 	const { pathname } = url;
 
-		let defaultLocale = 'en';
-		if (browser && currentLocale.get()) {
-			defaultLocale = currentLocale.get();
-		}
+	// 	let defaultLocale = 'en';
+	// 	if (browser && currentLocale.get()) {
+	// 		defaultLocale = currentLocale.get();
+	// 	}
 
-		const initLocale = locale.get() || defaultLocale;
-		await loadTranslations(initLocale, pathname);
-		return {};
-	};
+	// 	const initLocale = locale.get() || defaultLocale;
+	// 	await loadTranslations(initLocale, pathname);
+	// 	return {};
+	// };
 </script>
 
 <Navbar />

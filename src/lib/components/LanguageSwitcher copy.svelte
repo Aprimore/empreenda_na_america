@@ -9,24 +9,21 @@
 		{ code: 'pt-br', name: 'Português' }
 	];
 
-	// Track the currently selected language
 	$: selected = locale.get();
 
-	const handleOnChange = (event) => {
-		const newLocale = event.target.value;
-		// Update the locale in stores
-		currentLocale.set(newLocale);
-		locale.set(newLocale);
-		// Redirect to the new language path
-		goto(`/${newLocale}`);
+	const handleOnChange = () => {
+		currentLocale.set(selected);
+		locale.set(selected);
 	};
 </script>
 
 <div class="language-buttons">
+	<!-- {$currentLocale} -->
 	<select
 		class="relative h-[2.5rem] bg-[#F1F1F9] hover:bg-[#D4D4ED] rounded m-2 p-2 text-nowrap"
 		bind:value={selected}
 		on:change={handleOnChange}
+		on:change={({ target }) => goto(target.value)}
 	>
 		{#each languages as language}
 			<option value={language.code}>{language.name}</option>
