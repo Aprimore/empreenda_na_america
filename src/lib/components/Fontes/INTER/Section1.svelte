@@ -1,4 +1,5 @@
 <script lang="ts">
+	import headerhero_webp from '$lib/assets/images/headerhero.webp?w=200;400;800&format=avif;webp;jpg&as=picture';
 	// import * as m from '$lib/paraglide/messages';
 	import { t } from '$lib/translations';
 </script>
@@ -13,11 +14,7 @@
 				</h2>
 			</div>
 			<div class="md:max-w-[50%] max-sm:mt-6 h-full">
-				<img
-					class="w-full"
-					src="https://static-media.hotmart.com/OUwI4MVN3pxQE1sZcPInPF3Mr4Y=/filters:quality(100)/klickart-prod/uploads/media/file/8270597/bonus_(3).png"
-					alt=""
-				/>
+			
 			</div>
 		</div>
 	</div>

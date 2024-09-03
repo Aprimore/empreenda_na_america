@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { headerhero_webp } from "$lib";
+
 	// import * as m from '$lib/paraglide/messages';
 </script>
 
@@ -14,9 +16,10 @@
 			</div>
 			<div class="md:max-w-[50%] max-sm:mt-6 h-full">
 				<img
-					class="w-full"
-					src="https://static-media.hotmart.com/OUwI4MVN3pxQE1sZcPInPF3Mr4Y=/filters:quality(100)/klickart-prod/uploads/media/file/8270597/bonus_(3).png"
-					alt=""
+					class="w-full h-auto aspect-[4/3]"
+					src={headerhero_webp}
+					loading="eager"
+					alt="hotmart icon"
 				/>
 			</div>
 		</div>

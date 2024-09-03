@@ -1,15 +1,6 @@
 <script lang="ts">
 	// import * as m from '$lib/paraglide/messages';
-	import {
-		// ebook1,
-		ebook1_webp,
-		// ebook2,
-		ebook2_webp,
-		// ebook3,
-		ebook3_webp,
-		// ebook4,
-		ebook4_webp
-	} from '$lib';
+	import { ebook1_webp, ebook2_webp, ebook3_webp, ebook4_webp } from '$lib';
 	import BtnHotmart from '$lib/components/BtnHotmart.svelte';
 	import { t } from '$lib/translations';
 </script>
@@ -19,21 +10,22 @@
 <!-- EBOOK_REMOTEWORK EBOOK_MARKET -->
 <section class="w-full max-sm:p-2 bg-white py-10">
 	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
-		<h2 class="text-3xl md:text-4xl lg:text-5xl text-center my-6">{$t('S5_T')}</h2>
-		<h3 class="text-2xl max-sm:text-xl my-6 text-center">
+		<h2 class="text-4xl md:text-4xl lg:text-5xl text-center my-6">{$t('S5_T')}</h2>
+		<p class="text-2xl max-sm:text-xl my-6 text-center lg:px-10 px-3">
 			{$t('S5_D')}
-		</h3>
+		</p>
 		<div
 			class="sm:grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 m-auto sm:rounded-2xl lg:py-6 gap-3 max-sm:space-y-3"
 		>
 			<div
 				class="bg-[#dfdad6] rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
 			>
-				<h3 class="text-2xl text-center p-3 relative top-0">{$t('EBOOK_STARTUP')}</h3>
+				<p class="text-2xl text-center p-3 relative top-0">{$t('EBOOK_STARTUP')}</p>
 				<img
-					class="object-contain max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 					src={ebook1_webp}
-					alt=""
+					loading="lazy"
+					alt="ebook image"
 				/>
 				<div class="ml-auto w-fit mt-3">
 					<BtnHotmart />
@@ -42,11 +34,12 @@
 			<div
 				class="bg-[#dfdad6] rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
 			>
-				<h3 class="text-2xl text-center p-3">{$t('EBOOK_PLAN')}</h3>
+				<p class="text-2xl text-center p-3">{$t('EBOOK_PLAN')}</p>
 				<img
-					class="object-contain max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 					src={ebook2_webp}
-					alt=""
+					loading="lazy"
+					alt="ebook image"
 				/>
 				<div class="ml-auto w-fit mt-3">
 					<BtnHotmart />
@@ -55,11 +48,12 @@
 			<div
 				class="bg-[#dfdad6] rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
 			>
-				<h3 class="text-2xl text-center p-3">{$t('EBOOK_KID_MONEY')}</h3>
+				<p class="text-2xl text-center p-3">{$t('EBOOK_KID_MONEY')}</p>
 				<img
-					class="object-contain max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 					src={ebook3_webp}
-					alt=""
+					loading="lazy"
+					alt="ebook image"
 				/>
 				<div class="ml-auto w-fit mt-3">
 					<BtnHotmart />
@@ -68,11 +62,12 @@
 			<div
 				class="bg-[#dfdad6] rounded-2xl col-start-1 col-end-3 row-start-2 row-end-3 max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
 			>
-				<h3 class="text-2xl text-center p-3">{$t('EBOOK_INVEST')}</h3>
+				<p class="text-2xl text-center p-3">{$t('EBOOK_INVEST')}</p>
 				<img
-					class="bg-[#dfdad6] rounded-2xl object-contain max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+					class="bg-[#dfdad6] rounded-2xl object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 					src={ebook4_webp}
-					alt=""
+					loading="lazy"
+					alt="ebook image"
 				/>
 				<div class="ml-auto w-fit mt-3">
 					<BtnHotmart />
@@ -81,11 +76,12 @@
 			<div
 				class="bg-[#dfdad6] rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
 			>
-				<h3 class="text-2xl text-center p-3">{$t('EBOOK_EXTRACT')}</h3>
+				<p class="text-2xl text-center p-3">{$t('EBOOK_EXTRACT')}</p>
 				<img
-					class="object-contain max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 					src={ebook4_webp}
-					alt=""
+					loading="lazy"
+					alt="ebook image"
 				/>
 				<div class="ml-auto w-fit mt-3">
 					<BtnHotmart />
@@ -126,7 +122,7 @@
 		font-style: normal;
 	}
 
-	h3 {
+	p {
 		font-family: 'Lora', serif;
 		font-optical-sizing: auto;
 		font-weight: 400; /* Regular weight for body text */

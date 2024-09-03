@@ -1,15 +1,17 @@
 <script>
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
+	import { ebook4_webp } from '$lib';
 	import Navbar from '$lib/components/Navbar.svelte';
+	import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH, SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from '$lib/siteConfig';
 	import { currentLocale } from '$lib/store.js';
 	import { loadTranslations, locale } from '$lib/translations';
 	import '../app.css';
 	import LanguageSwitcher from './../lib/components/LanguageSwitcher.svelte';
-	
+
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
-	
+
 	// export const load = async ({ url }) => {
 	// 	const { pathname } = url;
 
@@ -23,6 +25,25 @@
 	// 	return {};
 	// };
 </script>
+
+<svelte:head>
+	<!-- <title>{$page.data.post?.title || 'My Menthor | Home'}</title> -->
+	<title>Empreenda na America</title>
+	<!-- <title>{getPageTitle(pagePath)}</title> -->
+	<link rel="canonical" href={SITE_URL + pagePath} />
+	<meta property="og:url" content={SITE_URL} />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={SITE_TITLE} />
+	<meta name="description" content={SITE_DESCRIPTION} />
+	<meta property="og:description" content={SITE_DESCRIPTION} />
+	<meta property="og:image" content={ebook4_webp} />
+	<meta property="og:image:width" content={OG_IMAGE_WIDTH} />
+	<meta property="og:image:height" content={OG_IMAGE_HEIGHT} />
+	<meta name="twitter:image" content={ebook4_webp} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={SITE_TITLE} />
+	<meta name="twitter:description" content={SITE_DESCRIPTION} />
+</svelte:head>
 
 <!-- <Navbar /> -->
 <slot />

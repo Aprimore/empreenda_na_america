@@ -7,24 +7,25 @@
 	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
 		<div class="lg:p-10 sm:p-5 flex max-md:flex-col">
 			<div class=" border-black">
-				<h1 class="font-extrabold text-3xl xl:text-5xl uppercase">{$t('S5_T')}</h1>
-				<h2 class="text-2xl max-sm:text-xl my-6 text-center">
+				<h2 class="font-extrabold text-3xl xl:text-5xl uppercase">{$t('S5_T')}</h2>
+				<p class="text-2xl max-sm:text-xl my-6 text-center">
 					{$t('S5_D')}
-				</h2>
+				</p>
 			</div>
 		</div>
 	</div>
 </section>
 
 <style>
-	h1 {
+
+	h2 {
 		font-family: 'Inter', sans-serif;
 		font-optical-sizing: auto;
 		font-weight: 700; /* Bold weight for titles */
 		font-style: normal;
 	}
 
-	h2 {
+	p {
 		font-family: 'Lora', serif;
 		font-optical-sizing: auto;
 		font-weight: 400; /* Regular weight for body text */

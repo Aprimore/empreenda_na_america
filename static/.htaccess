@@ -1,51 +1,141 @@
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.html [L]
+RewriteBase /
 
-ErrorDocument 404 /404.html
-ErrorDocument 500 /500.html
+# Prevent dot directories (hidden directories like .git) to be exposed to the public
+# Except for the .well-known directory used by LetsEncrypt a.o
+# RewriteRule "/\.|^\.(?!well-known/)" - [F]
 
-# Headers Module Configuration
-<IfModule mod_headers.c>
-    # Set CORS headers
-    # Header set Access-Control-Allow-Origin "*"
-    # Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
-    # Header set Access-Control-Allow-Headers "Content-Type"
+# Rewrite www.example.com -> example.com -- used with SEO Strict URLs plugin
+# RewriteCond %{HTTP_HOST} .
+# RewriteCond %{HTTP_HOST} ^www.(.*)$ [NC]
+# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-    # Set Cache-Control headers for various file types
-    <FilesMatch "\.(html|css|js|svg|woff2|webp|jpg|jpeg|png|gif|ico|pdf|flv|swf)$">
-        Header set Cache-Control "max-age=2592000, public"
-    </FilesMatch>
-</IfModule>
+# Rewrite secure requests properly to prevent SSL cert warnings, e.g. prevent 
+# https://www.example.com when your cert only allows https://secure.example.com
+# RewriteCond %{SERVER_PORT} !^443
+# RewriteRule (.*) https://%{SERVER_NAME}/$1 [R=301,L]
 
-# Gzip Compression
+##############################################
+# Skip redirection if locale already present #
+##############################################
+RewriteRule ^en(\/.*)?$ - [L]
+RewriteRule ^es(\/.*)?$ - [L]
+RewriteRule ^pt(\/.*)?$ - [L]
+# Serve files if they exist
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.*)$ - [L]
+################
+# Force HTTPS: #
+################
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+##############################
+# Set custom locales if fits #
+##############################
+RewriteCond %{HTTP:Accept-Language} ^es [NC]
+RewriteRule ^ /es%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP:Accept-Language} ^pt-br [NC]
+RewriteRule ^ /pt%{REQUEST_URI} [R=301,L]
+###############################################
+# Set default locale if no custom locale fits #
+###############################################
+RewriteRule ^ /en%{REQUEST_URI} [R=301,L]
+######################################
+# Set error pages for custom locales #
+######################################
+<If "%{REQUEST_URI} =~ /^\x2Fen(\x2F.*)?$/">
+  ErrorDocument 401 /en/401/index.html
+  ErrorDocument 403 /en/403/index.html
+  ErrorDocument 404 /en/404/index.html
+  ErrorDocument 500 /en/500/index.html
+</If>
+<ElseIf "%{REQUEST_URI} =~ /^\x2Fes(\x2F.*)?$/">
+  ErrorDocument 401 /es/401/index.html
+  ErrorDocument 403 /es/403/index.html
+  ErrorDocument 404 /es/404/index.html
+  ErrorDocument 500 /es/500/index.html
+</ElseIf>
+<ElseIf "%{REQUEST_URI} =~ /^\x2Fpt(\x2F.*)?$/">
+  ErrorDocument 401 /pt/401/index.html
+  ErrorDocument 403 /pt/403/index.html
+  ErrorDocument 404 /pt/404/index.html
+  ErrorDocument 500 /pt/500/index.html
+</ElseIf>
+##################################
+# Set default locale error pages #
+##################################
+<Else>
+  ErrorDocument 401 /en/401/index.html
+  ErrorDocument 403 /en/403/index.html
+  ErrorDocument 404 /en/404/index.html
+  ErrorDocument 500 /en/500/index.html
+</Else>
+
+####################
+# GZIP COMPRESSION #              
+####################
 <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/xml application/xhtml+xml application/rss+xml application/atom+xml image/svg+xml application/font-woff2
-</IfModule> 
-
-# Expiration Headers
-<IfModule mod_expires.c>
-    ExpiresActive On
-    # Cache HTML files for 1 hour
-    ExpiresByType text/html "access plus 1 hour"
-    # Cache CSS, JavaScript, and fonts for 1 month
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
-    ExpiresByType font/woff2 "access plus 1 month"
-    # Cache images for 1 month
-    ExpiresByType image/webp "access plus 1 month"
-    ExpiresByType image/jpeg "access plus 1 month"
-    ExpiresByType image/png "access plus 1 month"
-    ExpiresByType image/gif "access plus 1 month"
-    ExpiresByType image/svg+xml "access plus 1 month"
-    ExpiresByType image/x-icon "access plus 1 month"
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/xml application/json
+    # For older browsers that don't support compression
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    Header append Vary User-Agent
 </IfModule>
 
-# Security Headers
+<IfModule mod_expires.c>
+    ##################################
+    # LEVERAGE BROWSER CACHING       #
+    ##################################
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/x-javascript "access plus 1 month"
+    ExpiresByType application/x-shockwave-flash "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresDefault "access plus 2 days"
+</IfModule>
+
+#############################################
+# Enforce Strict Transport Security (HSTS): #
+#############################################
 <IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    ##################################
+    # SECURITY HEADERS               #
+    ##################################
     Header set X-Content-Type-Options "nosniff"
     Header set X-XSS-Protection "1; mode=block"
     Header set X-Frame-Options "DENY"
-    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header always set Referrer-Policy "no-referrer-when-downgrade"
+    Header set Content-Security-Policy "default-src 'self'; img-src 'self' https://*; script-src 'self' 'unsafe-inline' https://*; style-src 'self' 'unsafe-inline';"
+    Header unset ETag
+    ##################################
+    # PREVENT CLICKJACKING           #
+    ##################################
+    Header always append X-Frame-Options SAMEORIGIN
+    ##################################
+    # PREVENT MIME-STYPE SNIFFING    #
+    ##################################
+    Header set X-Content-Type-Options nosniff
 </IfModule>
+
+##################################
+# REMOVE ETAG                    #
+##################################
+FileETag None
+
+##################################
+# Hide Server Signature:         #
+##################################
+ServerSignature Off
+##################################
+# Block Access to Certain Files: #
+##################################
+<FilesMatch "\.(htaccess|htpasswd|env|ini|phar|zip|sql)$">
+    Require all denied
+</FilesMatch>
