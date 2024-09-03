@@ -1,13 +1,19 @@
 <script>
-	import { browser } from '$app/environment';
+	// import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 	import { ebook4_webp } from '$lib';
-	import Navbar from '$lib/components/Navbar.svelte';
-	import { OG_IMAGE_HEIGHT, OG_IMAGE_WIDTH, SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from '$lib/siteConfig';
-	import { currentLocale } from '$lib/store.js';
-	import { loadTranslations, locale } from '$lib/translations';
+	// import Navbar from '$lib/components/Navbar.svelte';
+	import {
+		OG_IMAGE_HEIGHT,
+		OG_IMAGE_WIDTH,
+		SITE_DESCRIPTION,
+		SITE_TITLE,
+		SITE_URL
+	} from '$lib/siteConfig';
+	// import { currentLocale } from '$lib/store.js';
+	// import { loadTranslations, locale } from '$lib/translations';
+	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
 	import '../app.css';
-	import LanguageSwitcher from './../lib/components/LanguageSwitcher.svelte';
 
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
