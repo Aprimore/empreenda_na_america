@@ -1,11 +1,14 @@
 <script>
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
+	import Footer from '$lib/components/Footer.svelte';
 	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import { currentLocale } from '$lib/store.js';
 	import { loadTranslations, locale } from '$lib/translations';
 	import '../../app.css';
+
+	export let data;
 
 	// let pagePath = $page.url.pathname;
 	// $: pagePath = $page.url.pathname;
@@ -24,5 +27,6 @@
 	// };
 </script>
 
-<!-- <Navbar /> -->
+<Navbar {data}/>
 <slot />
+<Footer />

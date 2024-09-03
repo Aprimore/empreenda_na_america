@@ -29,6 +29,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/enhanced-img": "^0.3.4",
     "sveltekit-i18n": "^2.4.2"
   }
 }

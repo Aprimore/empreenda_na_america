@@ -1,5 +1,7 @@
 <script>
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
+	export let data;
+	console.log(`export dddata`, data.locale);
 </script>
 
 <nav

@@ -2,6 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { currentLocale } from '$lib/store';
 	import { locale } from '$lib/translations';
+	import { onMount } from 'svelte';
 
 	const languages = [
 		{ code: 'en', name: 'English' },
@@ -9,15 +10,26 @@
 		{ code: 'pt-br', name: 'Português' }
 	];
 
-	// Track the currently selected language
-	$: selected = locale.get();
+	// Initialize selected with a default value
+	let selected = '';
+
+	// Function to update the selected value
+	function updateValue() {
+		currentLocale.subscribe((value) => {
+			selected = value;
+		});
+	}
+
+	// Call updateValue once the component is mounted
+	onMount(() => {
+		updateValue();
+	});
 
 	const handleOnChange = (event) => {
 		const newLocale = event.target.value;
-		// Update the locale in stores
 		currentLocale.set(newLocale);
 		locale.set(newLocale);
-		// Redirect to the new language path
+		updateValue()
 		goto(`/${newLocale}`);
 	};
 </script>

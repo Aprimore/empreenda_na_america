@@ -24,7 +24,7 @@
 	// };
 </script>
 
-<Navbar />
+<!-- <Navbar /> -->
 <slot />
 
 <style>

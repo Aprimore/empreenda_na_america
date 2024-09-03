@@ -22,16 +22,17 @@
 		</div>
 	</div>
 </section>
+
 <style>
 	h1 {
-		font-family: "Lora", sans-serif;
+		font-family: 'Lora', sans-serif;
 		font-optical-sizing: auto;
 		font-weight: 700; /* Bold weight for titles */
 		font-style: normal;
 	}
 
 	h2 {
-		font-family: "Lora", sans-serif;
+		font-family: 'Lora', sans-serif;
 		font-optical-sizing: auto;
 		font-weight: 400; /* Regular weight for body text */
 		font-style: normal;

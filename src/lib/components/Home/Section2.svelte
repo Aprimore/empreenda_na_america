@@ -17,11 +17,12 @@
 <!-- {$t('xxxxx')} -->
 
 <!-- EBOOK_REMOTEWORK EBOOK_MARKET -->
-<section class="w-full max-sm:p-2 bg-white">
+<section class="w-full max-sm:p-2 bg-white py-10">
 	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
-		<h2 class="text-3xl md:text-4xl lg:text-5xl text-center my-6">
-			{$t('S1_T')}
-		</h2>
+		<h2 class="text-3xl md:text-4xl lg:text-5xl text-center my-6">{$t('S5_T')}</h2>
+		<h3 class="text-2xl max-sm:text-xl my-6 text-center">
+			{$t('S5_D')}
+		</h3>
 		<div
 			class="sm:grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 m-auto sm:rounded-2xl lg:py-6 gap-3 max-sm:space-y-3"
 		>

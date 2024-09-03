@@ -3,14 +3,61 @@
 	import { t } from '$lib/translations';
 </script>
 
-<section class="w-full max-sm:p-2 bg-[#dfdad6] text-balance">
-	<div class="max-w-screen-xl mx-auto max-sm:p-2">
-		<div class="lg:p-10 sm:p-5 flex max-md:flex-col">
-			<div class=" border-black">
-				<h1 class="font-extrabold text-3xl xl:text-5xl uppercase">{$t('S4_T')}</h1>
-				<h2 class="font-bold text-xl lg:text-2xl mt-10">
-					{$t('S4_D')}
-				</h2>
+<section class="w-full max-sm:p-2 bg-[#fff] text-balance py-10">
+	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
+		<h1 class="text-3xl md:text-4xl lg:text-5xl my-6 text-center">
+			{$t('S7_T')}
+			<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. -->
+		</h1>
+		<h2 class="text-2xl max-sm:text-xl my-6 text-center">
+			{$t('S7_D')}
+		</h2>
+		<div class="grid grid-cols-3 grid-rows-1 gap-3 py-5">
+			<div class=" rounded-md w-full flex flex-col items-center justify-start py-5 space-y-5">
+				<!-- Replace with actual SVG -->
+				<img
+					src="https://www.gstatic.com/webp/gallery/1.webp" 
+					alt="Profile Picture"
+					class="size-32 rounded-full object-cover"
+				/>
+
+				<h3 class="text-2xl text-center font-semibold mb-1">Lorem ipsum dolor sit amet</h3>
+				<p class="text-lg text-center w-full">
+					Quas, omnis. Deserunt culpa distinctio autem iste esse architecto, accusamus at quos
+					veritatis, ipsam unde dolore sint tenetur. Iure vitae eos rerum! Lorem ipsum dolor sit
+					amet consectetur, adipisicing elit.
+				</p>
+			</div>
+			<div class=" rounded-md w-full flex flex-col items-center justify-start py-5 space-y-5">
+				<!-- Replace with actual SVG -->
+				<img
+					src="https://www.gstatic.com/webp/gallery/1.webp"
+					alt="Profile Picture"
+					class="size-32 rounded-full object-cover"
+				/>
+
+				<h3 class="text-2xl text-center font-semibold mb-1">Lorem ipsum dolor sit amet</h3>
+				<p class="text-lg text-center w-full">
+					Quas, omnis. Deserunt culpa distinctio autem iste esse architecto, accusamus at quos
+					veritatis, ipsam unde dolore sint tenetur. Iure vitae eos rerum! Lorem ipsum dolor sit
+					amet consectetur, adipisicing elit.
+				</p>
+			</div>
+			<div class=" rounded-md w-full flex flex-col items-center justify-start py-5 space-y-5">
+				<!-- Replace with actual SVG -->
+				<img
+					src="https://www.gstatic.com/webp/gallery/1.webp"
+					alt="Profile Picture"
+					class="size-32 rounded-full object-cover"
+				/>
+
+				<h3 class="text-2xl text-center font-semibold mb-1">Lorem ipsum dolor sit amet</h3>
+				<p class="text-lg text-center w-full">
+					Quas, omnis. Deserunt culpa distinctio autem iste esse architecto, accusamus at quos
+					veritatis, ipsam unde dolore sint tenetur. Iure vitae eos rerum! Lorem ipsum dolor sit
+					amet consectetur, adipisicing elit.
+					<!-- {$t('S2_T')} -->
+				</p>
 			</div>
 		</div>
 	</div>
