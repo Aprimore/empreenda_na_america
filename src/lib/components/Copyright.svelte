@@ -1,13 +1,9 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { arrow_up_svg } from '$lib';
 	import * as m from '$lib/paraglide/messages';
 	import CookieConsent from './CookieConsent.svelte';
 	import LoadingSpinner from './LoadingSpinner.svelte';
 </script>
-
-<!-- <div class="div1"></div>
-<div class="div2"></div>
-<div class="div3"></div> -->
 
 <div class="copyright p-5 text-sm copyright-component">
 	<div class="gridFooter max-md:text-center max-md:space-y-5">
@@ -51,7 +47,6 @@
 		</ul>
 
 		<ul class=" max-w-max arrowUp max-md:ml-auto">
-			<!-- max-md:absolute right-2 max-sm:bottom-3 flex max-w-min ml-auto mb-auto -->
 			<li class=" ">
 				<button
 					class="bg-[#D4D4ED] size-[36px] flex justify-center items-center rounded-md Exo transition-transform duration-200 transform hover:scale-105"
@@ -60,7 +55,7 @@
 						><img
 							src={arrow_up_svg}
 							alt="arrow top"
-							class="size-[14px]"
+							class="size-[14px] w-full h-auto aspect-[4/3]"
 							aria-label="top button"
 							decoding="sync"
 							fetchpriority="low"
@@ -103,4 +98,4 @@
 			display: block;
 		}
 	}
-</style>
+</style> -->

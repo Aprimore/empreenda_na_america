@@ -5,12 +5,12 @@
 
 <section class="w-full max-sm:p-2 bg-[#fff] text-balance py-10">
 	<div class="lg:max-w-screen-2xl mx-auto max-sm:p-2">
-		<div class="lg:p-10 sm:p-5 flex max-md:flex-col">
-			<div class="w-1/2 m-auto border-black align-middle">
-				<h1 class="text-3xl md:text-4xl lg:text-5xl my-6 text-center">{$t('S6_T')}</h1>
-				<h2 class="text-2xl max-sm:text-xl my-6 text-center">
+		<div class="lg:p-10 p-1 flex max-md:flex-col">
+			<div class="md:w-1/2 m-auto border-black align-middle">
+				<h2 class="text-3xl md:text-4xl lg:text-5xl my-6 text-center">{$t('S6_T')}</h2>
+				<p class="text-2xl max-sm:text-xl my-6 text-center">
 					{$t('S5_D')}
-				</h2>
+				</p>
 			</div>
 			<!-- <div class="md:max-w-[50%] max-sm:mt-6 h-full">
 				<img
@@ -19,9 +19,10 @@
 					alt=""
 				/>
 			</div> -->
-			<div class="w-1/2 aspect-video">
+			<div class="md:w-1/2 aspect-video px-2">
 				<iframe
-					class="w-full h-full rounded-lg"
+					loading="lazy"
+					class="aspect-[16/9] w-full h-auto rounded-lg"
 					src="https://www.youtube.com/embed/BHACKCNDMW8"
 					title="YouTube video player"
 					frameborder="0"
@@ -34,14 +35,14 @@
 </section>
 
 <style>
-	h1 {
+	h2 {
 		font-family: 'Inter', sans-serif;
 		font-optical-sizing: auto;
 		font-weight: 700; /* Bold weight for titles */
 		font-style: normal;
 	}
 
-	h2 {
+	p {
 		font-family: 'Lora', serif;
 		font-optical-sizing: auto;
 		font-weight: 400; /* Regular weight for body text */

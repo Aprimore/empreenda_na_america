@@ -1,43 +1,52 @@
 <script lang="ts">
-    import { browser } from '$app/environment';
-    import { goto } from '$app/navigation';
-
-    if (browser) {
-        const userLang = window.navigator.language.toLowerCase();
-        let redirectLang = 'en'; // default to English if language is not supported
-
-        // Set the redirect language based on the browser language
-        if (userLang.startsWith('pt-br')) {
-            redirectLang = 'pt-br';
-        } else if (userLang.startsWith('es')) {
-            redirectLang = 'es';
-        }
-
-        // Redirect to the appropriate language route
-        goto(`/${redirectLang}`);
-    }
+	import { browser } from '$app/environment';
+	import { goto } from '$app/navigation';
+	import headerhero_webp from '$lib/assets/images/headerhero.webp?enhanced';
+	// import * as m from '$lib/paraglide/messages';
+	import { t } from '$lib/translations';
 </script>
 
-<h1>Redirecting...</h1>
+<section class="w-full max-sm:p-2 bg-[#dfdad6] text-balance">
+	<div class="lg:max-w-screen-2xl mx-auto max-sm:p-0">
+		<div class="lg:p-10 sm:p-5 flex max-md:flex-col items-center">
+			<div class="md:max-w-[45%] m-auto border-black align-middle">
+				<h1 class="font-extrabold text-4xl md:text-5xl xl:text-7xl uppercase">
+					Entrepreneur in America: Your Complete Map to Success in the USA
+				</h1>
+				<h2 class="font-bold text-xl lg:text-2xl lg:mt-10 md:mt-5 mt-3">
+					Discover exclusive strategies for business, investment, and financial education to grow in
+					the United States.
+				</h2>
+			</div>
+			<div class="relative w-full">
+				<enhanced:img
+					style="width:100%; height:100%; object-fit:cover"
+					src={headerhero_webp}
+					alt="landing page header"
+					loading="eager"
+					sizes="(min-width:1080px) 744px, (min-width:768px) 640px, 400px"
+				/>
+			</div>
+			<!-- Placeholder for the image to prevent layout shift -->
+			<!-- The aspect ratio is maintained using padding-bottom (100% for a square) -->
+			<!-- <div class="relative w-full" style="padding-bottom: 100%;">
+				<enhanced:img
+					class="absolute top-0 left-0 w-full h-full object-cover"
+					src={headerhero_webp}
+					alt="landing page header"
+					loading="eager"
+					sizes="(min-width:1080px) 744px, (min-width:768px) 640px, 400px"
+				/>
+			</div> -->
+		</div>
+	</div>
+</section>
 
-
-<!-- <script>
-	import Section1 from '$lib/components/Home/Section1.svelte';
-	import Section2 from '$lib/components/Home/Section2.svelte';
-	import Section3 from '$lib/components/Home/Section3.svelte';
-	import Section4 from '$lib/components/Home/Section4.svelte';
-	import Section5 from '$lib/components/Home/Section5.svelte';
-	import Section6 from '$lib/components/Home/Section6.svelte';
-	import Section7 from '$lib/components/Home/Section7.svelte';
-	import { t } from '$lib/translations';
-</script> -->
-
-<!-- <Language /> -->
-
-<!-- <Section1 />
-<Section2 />
-<Section3 />
-<Section4 />
-<Section5 />
-<Section6 />
-<Section7 /> -->
+<style>
+	* {
+		font-family: 'Inter', sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 700; /* Bold weight for titles */
+		font-style: normal;
+	}
+</style>

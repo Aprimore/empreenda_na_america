@@ -9,3 +9,5 @@ export { default as ebook1_webp } from './assets/images/ebook1.webp';
 export { default as ebook2_webp } from './assets/images/ebook2.webp';
 export { default as ebook3_webp } from './assets/images/ebook3.webp';
 export { default as ebook4_webp } from './assets/images/ebook4.webp';
+export { default as headerhero_webp } from './assets/images/headerhero.webp';
+export { default as business_webp } from './assets/images/business.webp';

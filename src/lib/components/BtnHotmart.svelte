@@ -1,4 +1,3 @@
-
 <a
 	type="button"
 	href="https://hotmart.com/pt-br"
@@ -11,8 +10,10 @@
 
 	<!-- <a href="https://hotmart.com/pt-br" target="_blank"> -->
 	<img
-		class="fill-current w-4 h-4 mr-2"
+		class="fill-current w-4 h-4 mr-2 aspect-[4/3]"
 		src="https://logosandtypes.com/wp-content/uploads/2023/02/hotmart.svg"
+		loading="lazy"
+		alt="hotmart icon"
 	/>
 	<!-- </a> -->
 	<span>Download</span>
