@@ -4,6 +4,21 @@
 	import headerhero_webp from '$lib/assets/images/headerhero.webp?enhanced';
 	// import * as m from '$lib/paraglide/messages';
 	import { t } from '$lib/translations';
+
+	if (browser) {
+		const userLang = window.navigator.language.toLowerCase();
+		let redirectLang = 'en'; // default to English if language is not supported
+
+		// Set the redirect language based on the browser language
+		if (userLang.startsWith('pt-br')) {
+			redirectLang = 'pt-br';
+		} else if (userLang.startsWith('es')) {
+			redirectLang = 'es';
+		}
+
+		// Redirect to the appropriate language route
+		goto(`/${redirectLang}`);
+	}
 </script>
 
 <section class="w-full max-sm:p-2 bg-[#dfdad6] text-balance">
