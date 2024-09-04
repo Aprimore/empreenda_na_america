@@ -4,7 +4,10 @@
 	import { t } from '$lib/translations';
 </script>
 
-<section class="w-full max-sm:p-2 bg-[#fff] text-balance py-10">
+<section
+	class="w-full max-sm:p-2 bg-[#fff] text-balance py-10"
+	data-sveltekit-preload-data="viewport"
+>
 	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
 		<h2 class="text-3xl md:text-4xl lg:text-5xl my-6 text-center">
 			{$t('S7_T')}

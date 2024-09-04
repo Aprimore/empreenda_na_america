@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Provide the sitemap location
-Sitemap: https://empreendanaamerica.com/sitemap.xml
+# Sitemap: https://empreendanaamerica.com/sitemap.xml
 
 # Allow Googlebot to access everything
 User-agent: Googlebot
