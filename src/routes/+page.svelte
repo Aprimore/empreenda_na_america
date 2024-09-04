@@ -24,7 +24,7 @@
 			// goto(`/${redirectLang}`);
 			setTimeout(() => {
 				goto(`/${redirectLang}`);
-			}, 11111100); // Adjust the delay as needed
+			}, 100); // Adjust the delay as needed
 		}
 		loading = false;
 	});

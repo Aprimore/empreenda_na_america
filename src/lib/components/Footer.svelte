@@ -4,7 +4,7 @@
 	console.log(abdc);
 </script>
 
-<footer class="footer relative bg-[#dfdad6] Exo footer-component">
+<footer class="footer relative bg-[#dfdad6] Exo footer-component bottom-0">
 	<div class=" max-sm:flex justify-center">
 		<div class=" lg:p-12 max-md:flex justify-center p-5">
 			<!-- <div class="flex justify-center items-center"> -->
@@ -35,14 +35,14 @@
 					<ul class="space-y-3">
 						<li>
 							<a
-								href="/products#platform"
+								href="#"
 								title="Learn more about our company"
 								class="text-[#000] text-sm hover:text-blue-950">{$t('FOOT_contact')}</a
 							>
 						</li>
 						<li>
 							<a
-								href="/products#target-audience"
+								href="/"
 								title="Learn more about our company"
 								class="text-[#000] text-sm hover:text-blue-950"
 							>
@@ -51,14 +51,14 @@
 						</li>
 						<li>
 							<a
-								href="/products#platform"
+								href="#"
 								title="Learn more about our company"
 								class="text-[#000] text-sm hover:text-blue-950">{$t('FOOT_terms')}</a
 							>
 						</li>
 						<li>
 							<a
-								href="/products#target-audience"
+								href="/"
 								title="Learn more about our company"
 								class="text-[#000] text-sm hover:text-blue-950"
 							>
@@ -67,7 +67,7 @@
 						</li>
 						<li>
 							<a
-								href="/products#platform"
+								href="#"
 								title="Learn more about our company"
 								class="text-[#000] text-sm hover:text-blue-950">{$t('FOOT_aboutus')}</a
 							>
@@ -79,7 +79,7 @@
 						<ul class="space-y-3">
 							<li>
 								<a
-									href="/products#target-audience"
+									href="/"
 									title="Learn more about our company"
 									class="text-[#000] text-sm hover:text-blue-950"
 								>
@@ -88,14 +88,14 @@
 							</li>
 							<li>
 								<a
-									href="/products#platform"
+									href="#"
 									title="Learn more about our company"
 									class="text-[#000] text-sm hover:text-blue-950">{$t('FOOT_shop')}</a
 								>
 							</li>
 							<li>
 								<a
-									href="/products#target-audience"
+									href="/"
 									title="Learn more about our company"
 									class="text-[#000] text-sm hover:text-blue-950"
 								>
@@ -104,7 +104,7 @@
 							</li>
 							<li>
 								<a
-									href="/products#target-audience"
+									href="/"
 									title="Learn more about our company"
 									class="text-[#000] text-sm hover:text-blue-950"
 								>
@@ -113,7 +113,7 @@
 							</li>
 							<li>
 								<a
-									href="/products#target-audience"
+									href="/"
 									title="Learn more about our company"
 									class="text-[#000] text-sm hover:text-blue-950"
 								>

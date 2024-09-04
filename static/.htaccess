@@ -110,34 +110,34 @@ RewriteRule ^ /en%{REQUEST_URI} [R=301,L]
     ##################################
     # SECURITY HEADERS               #
     ##################################
-    Header set X-Content-Type-Options "nosniff"
+    # Header set X-Content-Type-Options "nosniff"
     Header set X-XSS-Protection "1; mode=block"
-    Header set X-Frame-Options "DENY"
-    Header always set Referrer-Policy "no-referrer-when-downgrade"
-    Header set Content-Security-Policy "default-src 'self'; img-src 'self' https://*; script-src 'self' 'unsafe-inline' https://*; style-src 'self' 'unsafe-inline';"
-    Header unset ETag
+    # Header set X-Frame-Options "DENY"
+    # Header always set Referrer-Policy "no-referrer-when-downgrade"
+    # Header set Content-Security-Policy "default-src 'self'; img-src 'self' https://*; script-src 'self' 'unsafe-inline' https://*; style-src 'self' 'unsafe-inline';"
+    # Header unset ETag
     ##################################
     # PREVENT CLICKJACKING           #
     ##################################
-    Header always append X-Frame-Options SAMEORIGIN
+    # Header always append X-Frame-Options SAMEORIGIN
     ##################################
     # PREVENT MIME-STYPE SNIFFING    #
     ##################################
-    Header set X-Content-Type-Options nosniff
+    # Header set X-Content-Type-Options nosniff
 </IfModule>
 
 ##################################
 # REMOVE ETAG                    #
 ##################################
-FileETag None
+# FileETag None
 
 ##################################
 # Hide Server Signature:         #
 ##################################
-ServerSignature Off
+# ServerSignature Off
 ##################################
 # Block Access to Certain Files: #
 ##################################
-<FilesMatch "\.(htaccess|htpasswd|env|ini|phar|zip|sql)$">
-    Require all denied
-</FilesMatch>
+# <FilesMatch "\.(htaccess|htpasswd|env|ini|phar|zip|sql)$">
+#     Require all denied
+# </FilesMatch>

@@ -3,8 +3,8 @@ import type { LayoutLoad } from './$types';
 
 export const trailingSlash = 'always';
 export const prerender = true;
-// export const ssr = false;
-export const csr = true;
+export const ssr = true;
+// export const csr = true;
 
 export const load: LayoutLoad = async ({ url, params }) => {
 	const { pathname } = url;
