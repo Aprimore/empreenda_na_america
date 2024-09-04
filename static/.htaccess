@@ -1,9 +1,6 @@
 RewriteEngine On
 RewriteBase /
 
-
-
-
 # Prevent dot directories (hidden directories like .git) to be exposed to the public
 # Except for the .well-known directory used by LetsEncrypt a.o
 # RewriteRule "/\.|^\.(?!well-known/)" - [F]

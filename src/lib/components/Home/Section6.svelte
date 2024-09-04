@@ -1,6 +1,7 @@
 <script lang="ts">
 	// import * as m from '$lib/paraglide/messages';
 	import { t } from '$lib/translations';
+	import Youtube from 'svelte-youtube-embed';
 </script>
 
 <section
@@ -22,8 +23,10 @@
 					alt=""
 				/>
 			</div> -->
+
 			<div class="md:w-1/2 aspect-video px-2">
-				<iframe
+				<Youtube id="BHACKCNDMW8" />
+				<!-- <iframe
 					data-sveltekit-preload-data="viewport"
 					loading="lazy"
 					class="aspect-[16/9] w-full h-auto rounded-lg"
@@ -32,7 +35,7 @@
 					frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 					allowfullscreen
-				></iframe>
+				></iframe> -->
 			</div>
 		</div>
 	</div>
