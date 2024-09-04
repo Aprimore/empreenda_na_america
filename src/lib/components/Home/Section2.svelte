@@ -25,7 +25,7 @@
 <!-- {$t('xxxxx')} -->
 
 <!-- EBOOK_REMOTEWORK EBOOK_MARKET -->
-<section class="w-full max-sm:p-2 bg-white py-10">
+<section class="w-full max-sm:p-2 bg-white py-10" data-sveltekit-preload-data="viewport">
 	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
 		<h2 class="text-4xl md:text-4xl lg:text-5xl text-center my-6">{$t('S5_T')}</h2>
 		<p class="text-2xl max-sm:text-xl my-6 text-center lg:px-10 px-3">

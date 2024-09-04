@@ -3,7 +3,10 @@
 	import { t } from '$lib/translations';
 </script>
 
-<section class="w-full max-sm:p-2 bg-[#fff] text-balance py-10">
+<section
+	class="w-full max-sm:p-2 bg-[#fff] text-balance py-10"
+	data-sveltekit-preload-data="viewport"
+>
 	<div class="lg:max-w-screen-2xl mx-auto max-sm:p-2">
 		<div class="lg:p-10 p-1 flex max-md:flex-col">
 			<div class="md:w-1/2 m-auto border-black align-middle">
@@ -21,6 +24,7 @@
 			</div> -->
 			<div class="md:w-1/2 aspect-video px-2">
 				<iframe
+					data-sveltekit-preload-data="viewport"
 					loading="lazy"
 					class="aspect-[16/9] w-full h-auto rounded-lg"
 					src="https://www.youtube.com/embed/BHACKCNDMW8"

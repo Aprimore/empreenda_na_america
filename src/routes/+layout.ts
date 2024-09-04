@@ -4,7 +4,7 @@ import { loadTranslations } from '$lib/translations';
 import type { LayoutLoad } from './$types';
 
 export const trailingSlash = 'always';
-export const ssr = false;
+// export const ssr = false;
 export const prerender = true;
 
 export const load: LayoutLoad = async ({ url }) => {

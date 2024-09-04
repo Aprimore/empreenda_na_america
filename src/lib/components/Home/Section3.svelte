@@ -3,7 +3,10 @@
 	import { t } from '$lib/translations';
 </script>
 
-<section class="w-full max-sm:p-2 bg-[#dfdad6] text-balance py-10 px-1 max-sm:px-2">
+<section
+	class="w-full max-sm:p-2 bg-[#dfdad6] text-balance py-10 px-1 max-sm:px-2"
+	data-sveltekit-preload-data="viewport"
+>
 	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
 		<h2 class="text-3xl md:text-4xl lg:text-5xl text-center my-6">
 			{$t('S2_T')}
