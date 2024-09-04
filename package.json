@@ -31,6 +31,7 @@
   "type": "module",
   "dependencies": {
     "@sveltejs/enhanced-img": "^0.3.4",
+    "svelte-youtube-embed": "^0.3.0",
     "sveltekit-i18n": "^2.4.2"
   }
 }

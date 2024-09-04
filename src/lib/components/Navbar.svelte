@@ -99,6 +99,7 @@
 		<button
 			class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
 			type="button"
+			alt="burger icon"
 		>
 			<span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
 				<svg
