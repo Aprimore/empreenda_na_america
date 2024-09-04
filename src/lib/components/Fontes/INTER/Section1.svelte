@@ -1,5 +1,5 @@
 <script lang="ts">
-	import headerhero_webp from '$lib/assets/images/headerhero.webp?w=200;400;800&format=avif;webp;jpg&as=picture';
+	// import headerhero_webp from '$lib/assets/images/headerhero.webp?w=200;400;800&format=avif;webp;jpg&as=picture';
 	// import * as m from '$lib/paraglide/messages';
 	import { t } from '$lib/translations';
 </script>

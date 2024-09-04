@@ -4,21 +4,30 @@
 	import headerhero_webp from '$lib/assets/images/headerhero.webp?enhanced';
 	// import * as m from '$lib/paraglide/messages';
 	import { t } from '$lib/translations';
+	import { onMount } from 'svelte';
 
-	if (browser) {
-		const userLang = window.navigator.language.toLowerCase();
-		let redirectLang = 'en'; // default to English if language is not supported
+	let loading = true;
 
-		// Set the redirect language based on the browser language
-		if (userLang.startsWith('pt-br')) {
-			redirectLang = 'pt-br';
-		} else if (userLang.startsWith('es')) {
-			redirectLang = 'es';
+	onMount(async () => {
+		if (browser) {
+			const userLang = window.navigator.language.toLowerCase();
+			let redirectLang = 'en'; // default to English if language is not supported
+
+			// Set the redirect language based on the browser language
+			if (userLang.startsWith('pt')) {
+				redirectLang = 'pt-br';
+			} else if (userLang.startsWith('es')) {
+				redirectLang = 'es';
+			}
+
+			// Redirect to the appropriate language route
+			// goto(`/${redirectLang}`);
+			setTimeout(() => {
+				goto(`/${redirectLang}`);
+			}, 100); // Adjust the delay as needed
 		}
-
-		// Redirect to the appropriate language route
-		goto(`/${redirectLang}`);
-	}
+		loading = false;
+	});
 </script>
 
 <section class="w-full max-sm:p-2 bg-[#dfdad6] text-balance">
@@ -34,15 +43,26 @@
 				</h2>
 			</div>
 			<div class="relative w-full">
-				<enhanced:img
+				<!-- <enhanced:img
 					style="width:100%; height:100%; object-fit:cover"
 					src={headerhero_webp}
 					alt="landing page header"
 					loading="eager"
 					sizes="(min-width:1080px) 744px, (min-width:768px) 640px, 400px"
-				/>
+				/> -->
+				{#if loading}
+					<!-- Placeholder while loading -->
+					<div class="skeleton-loader w-full h-[400px]"></div>
+				{:else}
+					<enhanced:img
+						style="width:100%; height:100%; object-fit:cover"
+						src={headerhero_webp}
+						alt="landing page header"
+						loading="lazy"
+						sizes="(min-width:1080px) 744px, (min-width:768px) 640px, 400px"
+					/>
+				{/if}
 			</div>
-			<!-- Placeholder for the image to prevent layout shift -->
 			<!-- The aspect ratio is maintained using padding-bottom (100% for a square) -->
 			<!-- <div class="relative w-full" style="padding-bottom: 100%;">
 				<enhanced:img
@@ -63,5 +83,20 @@
 		font-optical-sizing: auto;
 		font-weight: 700; /* Bold weight for titles */
 		font-style: normal;
+	}
+	/* Skeleton Loader Style */
+	.skeleton-loader {
+		background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+		background-size: 200% 100%;
+		animation: shimmer 1.5s infinite;
+	}
+
+	@keyframes shimmer {
+		0% {
+			background-position: 200% 0;
+		}
+		100% {
+			background-position: -200% 0;
+		}
 	}
 </style>

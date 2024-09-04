@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { headerhero_webp } from "$lib";
+	// import { headerhero_webp } from "$lib";
 
 	// import * as m from '$lib/paraglide/messages';
 </script>
@@ -14,14 +14,14 @@
 					doloribus repellat minima doloremque unde asperiores quo maiores ipsa pariatur ea quod?
 				</h2>
 			</div>
-			<div class="md:max-w-[50%] max-sm:mt-6 h-full">
+			<!-- <div class="md:max-w-[50%] max-sm:mt-6 h-full">
 				<img
 					class="w-full h-auto aspect-[4/3]"
 					src={headerhero_webp}
 					loading="eager"
 					alt="hotmart icon"
 				/>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>

@@ -1,6 +1,8 @@
 import { loadTranslations } from '$lib/translations';
 import type { LayoutLoad } from './$types';
 
+export const trailingSlash = 'always';
+export const ssr = false;
 export const prerender = true;
 
 export const load: LayoutLoad = async ({ url, params }) => {
@@ -14,8 +16,6 @@ export const load: LayoutLoad = async ({ url, params }) => {
 // import { browser } from '$app/environment';
 // import { loadTranslations } from '$lib/translations';
 // import type { LayoutLoad } from './$types';
-
-// export const prerender = true;
 
 // export const load: LayoutLoad = async ({ url }) => {
 // 	const { pathname } = url;

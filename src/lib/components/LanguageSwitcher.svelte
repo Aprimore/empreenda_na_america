@@ -1,5 +1,7 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { brazil_svg, spain_svg, usa_svg } from '$lib';
+	import Dropdown from '$lib/components/Dropdown.svelte';
 	import { currentLocale } from '$lib/store';
 	import { locale } from '$lib/translations';
 	import { onMount } from 'svelte';
@@ -9,6 +11,12 @@
 		{ code: 'es', name: 'Español' },
 		{ code: 'pt-br', name: 'Português' }
 	];
+
+	const flagsMap = {
+		en: usa_svg,
+		'pt-br': brazil_svg,
+		es: spain_svg
+	};
 
 	// Initialize selected with a default value
 	let selected = '';
@@ -25,23 +33,13 @@
 		updateValue();
 	});
 
-	const handleOnChange = (event) => {
-		const newLocale = event.target.value;
+	const handleOnChange = (newLocale) => {
 		currentLocale.set(newLocale);
 		locale.set(newLocale);
-		updateValue()
+		updateValue();
 		goto(`/${newLocale}`);
 	};
 </script>
 
-<div class="language-buttons">
-	<select
-		class="relative h-[2.5rem] bg-[#F1F1F9] hover:bg-[#D4D4ED] rounded m-2 p-2 text-nowrap"
-		bind:value={selected}
-		on:change={handleOnChange}
-	>
-		{#each languages as language}
-			<option value={language.code}>{language.name}</option>
-		{/each}
-	</select>
-</div>
+<Dropdown {languages} {flagsMap} {selected} onChange={handleOnChange} />
+<!-- <Dropdown2 {languages} {flagsMap} {selected} onChange={handleOnChange} /> -->

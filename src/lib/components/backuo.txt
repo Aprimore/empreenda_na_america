@@ -1,0 +1,89 @@
+<script>
+	import { goto } from '$app/navigation';
+	import { currentLocale } from '$lib/store';
+	import { locale } from '$lib/translations';
+
+	const languages = [
+		{ code: 'en', name: 'English' },
+		{ code: 'es', name: 'Español' },
+		{ code: 'pt-br', name: 'Português' }
+	];
+
+	$: selected = locale.get();
+
+	const handleOnChange = () => {
+		currentLocale.set(selected);
+		locale.set(selected);
+	};
+</script>
+
+<div class="language-buttons">
+	<!-- {$currentLocale} -->
+	<select
+		class="relative h-[2.5rem] bg-[#F1F1F9] hover:bg-[#D4D4ED] rounded m-2 p-2 text-nowrap"
+		bind:value={selected}
+		on:change={handleOnChange}
+		on:change={({ target }) => goto(target.value)}
+	>
+		{#each languages as language}
+			<option value={language.code}>{language.name}</option>
+		{/each}
+	</select>
+</div>
+
+///////////////// language switcher antes do dropdown: 
+
+<script>
+	import { goto } from '$app/navigation';
+	import { brazil_svg, spain_svg, usa_svg } from '$lib';
+	import { currentLocale } from '$lib/store';
+	import { locale } from '$lib/translations';
+	import { onMount } from 'svelte';
+
+	const languages = [
+		{ code: 'en', name: 'English' },
+		{ code: 'es', name: 'Español' },
+		{ code: 'pt-br', name: 'Português' }
+	];
+
+	const flagsMap = {
+		en: usa_svg,
+		'pt-br': brazil_svg,
+		'es': spain_svg
+	};
+
+	// Initialize selected with a default value
+	let selected = '';
+
+	// Function to update the selected value
+	function updateValue() {
+		currentLocale.subscribe((value) => {
+			selected = value;
+		});
+	}
+
+	// Call updateValue once the component is mounted
+	onMount(() => {
+		updateValue();
+	});
+
+	const handleOnChange = (event) => {
+		const newLocale = event.target.value;
+		currentLocale.set(newLocale);
+		locale.set(newLocale);
+		updateValue();
+		goto(`/${newLocale}`);
+	};
+</script>
+
+<div class="language-buttons">
+	<select
+		class="relative h-[2.5rem] bg-[#F1F1F9] hover:bg-[#D4D4ED] rounded m-2 p-2 text-nowrap"
+		bind:value={selected}
+		on:change={handleOnChange}
+	>
+		{#each languages as language}
+			<option value={language.code}>{language.name}</option>
+		{/each}
+	</select>
+</div>
