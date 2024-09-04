@@ -1,7 +1,7 @@
 <script>
 	// import { browser } from '$app/environment';
 	import { page } from '$app/stores';
-	import { ebook4_webp } from '$lib';
+	import { EBOOK_REMOTEWORK_webp } from '$lib';
 	// import Navbar from '$lib/components/Navbar.svelte';
 	import {
 		OG_IMAGE_HEIGHT,
@@ -42,10 +42,10 @@
 	<meta property="og:title" content={SITE_TITLE} />
 	<meta name="description" content={SITE_DESCRIPTION} />
 	<meta property="og:description" content={SITE_DESCRIPTION} />
-	<meta property="og:image" content={ebook4_webp} />
+	<meta property="og:image" content={EBOOK_REMOTEWORK_webp} />
 	<meta property="og:image:width" content={OG_IMAGE_WIDTH} />
 	<meta property="og:image:height" content={OG_IMAGE_HEIGHT} />
-	<meta name="twitter:image" content={ebook4_webp} />
+	<meta name="twitter:image" content={EBOOK_REMOTEWORK_webp} />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={SITE_TITLE} />
 	<meta name="twitter:description" content={SITE_DESCRIPTION} />

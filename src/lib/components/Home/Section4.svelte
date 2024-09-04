@@ -1,5 +1,6 @@
 <script lang="ts">
 	// import * as m from '$lib/paraglide/messages';
+	import { cassia_a_webp, dr_sten_webp, maria_d_webp } from '$lib';
 	import { t } from '$lib/translations';
 </script>
 
@@ -7,7 +8,6 @@
 	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
 		<h2 class="text-3xl md:text-4xl lg:text-5xl my-6 text-center">
 			{$t('S7_T')}
-			<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. -->
 		</h2>
 		<p class="text-2xl max-sm:text-xl my-6 text-center">
 			{$t('S7_D')}
@@ -16,49 +16,43 @@
 			<div class=" rounded-md w-full flex flex-col items-center justify-start py-5 space-y-5">
 				<!-- Replace with actual SVG -->
 				<img
-					src="https://www.gstatic.com/webp/gallery/1.webp"
+					src={dr_sten_webp}
 					loading="lazy"
 					alt="Profile Picture"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
 				/>
 
-				<p class="text-2xl text-center font-semibold mb-1">Lorem ipsum dolor sit amet</p>
+				<p class="text-2xl text-center font-semibold mb-1">{$t('TEST_DrSten_name')}</p>
 				<p class="text-lg text-center w-full">
-					Quas, omnis. Deserunt culpa distinctio autem iste esse architecto, accusamus at quos
-					veritatis, ipsam unde dolore sint tenetur. Iure vitae eos rerum! Lorem ipsum dolor sit
-					amet consectetur, adipisicing elit.
+					{$t('TEST_DrSten')}
 				</p>
 			</div>
 			<div class=" rounded-md w-full flex flex-col items-center justify-start py-5 space-y-5">
 				<!-- Replace with actual SVG -->
 				<img
-					src="https://www.gstatic.com/webp/gallery/1.webp"
+					src={cassia_a_webp}
 					loading="lazy"
 					alt="Profile Picture"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
 				/>
 
-				<p class="text-2xl text-center font-semibold mb-1">Lorem ipsum dolor sit amet</p>
+				<p class="text-2xl text-center font-semibold mb-1">{$t('TEST_Cassia_name')}</p>
 				<p class="text-lg text-center w-full">
-					Quas, omnis. Deserunt culpa distinctio autem iste esse architecto, accusamus at quos
-					veritatis, ipsam unde dolore sint tenetur. Iure vitae eos rerum! Lorem ipsum dolor sit
-					amet consectetur, adipisicing elit.
+					{$t('TEST_Cassia')}
 				</p>
 			</div>
 			<div class=" rounded-md w-full flex flex-col items-center justify-start py-5 space-y-5">
 				<!-- Replace with actual SVG -->
 				<img
-					src="https://www.gstatic.com/webp/gallery/1.webp"
+					src={maria_d_webp}
 					loading="lazy"
 					alt="Profile Picture"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
 				/>
 
-				<p class="text-2xl text-center font-semibold mb-1">Lorem ipsum dolor sit amet</p>
+				<p class="text-2xl text-center font-semibold mb-1">{$t('TEST_Maria_name')}</p>
 				<p class="text-lg text-center w-full">
-					Quas, omnis. Deserunt culpa distinctio autem iste esse architecto, accusamus at quos
-					veritatis, ipsam unde dolore sint tenetur. Iure vitae eos rerum! Lorem ipsum dolor sit
-					amet consectetur, adipisicing elit.
+					{$t('TEST_Maria')}
 					<!-- {$t('S2_T')} -->
 				</p>
 			</div>

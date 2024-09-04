@@ -1,33 +1,59 @@
 <script>
 	import Section1 from '$lib/components/Home/Section1.svelte';
-	import Section2 from '$lib/components/Home/Section2.svelte';
-	import Section3 from '$lib/components/Home/Section3.svelte';
-	import Section4 from '$lib/components/Home/Section4.svelte';
-	// import Section5 from '$lib/components/Home/Section5.svelte';
-	import Section6 from '$lib/components/Home/Section6.svelte';
-	import Section7 from '$lib/components/Home/Section7.svelte';
-	import { t } from '$lib/translations';
-	
-	// export let params;
-	// let currentLang = params.lang;
+	// import Section2 from '$lib/components/Home/Section2.svelte';
 
-	// Load translations or content based on `currentLang`
+	let Section2, Section3, Section4, Section6, Section7;
+	let loading = true;
+
+	// Function to load the sections dynamically
+	async function loadSections() {
+		Section2 = (await import('$lib/components/Home/Section2.svelte')).default;
+		Section3 = (await import('$lib/components/Home/Section3.svelte')).default;
+		Section4 = (await import('$lib/components/Home/Section4.svelte')).default;
+		Section6 = (await import('$lib/components/Home/Section6.svelte')).default;
+		Section7 = (await import('$lib/components/Home/Section7.svelte')).default;
+
+		loading = false; // Set loading to false after all sections are loaded
+	}
+
+	// Load sections after the page has rendered Section1
+	loadSections();
 </script>
-<!-- 
-<h1>{currentLang.toUpperCase()} Page</h1>
-<p>This is the {currentLang} version of the page.</p> -->
 
-<!-- <script>
-</script>
+<!-- Section 1 loads immediately -->
 
-<h1>{$t('HERO_T')}</h1>
-<p>{@html $t('HERO_D')}</p> -->
-<!-- <Language /> -->
 
 <Section1 />
-<Section2 />
-<Section3 />
-<Section4 />
-<!-- <Section5 /> -->
-<Section7 />
-<Section6 />
+{#if loading}
+	<!-- Placeholder or spinner while other sections are loading -->
+	<div class="loading-spinner"></div>
+{:else}
+	<!-- Sections 2 to 7 load after Section 1 -->
+	{#if Section2}<Section2 />{/if}
+	{#if Section3}<Section3 />{/if}
+	{#if Section4}<Section4 />{/if}
+	{#if Section7}<Section7 />{/if}
+	{#if Section6}<Section6 />{/if}
+{/if}
+
+<style>
+	.loading-spinner {
+		/* Simple spinner styles */
+		margin: 2rem auto;
+		width: 50px;
+		height: 50px;
+		border: 5px solid #dfdad6;
+		border-top-color: #333;
+		border-radius: 50%;
+		animation: spin 1s linear infinite;
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+</style>

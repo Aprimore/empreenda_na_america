@@ -1,6 +1,11 @@
+<script>
+	export let dynamicLink;
+</script>
+
+<!-- INSERT THE DYNAMIC HOTMART LINK BELLOW IN THE HREF: -->
 <a
 	type="button"
-	href="https://hotmart.com/pt-br"
+	href={dynamicLink || "#"} 
 	target="_blank"
 	class="bg-slate-100 hover:bg-white text-gray-800 font-bold py-2 px-4 rounded-xl inline-flex items-center w-full"
 >
