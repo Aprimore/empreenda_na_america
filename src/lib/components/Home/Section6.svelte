@@ -25,12 +25,12 @@
 			</div> -->
 
 			<div class="md:w-1/2 aspect-video px-2">
-				<Youtube id="BHACKCNDMW8" />
+				<Youtube id="zuAFIMEaS-o" />
 				<!-- <iframe
 					data-sveltekit-preload-data="viewport"
 					loading="lazy"
 					class="aspect-[16/9] w-full h-auto rounded-lg"
-					src="https://www.youtube.com/embed/BHACKCNDMW8"
+					src="https://www.youtube.com/embed/zuAFIMEaS-o"
 					title="YouTube video player"
 					frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

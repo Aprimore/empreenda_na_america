@@ -1,10 +1,16 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import { brazil_svg, spain_svg, usa_svg } from '$lib';
 	import Dropdown from '$lib/components/Dropdown.svelte';
 	import { currentLocale } from '$lib/store';
 	import { locale } from '$lib/translations';
 	import { onMount } from 'svelte';
+
+	let pagePath = $page.url.pathname;
+	$: pagePath = $page.url.pathname;
+
+	console.log(`pagepath`, pagePath);
 
 	const languages = [
 		{ code: 'en', name: 'English' },
@@ -34,6 +40,8 @@
 	});
 
 	const handleOnChange = (newLocale) => {
+		// console.log(`newLocale`, newLocale);
+		// console.log(`pagePath`, pagePath);
 		currentLocale.set(newLocale);
 		locale.set(newLocale);
 		updateValue();

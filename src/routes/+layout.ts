@@ -8,6 +8,7 @@ export const trailingSlash = 'always';
 export const prerender = true;
 
 export const load: LayoutLoad = async ({ url }) => {
+	// console.log(`GLOBAL URL`,url)
 	const { pathname } = url;
 
 	// Check if the path is the root (e.g., '/')
