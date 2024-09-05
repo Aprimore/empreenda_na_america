@@ -8,7 +8,7 @@
 >
 	<div class="flex items-center justify-between text-blue-gray-900">
 		<a
-			href="/"
+			href="/en"
 			class="mr-4 block cursor-pointer py-1.5 font-sans text-base font-semibold leading-relaxed tracking-normal text-inherit antialiased"
 		>
 			"LOGO IMG"
@@ -20,7 +20,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/"
+						href="/en/manrope"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl bg-slate-100"
 					>
@@ -31,7 +31,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/manrope"
+						href="/en/manrope"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl"
 					>
@@ -42,7 +42,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/inter"
+						href="/en/inter"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl"
 					>
@@ -53,7 +53,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/poppins"
+						href="/en/poppins"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl"
 					>
@@ -65,7 +65,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/montserrat"
+						href="/en/montserrat"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl"
 					>
@@ -76,7 +76,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/lora"
+						href="/en/lora"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl"
 					>
@@ -87,7 +87,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/merriweather"
+						href="/en/merriweather"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl"
 					>

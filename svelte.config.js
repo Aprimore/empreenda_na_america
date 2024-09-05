@@ -5,7 +5,16 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const languages = ['en', 'pt-br', 'es'];
 const pages = [
 	'/',
-	'/inter' // Example of additional static pages
+	'/template2',
+	'/template3',
+	'/template4',
+	'/template5',
+	'/inter',
+	'/lora',
+	'/manrope',
+	'/merriweather',
+	'/montserrat',
+	'/poppins'
 	// Add more static pages as needed
 ];
 
@@ -23,7 +32,6 @@ function generatePrerenderEntries() {
 			entries.push(`/${lang}${page}`);
 		});
 	});
-
 	return entries;
 }
 
