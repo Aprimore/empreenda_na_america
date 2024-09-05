@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 	import { EBOOK_REMOTEWORK_webp } from '$lib';
@@ -26,8 +26,6 @@
 
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
-
-	export let data;
 
 	// console.log('consoleLogPagePath', SITE_URL + data.route);
 

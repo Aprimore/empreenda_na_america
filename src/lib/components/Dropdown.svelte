@@ -10,6 +10,10 @@
 		selected = code;
 		onChange(code);
 	};
+	// Handle the dropdown selection
+	// const handleSelection = (code) => {
+	// 	onChange(code); // Call the parent function with the selected language code
+	// };
 </script>
 
 <div class="dropdown">
@@ -22,7 +26,7 @@
 	<div class="dropdown-content rounded-md">
 		{#each languages as { code, name }}
 			<button
-				class="flex items-center p-3 w-full text-left hover:bg-gray-200 border-none bg-transparent "
+				class="flex items-center p-3 w-full text-left hover:bg-gray-200 border-none bg-transparent"
 				on:click={() => handleSelection(code)}
 			>
 				<img src={flagsMap[code]} alt="" class="w-6 h-4 mr-2" />

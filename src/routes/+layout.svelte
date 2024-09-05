@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import { EBOOK_REMOTEWORK_webp } from '$lib';
 	// import Navbar from '$lib/components/Navbar.svelte';
+	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
 	import {
 		OG_IMAGE_HEIGHT,
 		OG_IMAGE_WIDTH,
@@ -10,26 +11,20 @@
 		SITE_TITLE,
 		SITE_URL
 	} from '$lib/siteConfig';
-	// import { currentLocale } from '$lib/store.js';
-	// import { loadTranslations, locale } from '$lib/translations';
-	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
 	import '../app.css';
 
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
 
-	// export const load = async ({ url }) => {
-	// 	const { pathname } = url;
-
-	// 	let defaultLocale = 'en';
-	// 	if (browser && currentLocale.get()) {
-	// 		defaultLocale = currentLocale.get();
-	// 	}
-
-	// 	const initLocale = locale.get() || defaultLocale;
-	// 	await loadTranslations(initLocale, pathname);
-	// 	return {};
-	// };
+	export async function load({ url }) {
+		const lang = url.pathname.split('/')[1] || 'en'; // Extract language from URL path
+		return {
+			props: {
+				lang
+			}
+		};
+	}
+	export let lang;
 </script>
 
 <svelte:head>

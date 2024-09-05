@@ -1,44 +1,97 @@
+<!-- Dropdown.svelte -->
 <script>
-	import { goto } from '$app/navigation';
-	import { currentLocale } from '$lib/store';
-	import { locale } from '$lib/translations';
+	//@ts-nocheck
+	export let languages;
+	export let flagsMap;
+	export let selected = '';
+	export let onChange = () => {};
 
-	const languages = [
-		{ code: 'en', name: 'English' },
-		{ code: 'es', name: 'Español' },
-		{ code: 'pt-br', name: 'Português' }
-	];
-
-	$: selected = locale.get();
-
-	const handleOnChange = () => {
-		currentLocale.set(selected);
-		locale.set(selected);
+	const handleSelection = (code) => {
+		selected = code;
+		onChange(code);
 	};
 </script>
 
-<div class="language-buttons">
-	<!-- {$currentLocale} -->
-	<select
-		class="relative h-[2.5rem] bg-[#F1F1F9] hover:bg-[#D4D4ED] rounded m-2 p-2 text-nowrap"
-		bind:value={selected}
-		on:change={handleOnChange}
-		on:change={({ target }) => goto(target.value)}
-	>
-		{#each languages as language}
-			<option value={language.code}>{language.name}</option>
+<div class="dropdown">
+	<button class="flex items-center bg-[#f1f1f9] border-none p-3 rounded-md cursor-pointer">
+		<img src={flagsMap[selected]} alt="" class="w-6 h-4 mr-2" />
+		{#if languages.find((option) => option.code === selected)}
+			{languages.find((option) => option.code === selected).name}
+		{/if}
+	</button>
+	<div class="dropdown-content rounded-md">
+		{#each languages as { code, name }}
+			<button
+				class="flex items-center p-3 w-full text-left hover:bg-gray-200 border-none bg-transparent "
+				on:click={() => handleSelection(code)}
+			>
+				<img src={flagsMap[code]} alt="" class="w-6 h-4 mr-2" />
+				{name}
+			</button>
 		{/each}
-	</select>
+	</div>
 </div>
 
-///////////////// language switcher antes do dropdown: 
+<style>
+	.dropdown {
+		position: relative;
+		display: inline-block;
+		z-index: 10;
+	}
+	/* .dropdown-button {
+		display: flex;
+		align-items: center;
+		background: #f1f1f9;
+		border: none;
+		padding: 8px;
+		border-radius: 4px;
+		cursor: pointer;
+	} */
+	/* .flag-icon {
+		width: 24px;
+		height: 16px;
+		margin-right: 8px;
+	} */
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: white;
+		min-width: 140px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	}
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+	/* .dropdown-item {
+		padding: 8px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		border: none;
+		background: none;
+		margin-left: auto;
+		width: 100%;
+		text-align: left;
+	}
+	.dropdown-item:hover {
+		background-color: #ddd;
+	} */
+</style>
 
+///////////////////////////////
 <script>
-	import { goto } from '$app/navigation';
+	// import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import { brazil_svg, spain_svg, usa_svg } from '$lib';
+	import Dropdown from '$lib/components/Dropdown.svelte';
 	import { currentLocale } from '$lib/store';
 	import { locale } from '$lib/translations';
 	import { onMount } from 'svelte';
+
+	let pagePath = $page.url.pathname;
+	$: pagePath = $page.url.pathname;
+
+	console.log(`pagepath`, pagePath);
 
 	const languages = [
 		{ code: 'en', name: 'English' },
@@ -49,7 +102,7 @@
 	const flagsMap = {
 		en: usa_svg,
 		'pt-br': brazil_svg,
-		'es': spain_svg
+		es: spain_svg
 	};
 
 	// Initialize selected with a default value
@@ -67,23 +120,15 @@
 		updateValue();
 	});
 
-	const handleOnChange = (event) => {
-		const newLocale = event.target.value;
+	const handleOnChange = (newLocale) => {
+		// console.log(`newLocale`, newLocale);
+		// console.log(`pagePath`, pagePath);
 		currentLocale.set(newLocale);
 		locale.set(newLocale);
 		updateValue();
-		goto(`/${newLocale}`);
+		// goto(`/${newLocale}`);
 	};
 </script>
 
-<div class="language-buttons">
-	<select
-		class="relative h-[2.5rem] bg-[#F1F1F9] hover:bg-[#D4D4ED] rounded m-2 p-2 text-nowrap"
-		bind:value={selected}
-		on:change={handleOnChange}
-	>
-		{#each languages as language}
-			<option value={language.code}>{language.name}</option>
-		{/each}
-	</select>
-</div>
+<Dropdown {languages} {flagsMap} {selected} onChange={handleOnChange} />
+<!-- <Dropdown2 {languages} {flagsMap} {selected} onChange={handleOnChange} /> -->

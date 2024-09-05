@@ -1,16 +1,15 @@
 <script>
-	import { goto } from '$app/navigation';
+	import { goto } from '$app/navigation'; // Import goto for client-side navigation
 	import { page } from '$app/stores';
 	import { brazil_svg, spain_svg, usa_svg } from '$lib';
 	import Dropdown from '$lib/components/Dropdown.svelte';
 	import { currentLocale } from '$lib/store';
 	import { locale } from '$lib/translations';
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 
+	// Initialize the page path from $page store
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
-
-	console.log(`pagepath`, pagePath);
 
 	const languages = [
 		{ code: 'en', name: 'English' },
@@ -24,30 +23,31 @@
 		es: spain_svg
 	};
 
-	// Initialize selected with a default value
+	// Subscribe to the currentLocale store to get the selected locale
 	let selected = '';
 
-	// Function to update the selected value
-	function updateValue() {
-		currentLocale.subscribe((value) => {
-			selected = value;
-		});
-	}
-
-	// Call updateValue once the component is mounted
-	onMount(() => {
-		updateValue();
+	// Synchronize selected value with the store
+	const unsubscribe = currentLocale.subscribe((value) => {
+		selected = value;
+		locale.set(value); // Set the locale in i18n
 	});
 
+	// Cleanup subscription when the component is destroyed
+	onDestroy(() => {
+		unsubscribe();
+	});
+
+	// Handle the change in language selection
 	const handleOnChange = (newLocale) => {
-		// console.log(`newLocale`, newLocale);
-		// console.log(`pagePath`, pagePath);
-		currentLocale.set(newLocale);
-		locale.set(newLocale);
-		updateValue();
-		goto(`/${newLocale}`);
+		if (newLocale !== selected) {
+			currentLocale.set(newLocale);
+			locale.set(newLocale);
+			const newPath = pagePath.replace(/^\/[a-z]{2}(?:-[a-z]{2})?/, `/${newLocale}`);
+			// Manually update the <html lang="..."> tag
+			document.documentElement.lang = newLocale;
+			goto(newPath);
+		}
 	};
 </script>
 
 <Dropdown {languages} {flagsMap} {selected} onChange={handleOnChange} />
-<!-- <Dropdown2 {languages} {flagsMap} {selected} onChange={handleOnChange} /> -->

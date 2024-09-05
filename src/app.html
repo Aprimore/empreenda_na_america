@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="%lang%">
 
 <head>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +29,13 @@
 </head>
 
 <body data-sveltekit-preload-data="hover">
+	<script>
+		// Set the `lang` attribute based on the URL path
+		document.addEventListener('DOMContentLoaded', () => {
+			const lang = window.location.pathname.split('/')[1] || 'en';
+			document.documentElement.lang = lang;
+		});
+	</script>
 	<div style="display: contents">%sveltekit.body%</div>
 </body>
 

@@ -26,7 +26,7 @@
 
 	onMount(() => {
 		// setTimeout(() => {}, 5000); // Adjust the delay as needed
-	loading = false;
+		loading = false;
 	});
 </script>
 

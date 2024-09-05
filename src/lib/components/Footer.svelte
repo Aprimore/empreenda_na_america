@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { t } from '$lib/translations';
-	const abdc = 1;
-	console.log(abdc);
 </script>
 
 <footer class="footer relative bg-[#dfdad6] Exo footer-component bottom-0">

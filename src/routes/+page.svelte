@@ -1,5 +1,20 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	// import { goto } from '$app/navigation'; // Redirection moved to layout
+	import headerhero_webp from '$lib/assets/images/headerhero.webp?enhanced';
+	// import * as m from '$lib/paraglide/messages'; // No longer needed here
+	import { t } from '$lib/translations';
+	import { onMount } from 'svelte';
+
+	let loading = true;
+
+	onMount(() => {
+		loading = false;
+	});
+</script>
+
+<!-- <script lang="ts">
+	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import headerhero_webp from '$lib/assets/images/headerhero.webp?enhanced';
 	// import * as m from '$lib/paraglide/messages';
@@ -28,7 +43,7 @@
 		}
 		loading = false;
 	});
-</script>
+</script> -->
 
 {#if loading}
 	<h1>Loading...</h1>
