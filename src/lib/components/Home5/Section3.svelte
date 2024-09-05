@@ -4,7 +4,8 @@
 </script>
 
 <section
-	class="w-full max-sm:p-2 bg-gradient-to-b from-teal-200 to-teal-500 text-balance py-10 px-1 max-sm:px-2"
+	class="w-full max-sm:p-2 bg-gradient-to-bl from-teal-500 to-orange-100
+ text-balance py-10 px-1 max-sm:px-2 text-black"
 	data-sveltekit-preload-data="viewport"
 >
 	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">

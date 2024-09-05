@@ -1,25 +1,19 @@
 <script lang="ts">
-	import { business_webp } from '$lib';
-
 	// import * as m from '$lib/paraglide/messages';
 	import { t } from '$lib/translations';
+	import Youtube from 'svelte-youtube-embed';
 </script>
 
-<section class="w-full max-sm:p-2 bg-gradient-to-r from-teal-200 to-teal-500 text-balance py-10">
+<section
+	class="w-full max-sm:p-2 bg-[#fff] text-balance py-10"
+	data-sveltekit-preload-data="viewport"
+>
 	<div class="lg:max-w-screen-2xl mx-auto max-sm:p-2">
-		<div class="lg:p-10 sm:p-5 flex max-md:flex-col">
-			<div class="md:w-1/2 align-middle flex items-center max-md:order-2">
-				<img
-					class="rounded-xl aspect-[4/3] w-full h-auto"
-					src={business_webp}
-					alt="business image"
-					loading="lazy"
-				/>
-			</div>
+		<div class="lg:p-10 p-1 flex max-md:flex-col">
 			<div class="md:w-1/2 m-auto border-black align-middle">
-				<h2 class="text-3xl md:text-4xl lg:text-5xl my-6 text-center">{$t('S4_T')}</h2>
+				<h2 class="text-3xl md:text-4xl lg:text-5xl my-6 text-center">{$t('S6_T')}</h2>
 				<p class="text-2xl max-sm:text-xl my-6 text-center">
-					{$t('S4_D')}
+					{$t('S5_D')}
 				</p>
 			</div>
 			<!-- <div class="md:max-w-[50%] max-sm:mt-6 h-full">
@@ -29,6 +23,20 @@
 					alt=""
 				/>
 			</div> -->
+
+			<div class="md:w-1/2 aspect-video px-2">
+				<Youtube id="zuAFIMEaS-o" />
+				<!-- <iframe
+					data-sveltekit-preload-data="viewport"
+					loading="lazy"
+					class="aspect-[16/9] w-full h-auto rounded-lg"
+					src="https://www.youtube.com/embed/zuAFIMEaS-o"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+				></iframe> -->
+			</div>
 		</div>
 	</div>
 </section>

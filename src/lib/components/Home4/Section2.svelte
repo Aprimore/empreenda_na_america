@@ -25,18 +25,18 @@
 <!-- {$t('xxxxx')} -->
 
 <!-- EBOOK_REMOTEWORK EBOOK_MARKET -->
-<section class="w-full max-sm:p-2 bg-white py-10" data-sveltekit-preload-data="viewport">
+<section class="w-full max-sm:p-2 py-10" data-sveltekit-preload-data="viewport">
 	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
 		<h2 class="text-4xl md:text-4xl lg:text-5xl text-center my-6">{$t('S5_T')}</h2>
 		<p class="text-2xl max-sm:text-xl my-6 text-center lg:px-10 px-3">
 			{$t('S5_D')}
 		</p>
 		<div
-			class="sm:grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 m-auto sm:rounded-2xl lg:py-6 gap-3 max-sm:space-y-3"
+			class="sm:grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 m-auto sm:rounded-2xl lg:py-6 gap-3 max-sm:space-y-3 text-white"
 		>
 			<!----------------------- EBOOK_STARTUP ------------------------------------->
 			<div
-				class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
+				class="bg-gradient-to-b from-slate-500 to-slate-600 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
 			>
 				<p class="text-2xl text-center p-3 relative top-0">{$t('EBOOK_STARTUP')}</p>
 				<img
@@ -52,7 +52,8 @@
 			<!----------------------- EBOOK_PLAN ------------------------------------->
 
 			<div
-				class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
+				class="bg-gradient-to-b from-slate-500 to-slate-600
+ rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
 			>
 				<p class="text-2xl text-center p-3">{$t('EBOOK_PLAN')}</p>
 				<img
@@ -68,7 +69,7 @@
 			<!----------------------- EBOOK_KID_MONEY ------------------------------------->
 
 			<div
-				class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
+				class="bg-gradient-to-b from-slate-500 to-slate-600 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
 			>
 				<p class="text-2xl text-center p-3">{$t('EBOOK_KID_MONEY')}</p>
 				<img
@@ -84,11 +85,11 @@
 			<!----------------------- EBOOK_EXTRACT ------------------------------------->
 
 			<div
-				class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl row-end-3 max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
+				class="bg-gradient-to-b from-slate-500 to-slate-600 rounded-2xl row-end-3 max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
 			>
 				<p class="text-2xl text-center p-3">{$t('EBOOK_EXTRACT')}</p>
 				<img
-					class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+					class="bg-gradient-to-b from-slate-500 to-slate-600 rounded-2xl object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 					src={EBOOK_EXTRACT_webp}
 					loading="lazy"
 					alt="ebook image"
@@ -100,7 +101,7 @@
 			<!----------------------- EBOOK_REMOTEWORK ------------------------------------->
 
 			<div
-				class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
+				class="bg-gradient-to-b from-slate-500 to-slate-600 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
 			>
 				<p class="text-2xl text-center p-3">{$t('EBOOK_REMOTEWORK')}</p>
 				<img
@@ -116,7 +117,7 @@
 			<!----------------------- EBOOK_MARKET ------------------------------------->
 
 			<div
-				class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
+				class="bg-gradient-to-b from-slate-500 to-slate-600 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
 			>
 				<p class="text-2xl text-center p-3">{$t('EBOOK_MARKET')}</p>
 				<img

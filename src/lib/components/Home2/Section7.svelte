@@ -5,7 +5,10 @@
 	import { t } from '$lib/translations';
 </script>
 
-<section class="w-full max-sm:p-2 bg-gradient-to-r from-teal-200 to-teal-500 text-balance py-10">
+<section
+	class="w-full max-sm:p-2 bg-gradient-to-r from-indigo-100 to-blue-100
+ text-balance py-10"
+>
 	<div class="lg:max-w-screen-2xl mx-auto max-sm:p-2">
 		<div class="lg:p-10 sm:p-5 flex max-md:flex-col">
 			<div class="md:w-1/2 align-middle flex items-center max-md:order-2">

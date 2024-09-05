@@ -4,7 +4,10 @@
 	import { t } from '$lib/translations';
 </script>
 
-<section class="w-full max-sm:p-2 text-balance -z-10 bg-gradient-to-b from-teal-200 to-teal-500">
+<section
+	class="w-full max-sm:p-2 bg-gradient-to-b from-slate-500 to-slate-800
+ text-balance -z-10 text-white"
+>
 	<div class="lg:max-w-screen-2xl mx-auto max-sm:p-0">
 		<div class="lg:p-10 sm:p-5 flex max-md:flex-col items-center">
 			<div class="md:max-w-[45%] m-auto border-black align-middle">
