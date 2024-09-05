@@ -10,10 +10,6 @@
 		selected = code;
 		onChange(code);
 	};
-	// Handle the dropdown selection
-	// const handleSelection = (code) => {
-	// 	onChange(code); // Call the parent function with the selected language code
-	// };
 </script>
 
 <div class="dropdown">

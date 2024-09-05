@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	// import { goto } from '$app/navigation'; // Redirection moved to layout
 	import headerhero_webp from '$lib/assets/images/headerhero.webp?enhanced';
-	// import * as m from '$lib/paraglide/messages'; // No longer needed here
 	import { t } from '$lib/translations';
 	import { onMount } from 'svelte';
 
@@ -12,38 +10,6 @@
 		loading = false;
 	});
 </script>
-
-<!-- <script lang="ts">
-	import { browser } from '$app/environment';
-	import { goto } from '$app/navigation';
-	import headerhero_webp from '$lib/assets/images/headerhero.webp?enhanced';
-	// import * as m from '$lib/paraglide/messages';
-	import { t } from '$lib/translations';
-	import { onMount } from 'svelte';
-
-	let loading = true;
-
-	onMount(async () => {
-		if (browser) {
-			const userLang = window.navigator.language.toLowerCase();
-			let redirectLang = 'en'; // default to English if language is not supported
-
-			// Set the redirect language based on the browser language
-			if (userLang.startsWith('pt')) {
-				redirectLang = 'pt-br';
-			} else if (userLang.startsWith('es')) {
-				redirectLang = 'es';
-			}
-
-			// Redirect to the appropriate language route
-			// goto(`/${redirectLang}`);
-			setTimeout(() => {
-				goto(`/${redirectLang}`);
-			}, 100); // Adjust the delay as needed
-		}
-		loading = false;
-	});
-</script> -->
 
 {#if loading}
 	<h1>Loading...</h1>
@@ -71,16 +37,6 @@
 						sizes="(min-width:1080px) 744px, (min-width:768px) 640px, 400px"
 					/>
 				</div>
-				<!-- The aspect ratio is maintained using padding-bottom (100% for a square) -->
-				<!-- <div class="relative w-full" style="padding-bottom: 100%;">
-				<enhanced:img
-					class="absolute top-0 left-0 w-full h-full object-cover"
-					src={headerhero_webp}
-					alt="landing page header"
-					loading="eager"
-					sizes="(min-width:1080px) 744px, (min-width:768px) 640px, 400px"
-				/>
-			</div> -->
 			</div>
 		</div>
 	</section>

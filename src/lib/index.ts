@@ -1,10 +1,3 @@
-// place files you want to import through the `$lib` alias in this folder.
-// export { default as image } from './assets/images/image.webp';
-// export { default as ebook1 } from './assets/images/ebook1.png';
-// export { default as ebook2 } from './assets/images/ebook2.png';
-// export { default as ebook3 } from './assets/images/ebook3.png';
-// export { default as ebook4 } from './assets/images/ebook4.png';
-//
 export { default as business_webp } from './assets/images/business.webp';
 export { default as EBOOK_EXTRACT_webp } from './assets/images/ebooks/EBOOK_EXTRACT.webp';
 export { default as EBOOK_MARKET_webp } from './assets/images/ebooks/EBOOK_MARKET.webp';

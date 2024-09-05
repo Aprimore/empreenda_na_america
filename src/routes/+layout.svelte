@@ -1,5 +1,4 @@
-<script>
-	// import { browser } from '$app/environment';
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { EBOOK_REMOTEWORK_webp } from '$lib';
 	// import Navbar from '$lib/components/Navbar.svelte';
@@ -16,15 +15,15 @@
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
 
-	export async function load({ url }) {
-		const lang = url.pathname.split('/')[1] || 'en'; // Extract language from URL path
-		return {
-			props: {
-				lang
-			}
-		};
-	}
-	export let lang;
+	// export async function load({ url }) {
+	// 	const lang = url.pathname.split('/')[1] || 'en'; // Extract language from URL path
+	// 	return {
+	// 		props: {
+	// 			lang
+	// 		}
+	// 	};
+	// }
+	// export const lang;
 </script>
 
 <svelte:head>
@@ -46,7 +45,6 @@
 	<meta name="twitter:description" content={SITE_DESCRIPTION} />
 </svelte:head>
 
-<!-- <Navbar /> -->
 <slot />
 
 <style>
@@ -69,31 +67,8 @@
 		}
 	} */
 
-	:global(html) {
-		/* font-family: 'Exo Variable, sans-serif;'; */
-	}
-
-	/* Specific font classes */
-	:global(.Archivo) {
-		/* font-family: 'Archivo Variable', sans-serif; */
-	}
-
-	:global(.Exo) {
-		/* font-family: 'Exo Variable', sans-serif; */
-	}
-
 	:global(.Exo-Regular) {
 		/* font-family: 'Exo Variable', sans-serif; */
 		font-weight: 400; /* Set font weight */
-	}
-
-	:global(.Exo-Semibold) {
-		/* font-family: 'Exo Variable', sans-serif; */
-		font-weight: 600; /* Set font weight */
-	}
-
-	:global(.Exo-Bold) {
-		/* font-family: 'Exo Variable', sans-serif; */
-		font-weight: 700; /* Set font weight */
 	}
 </style>

@@ -13,35 +13,12 @@
 		SITE_TITLE,
 		SITE_URL
 	} from '$lib/siteConfig';
-	// import {
-	// 	OG_IMAGE_HEIGHT,
-	// 	OG_IMAGE_WIDTH,
-	// 	SITE_DESCRIPTION,
-	// 	SITE_TITLE,
-	// 	SITE_URL
-	// } from '$lib/siteConfig';
 	import { currentLocale } from '$lib/store.js';
 	import { loadTranslations, locale } from '$lib/translations';
 	import '../../app.css';
 
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
-
-	// console.log('consoleLogPagePath', SITE_URL + data.route);
-
-	// let pagePath = $page.url.pathname;
-	// $: pagePath = $page.url.pathname;
-
-	// export const load = async ({ url }) => {
-	// 	const { pathname } = url;
-	// 	let defaultLocale = 'en';
-	// 	if (browser && currentLocale.get()) {
-	// 		defaultLocale = currentLocale.get();
-	// 	}
-	// 	const initLocale = locale.get() || defaultLocale;
-	// 	await loadTranslations(initLocale, pathname);
-	// 	return {};
-	// };
 </script>
 
 <svelte:head>
@@ -63,7 +40,6 @@
 	<meta name="twitter:description" content={SITE_DESCRIPTION} />
 </svelte:head>
 
-<!-- <Navbar {data} /> -->
 <Navbar2 />
 <main>
 	<slot />
