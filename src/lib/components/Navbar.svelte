@@ -8,7 +8,7 @@
 >
 	<div class="flex items-center justify-between text-blue-gray-900">
 		<a
-			href="/en"
+			href="/"
 			class="mr-4 block cursor-pointer py-1.5 font-sans text-base font-semibold leading-relaxed tracking-normal text-inherit antialiased"
 		>
 			"LOGO IMG"
@@ -20,7 +20,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/en/manrope"
+						href="/"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl bg-slate-100"
 					>
@@ -31,7 +31,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/en/manrope"
+						href="/"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl"
 					>
@@ -42,7 +42,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/en/inter"
+						href="/"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl"
 					>
@@ -53,7 +53,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/en/poppins"
+						href="/"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl"
 					>
@@ -65,7 +65,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/en/montserrat"
+						href="/"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl"
 					>
@@ -76,7 +76,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/en/lora"
+						href="/"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl"
 					>
@@ -87,7 +87,7 @@
 					class="block p-1 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
 				>
 					<a
-						href="/en/merriweather"
+						href="/"
 						type="button"
 						class="flex items-center transition-colors hover:text-slate-50 hover:bg-blue-400 px-3 py-2 rounded-xl"
 					>
@@ -99,7 +99,7 @@
 		<button
 			class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
 			type="button"
-			alt="burger icon"
+			title="burger icon"
 		>
 			<span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
 				<svg

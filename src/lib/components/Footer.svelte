@@ -33,7 +33,7 @@
 					<ul class="space-y-3">
 						<li>
 							<a
-								href="#"
+								href="/"
 								title="Learn more about our company"
 								class="text-[#000] text-sm hover:text-blue-950">{$t('FOOT_contact')}</a
 							>
@@ -49,7 +49,7 @@
 						</li>
 						<li>
 							<a
-								href="#"
+								href="/"
 								title="Learn more about our company"
 								class="text-[#000] text-sm hover:text-blue-950">{$t('FOOT_terms')}</a
 							>
@@ -65,7 +65,7 @@
 						</li>
 						<li>
 							<a
-								href="#"
+								href="/"
 								title="Learn more about our company"
 								class="text-[#000] text-sm hover:text-blue-950">{$t('FOOT_aboutus')}</a
 							>
@@ -86,7 +86,7 @@
 							</li>
 							<li>
 								<a
-									href="#"
+									href="/"
 									title="Learn more about our company"
 									class="text-[#000] text-sm hover:text-blue-950">{$t('FOOT_shop')}</a
 								>

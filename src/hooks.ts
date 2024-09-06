@@ -10,7 +10,10 @@ export const handle: Handle = async ({ event, resolve }) => {
 	// If the language is missing or invalid, redirect to a valid language route
 	if (!lang || !isValidLocale(lang)) {
 		const redirectLang = getInitialLocale(event);
-		return Response.redirect(`/${redirectLang}${pathname}`, 302);
+
+		setTimeout(() => {
+			return Response.redirect(`/${redirectLang}${pathname}`, 302);
+		}, 5000);
 	}
 
 	// Continue resolving the response for the request

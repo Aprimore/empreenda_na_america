@@ -43,7 +43,7 @@
 					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 					src={EBOOK_STARTUP_webp}
 					loading="lazy"
-					alt="ebook image"
+					alt="ebook"
 				/>
 				<div class="ml-auto w-fit mt-3">
 					<BtnHotmart dynamicLink={ebookLinks.EBOOK_STARTUP} />
@@ -60,7 +60,7 @@
 					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 					src={EBOOK_PLAN_webp}
 					loading="lazy"
-					alt="ebook image"
+					alt="ebook"
 				/>
 				<div class="ml-auto w-fit mt-3">
 					<BtnHotmart dynamicLink={ebookLinks.EBOOK_PLAN} />
@@ -76,7 +76,7 @@
 					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 					src={EBOOK_KID_MONEY_webp}
 					loading="lazy"
-					alt="ebook image"
+					alt="ebook"
 				/>
 				<div class="ml-auto w-fit mt-3">
 					<BtnHotmart dynamicLink={ebookLinks.EBOOK_KID_MONEY} />
@@ -92,7 +92,7 @@
 					class="bg-gradient-to-b from-teal-400 to-rose-200 rounded-2xl object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 					src={EBOOK_EXTRACT_webp}
 					loading="lazy"
-					alt="ebook image"
+					alt="ebook"
 				/>
 				<div class="ml-auto w-fit mt-3">
 					<BtnHotmart dynamicLink={ebookLinks.EBOOK_EXTRACT} />
@@ -108,7 +108,7 @@
 					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 					src={EBOOK_REMOTEWORK_webp}
 					loading="lazy"
-					alt="ebook image"
+					alt="ebook"
 				/>
 				<div class="ml-auto w-fit mt-3">
 					<BtnHotmart dynamicLink={ebookLinks.EBOOK_REMOTEWORK} />
@@ -124,7 +124,7 @@
 					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 					src={EBOOK_MARKET_webp}
 					loading="lazy"
-					alt="ebook image"
+					alt="ebook"
 				/>
 				<div class="ml-auto w-fit mt-3">
 					<BtnHotmart dynamicLink={ebookLinks.EBOOK_MARKET} />

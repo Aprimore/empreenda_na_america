@@ -21,7 +21,7 @@
 				<img
 					src={dr_sten_webp}
 					loading="lazy"
-					alt="Profile Picture"
+					alt="Profile"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
 				/>
 
@@ -35,7 +35,7 @@
 				<img
 					src={cassia_a_webp}
 					loading="lazy"
-					alt="Profile Picture"
+					alt="Profile"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
 				/>
 
@@ -49,7 +49,7 @@
 				<img
 					src={maria_d_webp}
 					loading="lazy"
-					alt="Profile Picture"
+					alt="Profile"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
 				/>
 

@@ -25,16 +25,17 @@
 		</div>
 	</div>
 </section>
+
 <style>
 	h1 {
-		font-family: "Montserrat", sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		font-optical-sizing: auto;
 		font-weight: 700; /* Bold weight for titles */
 		font-style: normal;
 	}
 
 	h2 {
-		font-family: "Montserrat", sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		font-optical-sizing: auto;
 		font-weight: 400; /* Regular weight for body text */
 		font-style: normal;

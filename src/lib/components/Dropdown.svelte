@@ -13,7 +13,10 @@
 </script>
 
 <div class="dropdown">
-	<button class="flex items-center bg-[#f1f1f9] border-none p-3 rounded-md cursor-pointer">
+	<button
+		class="flex items-center bg-[#f1f1f9] border-none p-3 rounded-md cursor-pointer"
+		title="dropdown button"
+	>
 		<img src={flagsMap[selected]} alt="" class="w-6 h-4 mr-2" />
 		{#if languages.find((option) => option.code === selected)}
 			{languages.find((option) => option.code === selected).name}
@@ -23,6 +26,7 @@
 		{#each languages as { code, name }}
 			<button
 				class="flex items-center p-3 w-full text-left hover:bg-gray-200 border-none bg-transparent"
+				title="country"
 				on:click={() => handleSelection(code)}
 			>
 				<img src={flagsMap[code]} alt="" class="w-6 h-4 mr-2" />

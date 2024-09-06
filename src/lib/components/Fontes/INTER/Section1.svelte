@@ -13,9 +13,7 @@
 					{$t('HERO_D')}
 				</h2>
 			</div>
-			<div class="md:max-w-[50%] max-sm:mt-6 h-full">
-			
-			</div>
+			<div class="md:max-w-[50%] max-sm:mt-6 h-full"></div>
 		</div>
 	</div>
 </section>

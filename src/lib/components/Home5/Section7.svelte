@@ -15,7 +15,7 @@
 				<img
 					class="rounded-xl aspect-[4/3] w-full h-auto"
 					src={business_webp}
-					alt="business image"
+					alt="business "
 					loading="lazy"
 				/>
 			</div>

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { goto } from '$app/navigation'; // Import goto for client-side navigation
 	import { page } from '$app/stores';
 	import { brazil_svg, spain_svg, usa_svg } from '$lib';
@@ -38,7 +38,7 @@
 	});
 
 	// Handle the change in language selection
-	const handleOnChange = (newLocale) => {
+	const handleOnChange = (newLocale: any) => {
 		if (newLocale !== selected) {
 			currentLocale.set(newLocale);
 			locale.set(newLocale);

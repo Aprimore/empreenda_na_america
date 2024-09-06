@@ -5,7 +5,7 @@
 </script>
 
 <section
-	class="w-full max-sm:p-2 bg-[#fff] text-balance py-10 "
+	class="w-full max-sm:p-2 bg-[#fff] text-balance py-10"
 	data-sveltekit-preload-data="viewport"
 >
 	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
@@ -21,7 +21,7 @@
 				<img
 					src={dr_sten_webp}
 					loading="lazy"
-					alt="Profile Picture"
+					alt="testimonial"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
 				/>
 
@@ -35,7 +35,7 @@
 				<img
 					src={cassia_a_webp}
 					loading="lazy"
-					alt="Profile Picture"
+					alt="testimonial"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
 				/>
 
@@ -49,7 +49,7 @@
 				<img
 					src={maria_d_webp}
 					loading="lazy"
-					alt="Profile Picture"
+					alt="testimonial"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
 				/>
 

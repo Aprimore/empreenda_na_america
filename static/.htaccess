@@ -1,0 +1,23 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# If the URL does not end with a slash, append one
+RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
+
+# Serve files if they exist
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Redirect everything else to the index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.html [L]
+
+# Force HTTPS (optional, if your site requires it)
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Set default cache control headers (optional, but generally useful)
+<IfModule mod_headers.c>
+    Header set Cache-Control "max-age=3600, public"
+</IfModule>

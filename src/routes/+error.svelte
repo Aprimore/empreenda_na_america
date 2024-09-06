@@ -10,14 +10,10 @@
 			</h2>
 
 			<p class="text-2xl font-semibold md:text-3xl">
-			
-			<!-- {@html m.error_sorry()} -->
-			
+				<!-- {@html m.error_sorry()} -->
 			</p>
 			<p class="mt-4 mb-8 dark:text-gray-600">
-			
-			<!-- {@html m.error_but()} -->
-			
+				<!-- {@html m.error_but()} -->
 			</p>
 			<a
 				rel="noopener noreferrer"

@@ -24,8 +24,8 @@
 </script>
 
 <!-- O botão que irá usar o widget do Hotmart -->
+<!-- onclick="return false;" -->
 <a
-	onclick="return false;"
 	href="https://pay.hotmart.com/D93514468N?checkoutMode=2"
 	class="hotmart-fb hotmart__button-checkout"
 >

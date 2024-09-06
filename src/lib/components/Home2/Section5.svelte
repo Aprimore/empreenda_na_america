@@ -3,7 +3,10 @@
 	import { t } from '$lib/translations';
 </script>
 
-<section class="w-full max-sm:p-2 bg-gradient-to-b from-slate-50 to-slate-100 text-balance" data-sveltekit-preload-data="viewport">
+<section
+	class="w-full max-sm:p-2 bg-gradient-to-b from-slate-50 to-slate-100 text-balance"
+	data-sveltekit-preload-data="viewport"
+>
 	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
 		<div class="lg:p-10 sm:p-5 flex max-md:flex-col">
 			<div class=" border-black">

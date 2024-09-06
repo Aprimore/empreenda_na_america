@@ -6,7 +6,7 @@
 
 <section
 	class="w-full max-sm:p-2 bg-gradient-to-br from-teal-600 to-rose-300
- text-balance -z-10 "
+ text-balance -z-10"
 >
 	<div class="lg:max-w-screen-2xl mx-auto max-sm:p-0">
 		<div class="lg:p-10 sm:p-5 flex max-md:flex-col items-center">

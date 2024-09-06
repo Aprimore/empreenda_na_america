@@ -8,13 +8,13 @@ const pages = [
 	'/template2',
 	'/template3',
 	'/template4',
-	'/template5',
-	'/inter',
-	'/lora',
-	'/manrope',
-	'/merriweather',
-	'/montserrat',
-	'/poppins'
+	'/template5'
+	// '/inter',
+	// '/lora',
+	// '/manrope',
+	// '/merriweather',
+	// '/montserrat',
+	// '/poppins'
 	// Add more static pages as needed
 ];
 
@@ -60,6 +60,7 @@ const config = {
 		prerender: {
 			crawl: true,
 			entries: generatePrerenderEntries()
+			// entries: ['/pt-br/', '/en/', '/es/']
 		}
 	},
 	preprocess: vitePreprocess()
