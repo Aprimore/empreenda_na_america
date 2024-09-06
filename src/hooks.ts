@@ -1,23 +1,24 @@
 import type { Handle, RequestEvent } from '@sveltejs/kit';
+import { get } from 'svelte/store';
+import { currentLocale } from '$lib/store'; // Import from store.js
 
 export const handle: Handle = async ({ event, resolve }) => {
 	const { url, params } = event;
 	const { pathname } = url;
 
+	// Get the current locale from the store
+	const locale = get(currentLocale); // Correct way to access the store value
+
 	// Extract the language from the URL (e.g., '/en', '/pt-br', etc.)
-	const lang = params.lang || getInitialLocale(event);
+	const lang = params.lang || locale || getInitialLocale(event);
 
 	// If the language is missing or invalid, redirect to a valid language route
 	if (!lang || !isValidLocale(lang)) {
 		const redirectLang = getInitialLocale(event);
-
-		setTimeout(() => {
-			return Response.redirect(`/${redirectLang}${pathname}`, 302);
-		}, 5000);
+		return Response.redirect(`/${redirectLang}${pathname}`, 302);
 	}
 
 	// Continue resolving the response for the request
-	// return await resolve(event);
 	return resolve(event, {
 		transformPageChunk: ({ html }) => html.replace('%lang%', lang)
 	});
