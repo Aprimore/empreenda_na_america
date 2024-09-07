@@ -1,3 +1,4 @@
+<!-- About Our Mission -->
 <script lang="ts">
 	import { business_webp } from '$lib';
 
@@ -5,10 +6,14 @@
 	import { t } from '$lib/translations';
 </script>
 
-<section class="w-full max-sm:p-2 bg-gradient-to-r from-teal-200 to-teal-500 text-balance py-10">
-	<div class="lg:max-w-screen-2xl mx-auto max-sm:p-2">
-		<div class="lg:p-10 sm:p-5 flex max-md:flex-col">
-			<div class="md:w-1/2 align-middle flex items-center max-md:order-2">
+<!-- 11111111111111111111111111111111111111111111111111111111111111 -->
+<section
+	class="w-full max-sm:p-2 bg-gradient-to-r from-emerald-500 to-emerald-600 section-bg2
+ text-balance py-10 text-emerald-100"
+>
+	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
+		<div class="p-5 flex max-md:flex-col">
+			<div class="md:w-1/2 align-middle flex items-center max-md:order-2 lg:m-10 md:m-5">
 				<img
 					class="rounded-xl aspect-[4/3] w-full h-auto"
 					src={business_webp}
@@ -17,8 +22,8 @@
 				/>
 			</div>
 			<div class="md:w-1/2 m-auto border-black align-middle">
-				<h2 class="text-3xl md:text-4xl lg:text-5xl my-6 text-center">{$t('S4_T')}</h2>
-				<p class="text-2xl max-sm:text-xl my-6 text-center">
+				<h2 class="Inter-Bold text-3xl md:text-4xl my-6 text-center">{$t('S4_T')}</h2>
+				<p class="Lora text-lg max-sm:text-md my-6 text-center">
 					{$t('S4_D')}
 				</p>
 			</div>
@@ -34,17 +39,15 @@
 </section>
 
 <style>
-	h2 {
-		font-family: 'Inter', sans-serif;
-		font-optical-sizing: auto;
-		font-weight: 700; /* Bold weight for titles */
-		font-style: normal;
-	}
+	/* * {
+		border: black 1px solid;
+	} */
 
-	p {
-		font-family: 'Lora', serif;
-		font-optical-sizing: auto;
-		font-weight: 400; /* Regular weight for body text */
-		font-style: normal;
+	.section-bg2 {
+		background-image: url('$lib/assets/svg/patterns/sun-tornado2.svg');
+		/* background-image: url('$lib/assets/svg/patterns/dragon-scales.svg'); */
+		background-size: cover;
+		background-repeat: repeat;
+		background-position: center;
 	}
 </style>

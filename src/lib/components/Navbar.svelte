@@ -1,10 +1,11 @@
 <script>
+	import { toptier_png } from '$lib';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	// export let data;
 </script>
 
 <nav
-	class="block w-full max-w-screen-xl px-6 py-3 mx-auto text-[#4A4A4A] bg-white border shadow-md rounded-xl border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200"
+	class="block w-full max-w-screen-lg px-6 py-3 mx-auto text-[#4A4A4A] bg-white border shadow-md rounded-xl border-white/80 bg-opacity-80 backdrop-blur-2xl backdrop-saturate-200"
 >
 	<div class="flex items-center justify-between text-blue-gray-900">
 		<a
@@ -12,6 +13,7 @@
 			class="mr-4 block cursor-pointer py-1.5 font-sans text-base font-semibold leading-relaxed tracking-normal text-inherit antialiased"
 		>
 			"LOGO IMG"
+			<img src={toptier_png} alt="" />
 		</a>
 		<div class="hidden lg:block">
 			<p class="font-bold text-2xl text-center border-b">FEEDBACK DE FONTES:</p>

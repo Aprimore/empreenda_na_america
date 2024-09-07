@@ -1,3 +1,4 @@
+<!-- TESTIMONIALS -->
 <script lang="ts">
 	// import * as m from '$lib/paraglide/messages';
 	import { cassia_a_webp, dr_sten_webp, maria_d_webp } from '$lib';
@@ -5,14 +6,19 @@
 </script>
 
 <section
-	class="w-full max-sm:p-2 bg-[#fff] text-balance py-10"
+	class="w-full max-sm:p-2 background-img4 text-balance py-10"
 	data-sveltekit-preload-data="viewport"
 >
-	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
-		<h2 class="text-3xl md:text-4xl lg:text-5xl my-6 text-center">
+	<!-- <section
+	class="w-full max-sm:p-2 bg-[#fff] text-balance py-10"
+	data-sveltekit-preload-data="viewport"
+> -->
+
+	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
+		<h2 class="Inter-Bold text-3xl md:text-4xl text-center my-6">
 			{$t('S7_T')}
 		</h2>
-		<p class="text-2xl max-sm:text-xl my-6 text-center">
+		<p class="Inter text-md sm:text-xl my-6 text-center px-3">
 			{$t('S7_D')}
 		</p>
 		<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 py-5 px-1 max-sm:px-2">
@@ -21,12 +27,14 @@
 				<img
 					src={dr_sten_webp}
 					loading="lazy"
-					alt="Profile"
+					alt="testimonial"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
 				/>
 
-				<p class="text-2xl text-center font-semibold mb-1">{$t('TEST_DrSten_name')}</p>
-				<p class="text-lg text-center w-full">
+				<p class="Lora text-xl md:text-2xl text-center font-semibold mb-1">
+					{$t('TEST_DrSten_name')}
+				</p>
+				<p class="Lora text-md md:text-lg text-center w-full">
 					{$t('TEST_DrSten')}
 				</p>
 			</div>
@@ -35,12 +43,14 @@
 				<img
 					src={cassia_a_webp}
 					loading="lazy"
-					alt="Profile"
+					alt="testimonial"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
 				/>
 
-				<p class="text-2xl text-center font-semibold mb-1">{$t('TEST_Cassia_name')}</p>
-				<p class="text-lg text-center w-full">
+				<p class="Lora text-xl md:text-2xl text-center font-semibold mb-1">
+					{$t('TEST_Cassia_name')}
+				</p>
+				<p class="Lora text-md md:text-lg text-center w-full">
 					{$t('TEST_Cassia')}
 				</p>
 			</div>
@@ -49,12 +59,14 @@
 				<img
 					src={maria_d_webp}
 					loading="lazy"
-					alt="Profile"
+					alt="testimonial"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
 				/>
 
-				<p class="text-2xl text-center font-semibold mb-1">{$t('TEST_Maria_name')}</p>
-				<p class="text-lg text-center w-full">
+				<p class="Lora text-xl md:text-2xl text-center font-semibold mb-1">
+					{$t('TEST_Maria_name')}
+				</p>
+				<p class="Lora text-md md:text-lg text-center w-full">
 					{$t('TEST_Maria')}
 					<!-- {$t('S2_T')} -->
 				</p>
@@ -64,17 +76,11 @@
 </section>
 
 <style>
-	h2 {
-		font-family: 'Inter', sans-serif;
-		font-optical-sizing: auto;
-		font-weight: 700; /* Bold weight for titles */
-		font-style: normal;
-	}
+	/* * {
+		border: black 1px solid;
+	} */
 
-	p {
-		font-family: 'Lora', serif;
-		font-optical-sizing: auto;
-		font-weight: 400; /* Regular weight for body text */
-		font-style: normal;
+	.background-img4 {
+		background-image: url('$lib/assets/svg/patterns/brushed-alum-dark.png');
 	}
 </style>

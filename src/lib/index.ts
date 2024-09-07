@@ -10,7 +10,15 @@ export { default as EBOOK_STARTUP_webp } from './assets/images/ebooks/EBOOK_STAR
 export { default as headerhero_webp } from './assets/images/headerhero.webp';
 export { default as cassia_a_webp } from './assets/images/testimonials/cassia_a.webp';
 export { default as dr_sten_webp } from './assets/images/testimonials/dr_sten.webp';
+export { default as toptier_png } from './assets/images/toptier.png';
 export { default as maria_d_webp } from './assets/images/testimonials/maria_d.webp';
 export { default as brazil_svg } from './assets/svg/brazil.svg';
+
+// export { default as dragon_scales_svg } from './assets/svg/patterns/dragon-scales.svg';
+// export { default as page_turner_svg } from './assets/svg/patterns/page-turner.svg';
+// export { default as protruding_squares_svg } from './assets/svg/patterns/protruding-squares.svg';
+// export { default as rose_petals_svg } from './assets/svg/patterns/rose-petals.svg';
+// export { default as subtle_prism_svg } from './assets/svg/patterns/subtle-prism.svg';
+// export { default as sun_tornado_svg } from './assets/svg/patterns/sun-tornado.svg';
 export { default as spain_svg } from './assets/svg/spain.svg';
 export { default as usa_svg } from './assets/svg/usa.svg';

@@ -16,12 +16,12 @@
 {:else} -->
 <section class="w-full max-sm:p-2 bg-[#dfdad6] text-balance h-screen">
 	<div class="lg:max-w-screen-2xl mx-auto max-sm:p-0">
-		<div class="lg:p-10 sm:p-5 flex max-md:flex-col items-center">
+		<div class="p-5 flex max-md:flex-col items-center">
 			<div class="md:max-w-[50%] m-auto border-black align-middle">
-				<h1 class="font-extrabold text-4xl md:text-5xl xl:text-7xl uppercase">
+				<h1 class="Inter-Bold text-4xl md:text-5xl xl:text-7xl uppercase">
 					Entrepreneur in America: Your Complete Map to Success in the USA
 				</h1>
-				<h2 class="font-bold text-xl lg:text-2xl lg:mt-10 md:mt-5 mt-3">
+				<h2 class="Inter-Bold text-xl lg:text-2xl lg:mt-10 md:mt-5 mt-3">
 					Discover exclusive strategies for business, investment, and financial education to grow in
 					the United States.
 				</h2>
@@ -44,12 +44,6 @@
 <!-- {/if} -->
 
 <style>
-	* {
-		font-family: 'Inter', sans-serif;
-		font-optical-sizing: auto;
-		font-weight: 700; /* Bold weight for titles */
-		font-style: normal;
-	}
 	/* Skeleton Loader Style */
 	.skeleton-loader {
 		background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);

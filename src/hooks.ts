@@ -1,6 +1,6 @@
+import { currentLocale } from '$lib/store'; // Import from store.js
 import type { Handle, RequestEvent } from '@sveltejs/kit';
 import { get } from 'svelte/store';
-import { currentLocale } from '$lib/store'; // Import from store.js
 
 export const handle: Handle = async ({ event, resolve }) => {
 	const { url, params } = event;

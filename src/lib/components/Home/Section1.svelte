@@ -1,23 +1,29 @@
+<!-- HERO SECTION -->
 <script lang="ts">
 	import headerhero_webp from '$lib/assets/images/headerhero.webp?enhanced';
-	// import * as m from '$lib/paraglide/messages';
 	import { t } from '$lib/translations';
 </script>
 
-<section class="w-full max-sm:p-2 text-balance -z-10 bg-gradient-to-b from-teal-200 to-teal-500">
-	<div class="lg:max-w-screen-2xl mx-auto max-sm:p-0">
-		<div class="lg:p-10 sm:p-5 flex max-md:flex-col items-center">
-			<div class="md:max-w-[45%] m-auto border-black align-middle">
-				<h1 class="font-extrabold text-4xl md:text-5xl xl:text-7xl uppercase">
+<!-- 5555555555555555555555555555555555555 -->
+<!-- bg-gradient-to-b from-emerald-500 to-emerald-900 -->
+<section
+	class="w-full
+ text-balance -z-10 text-emerald-100 section-bg2 pt-32"
+>
+	<div class="lg:max-w-screen-lg mx-auto max-sm:p-0">
+		<div class=" sm:p-5 flex max-md:flex-col items-center md:gap-10">
+			<div class="md:max-w-[45%] border-black align-middle lg:m-10 md:m-5 max-md:p-5 max-md:mt-7">
+				<h1 class="Inter-Bold text-2xl md:text-3xl xl:text-5xl uppercase p-1">
 					{$t('HERO_T')}
 				</h1>
-				<h2 class="font-bold text-xl lg:text-2xl lg:mt-10 md:mt-5 mt-3">
+				<h2 class="Lora text-xl lg:text-2xl lg:mt-8 md:mt-5 mt-3 p-1">
 					{$t('HERO_D')}
 				</h2>
 			</div>
-			<div class="relative w-full">
+			<div class="relative w-full max-md:p-20 max-sm:p-10">
 				<enhanced:img
-					style="width:100%; height:100%; object-fit:cover"
+					class="max-w-[400px] h-auto"
+					style="object-fit:cover"
 					src={headerhero_webp}
 					alt="landing page header"
 					loading="eager"
@@ -40,17 +46,14 @@
 </section>
 
 <style>
-	h1 {
-		font-family: 'Inter', sans-serif;
-		font-optical-sizing: auto;
-		font-weight: 700; /* Bold weight for titles */
-		font-style: normal;
-	}
-
-	h2 {
-		font-family: 'Lora', serif;
-		font-optical-sizing: auto;
-		font-weight: 400; /* Regular weight for body text */
-		font-style: normal;
+	/* * {
+		border: black 1px solid;
+	} */
+	.section-bg2 {
+		background-image: url('$lib/assets/svg/patterns/sun-tornado.svg');
+		/* background-image: url('$lib/assets/svg/patterns/dragon-scales.svg'); */
+		background-size: cover;
+		background-repeat: repeat;
+		background-position: center;
 	}
 </style>

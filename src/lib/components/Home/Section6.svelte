@@ -1,3 +1,4 @@
+<!-- Benefits of Following Our YouTube Channel -->
 <script lang="ts">
 	// import * as m from '$lib/paraglide/messages';
 	import { t } from '$lib/translations';
@@ -5,14 +6,14 @@
 </script>
 
 <section
-	class="w-full max-sm:p-2 bg-[#fff] text-balance py-10"
+	class="w-full max-sm:p-2 text-balance py-10 background-img4"
 	data-sveltekit-preload-data="viewport"
 >
-	<div class="lg:max-w-screen-2xl mx-auto max-sm:p-2">
-		<div class="lg:p-10 p-1 flex max-md:flex-col">
-			<div class="md:w-1/2 m-auto border-black align-middle">
-				<h2 class="text-3xl md:text-4xl lg:text-5xl my-6 text-center">{$t('S6_T')}</h2>
-				<p class="text-2xl max-sm:text-xl my-6 text-center">
+	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
+		<div class="p-1 flex max-md:flex-col">
+			<div class="md:w-[40%] m-auto border-black align-middle lg:m-10 md:m-5">
+				<h2 class="Inter-Bold text-3xl md:text-4xl my-6 text-center">{$t('S6_T')}</h2>
+				<p class="Lora text-lg max-sm:text-md my-6 text-center">
 					{$t('S5_D')}
 				</p>
 			</div>
@@ -24,7 +25,7 @@
 				/>
 			</div> -->
 
-			<div class="md:w-1/2 aspect-video px-2">
+			<div class="md:w-1/2 aspect-video px-2 my-auto">
 				<Youtube id="zuAFIMEaS-o" />
 				<!-- <iframe
 					data-sveltekit-preload-data="viewport"
@@ -42,17 +43,15 @@
 </section>
 
 <style>
-	h2 {
-		font-family: 'Inter', sans-serif;
-		font-optical-sizing: auto;
-		font-weight: 700; /* Bold weight for titles */
-		font-style: normal;
+	/* * {
+		border: black 1px solid;
+	} */
+
+	.background-img4 {
+		background-image: url('$lib/assets/svg/patterns/brushed-alum-dark.png');
 	}
 
-	p {
-		font-family: 'Lora', serif;
-		font-optical-sizing: auto;
-		font-weight: 400; /* Regular weight for body text */
-		font-style: normal;
-	}
+	/* button:hover {
+		background-color: #ffffff;
+	} */
 </style>

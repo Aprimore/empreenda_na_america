@@ -1,48 +1,44 @@
 <script lang="ts">
+	import { toptier_png } from '$lib';
 	import { t } from '$lib/translations';
 </script>
 
-<footer class="footer relative bg-[#dfdad6] Exo footer-component bottom-0">
+<!-- 1111111111111111111111111111111111111111111111111111111111 -->
+<footer
+	class="footer relative bg-gradient-to-tr from-emerald-500 to-emerald-800 section-bg3 font-normal"
+>
 	<div class=" max-sm:flex justify-center">
 		<div class=" lg:p-12 max-md:flex justify-center p-5">
 			<!-- <div class="flex justify-center items-center"> -->
 			<!-- <div class="footer1 xl:col-span-2 md:col-span-2 col-span-2 max-md:flex justify-center">
-					<div class=" ">
-						<a href="/" class="mb-6 inline-block max-w-[250px]">
-							<img
-								loading="lazy"
-								decoding="sync"
-								fetchpriority="low"
-								src={logo_footer_webp}
-								alt="logo"
-								class="aspect-video transition-transform transform hover:-translate-y-1"
-							/>
-						</a>
-						<button class="flex flex-wrap Exo">
-							<a
-								class="btn-agendar w-full bg-[#8abb3f] text-[#17193B] py-4 px-10 rounded-lg relative transition-transform transform hover:-translate-y-1"
-								href="/company#contact"
-							>
-								{@html m.button_schedule_a_demo()}
-							</a>
-						</button>
-					</div>
 				</div> -->
-			<div class="flex justify-center items-center space-x-10">
+			<div class="flex justify-around items-center space-x-10">
+				<div class=" ">
+					<a href="/" class="mb-6 inline-block max-w-[150px]">
+						<img
+							loading="lazy"
+							decoding="sync"
+							fetchpriority="low"
+							src={toptier_png}
+							alt="logo"
+							class="aspect-video transition-transform transform hover:-translate-y-1"
+						/>
+					</a>
+				</div>
 				<div class=" mb-10">
 					<ul class="space-y-3">
 						<li>
 							<a
 								href="/"
 								title="Learn more about our company"
-								class="text-[#000] text-sm hover:text-blue-950">{$t('FOOT_contact')}</a
+								class="text-emerald-100 text-base hover:text-emerald-950">{$t('FOOT_contact')}</a
 							>
 						</li>
 						<li>
 							<a
 								href="/"
 								title="Learn more about our company"
-								class="text-[#000] text-sm hover:text-blue-950"
+								class="text-emerald-100 text-base hover:text-emerald-950"
 							>
 								{$t('FOOT_help')}
 							</a>
@@ -51,14 +47,14 @@
 							<a
 								href="/"
 								title="Learn more about our company"
-								class="text-[#000] text-sm hover:text-blue-950">{$t('FOOT_terms')}</a
+								class="text-emerald-100 text-base hover:text-emerald-950">{$t('FOOT_terms')}</a
 							>
 						</li>
 						<li>
 							<a
 								href="/"
 								title="Learn more about our company"
-								class="text-[#000] text-sm hover:text-blue-950"
+								class="text-emerald-100 text-base hover:text-emerald-950"
 							>
 								{$t('FOOT_privacy')}
 							</a>
@@ -67,7 +63,7 @@
 							<a
 								href="/"
 								title="Learn more about our company"
-								class="text-[#000] text-sm hover:text-blue-950">{$t('FOOT_aboutus')}</a
+								class="text-emerald-100 text-base hover:text-emerald-950">{$t('FOOT_aboutus')}</a
 							>
 						</li>
 					</ul>
@@ -79,7 +75,7 @@
 								<a
 									href="/"
 									title="Learn more about our company"
-									class="text-[#000] text-sm hover:text-blue-950"
+									class="text-emerald-100 text-base hover:text-emerald-950"
 								>
 									{$t('FOOT_community')}
 								</a>
@@ -88,14 +84,14 @@
 								<a
 									href="/"
 									title="Learn more about our company"
-									class="text-[#000] text-sm hover:text-blue-950">{$t('FOOT_shop')}</a
+									class="text-emerald-100 text-base hover:text-emerald-950">{$t('FOOT_shop')}</a
 								>
 							</li>
 							<li>
 								<a
 									href="/"
 									title="Learn more about our company"
-									class="text-[#000] text-sm hover:text-blue-950"
+									class="text-emerald-100 text-base hover:text-emerald-950"
 								>
 									{$t('FOOT_company')}
 								</a>
@@ -104,7 +100,7 @@
 								<a
 									href="/"
 									title="Learn more about our company"
-									class="text-[#000] text-sm hover:text-blue-950"
+									class="text-emerald-100 text-base hover:text-emerald-950"
 								>
 									{$t('FOOT_support')}
 								</a>
@@ -113,7 +109,7 @@
 								<a
 									href="/"
 									title="Learn more about our company"
-									class="text-[#000] text-sm hover:text-blue-950"
+									class="text-emerald-100 text-base hover:text-emerald-950"
 								>
 									{$t('FOOT_documentation')}
 								</a>
@@ -148,3 +144,13 @@
 		vertical-align: middle;
 	}
 </style> -->
+
+<style>
+	.section-bg3 {
+		background-image: url('$lib/assets/svg/patterns/subtle-prism.svg');
+		/* background-image: url('$lib/assets/svg/patterns/dragon-scales.svg'); */
+		background-size: contain;
+		background-repeat: repeat;
+		background-position: center;
+	}
+</style>

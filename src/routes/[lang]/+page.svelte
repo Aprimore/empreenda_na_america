@@ -10,13 +10,12 @@
 	let loading = true;
 
 	onMount(() => {
-		// setTimeout(() => {}, 5000); // Adjust the delay as needed
+		setTimeout(() => {}, 500);
 		loading = false;
 	});
 </script>
 
 <Navbar2 />
-
 {#if loading}
 	<div class="w-full h-screen flex justify-center items-center pb-24">
 		<div class="loading-spinner"></div>

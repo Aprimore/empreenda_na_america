@@ -24,7 +24,7 @@
 				<a
 					href="/terms-of-service"
 					target="_blank"
-					class="underline text-[#D4D4ED] hover:text-white"
+					class="underline text-[#D4D4ED] hover:text-emerald-100"
 					style="min-width: 48px; min-height: 48px;">{@html m.footer_Terms()}</a
 				>
 			</li>
@@ -32,7 +32,7 @@
 				<a
 					href="/privacy-policy"
 					target="_blank"
-					class="underline text-[#D4D4ED] hover:text-white"
+					class="underline text-[#D4D4ED] hover:text-emerald-100"
 					style="min-width: 48px; min-height: 48px;">{@html m.footer_Privacy()}</a
 				>
 			</li>
@@ -40,7 +40,7 @@
 				<a
 					href="/cookies"
 					target="_blank"
-					class=" underline text-[#D4D4ED] hover:text-white"
+					class=" underline text-[#D4D4ED] hover:text-emerald-100"
 					style="min-width: 48px; min-height: 48px;">{@html m.footer_Cookies()}</a
 				>
 			</li>

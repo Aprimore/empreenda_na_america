@@ -6,7 +6,7 @@
 
 <section class="w-full max-sm:p-2 bg-[#dfdad6]">
 	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
-		<div class="lg:p-10 p-5 flex max-md:flex-col">
+		<div class="p-5 flex max-md:flex-col">
 			<div class="md:max-w-[45%] m-auto border-black align-middle">
 				<h1 class="font-extrabold text-6xl xl:text-8xl">TO SUCCEED YOU MUST READ</h1>
 				<h2 class="font-bold text-xl lg:text-2xl mt-10">

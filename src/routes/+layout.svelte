@@ -1,4 +1,6 @@
 <script lang="ts">
+	import '@fontsource-variable/lora';
+	import '@fontsource-variable/inter';
 	import { page } from '$app/stores';
 	import { EBOOK_REMOTEWORK_webp } from '$lib';
 	// import Navbar from '$lib/components/Navbar.svelte';
@@ -66,9 +68,56 @@
 			zoom: 1;
 		}
 	} */
+	/* :global(html) {
+		font-family: 'Lora Variable, sans-serif;';
+	}
+	:global(.Lora) {
+		font-family: 'Lora Variable', serif;
+		font-weight: 400;
+	}
+	:global(.Lora-Bold) {
+		font-family: 'Lora Variable', serif;
+		font-weight: 700;
+	}
+	:global(.Inter) {
+		font-family: 'Inter Variable', sans-serif;
+		font-weight: 400;
+	}
 
-	:global(.Exo-Regular) {
-		/* font-family: 'Exo Variable', sans-serif; */
-		font-weight: 400; /* Set font weight */
+	:global(.Inter-Bold) {
+		font-family: 'Inter Variable', sans-serif;
+		font-weight: 700;
+	} */
+
+	:global(html) {
+		font-family: 'Inter Variable';
+		font-weight: 700;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+	:global(.Lora) {
+		font-family: 'Lora Variable', serif;
+		font-weight: 400;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+	:global(.Lora-Bold) {
+		font-family: 'Lora Variable', serif;
+		font-weight: 700;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+	:global(.Inter) {
+		font-family: 'Inter Variable', sans-serif;
+		font-weight: 400;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+
+	:global(.Inter-Bold) {
+		font-family: 'Inter Variable', sans-serif;
+		font-weight: 700;
+		font-optical-sizing: auto;
+		font-style: normal;
 	}
 </style>

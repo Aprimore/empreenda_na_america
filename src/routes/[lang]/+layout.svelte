@@ -1,4 +1,6 @@
 <script lang="ts">
+	import '@fontsource-variable/lora';
+	import '@fontsource-variable/inter';
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 	import { EBOOK_REMOTEWORK_webp } from '$lib';
@@ -25,40 +27,40 @@
 	// }
 </script>
 
-<nav class="max-w-2xl mx-auto border border-blue-950 rounded p-2 m-2">
+<!-- <nav class="max-w-2xl mx-auto border border-blue-950 rounded p-2 m-2">
 	<div class="flex items-center justify-between text-blue-gray-900">
 		<a
-			href="/"
+			href="/en/"
 			class="p-2 hover:bg-slate-200 mr-4 block cursor-pointer py-1.5 font-sans text-base font-semibold leading-relaxed tracking-normal text-inherit antialiased"
 		>
 			TEMPLATE1
 		</a>
 		<a
-			href="/template2/"
+			href="/en/template2/"
 			class="p-2 hover:bg-slate-200 mr-4 block cursor-pointer py-1.5 font-sans text-base font-semibold leading-relaxed tracking-normal text-inherit antialiased"
 		>
 			TEMPLATE2
 		</a>
 		<a
-			href="/template3/"
+			href="/en/template3/"
 			class="p-2 hover:bg-slate-200 mr-4 block cursor-pointer py-1.5 font-sans text-base font-semibold leading-relaxed tracking-normal text-inherit antialiased"
 		>
 			TEMPLATE3
 		</a>
 		<a
-			href="/template4/"
+			href="/en/template4/"
 			class="p-2 hover:bg-slate-200 mr-4 block cursor-pointer py-1.5 font-sans text-base font-semibold leading-relaxed tracking-normal text-inherit antialiased"
 		>
 			TEMPLATE4
 		</a>
 		<a
-			href="/template5/"
+			href="/en/template5/"
 			class="p-2 hover:bg-slate-200 mr-4 block cursor-pointer py-1.5 font-sans text-base font-semibold leading-relaxed tracking-normal text-inherit antialiased"
 		>
 			TEMPLATE5
 		</a>
 	</div>
-</nav>
+</nav> -->
 <main>
 	<slot />
 </main>

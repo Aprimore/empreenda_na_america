@@ -4,11 +4,11 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 const languages = ['en', 'pt-br', 'es'];
 const pages = [
-	'/',
-	'/template2',
-	'/template3',
-	'/template4',
-	'/template5'
+	'/'
+	// '/template2',
+	// '/template3',
+	// '/template4',
+	// '/template5'
 	// '/inter',
 	// '/lora',
 	// '/manrope',
@@ -47,13 +47,15 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 
 		// adapter: adapter()
-
+		// prerender: {
+		// 	handleMissingId: 'warn' // or 'ignore' to completely suppress the error
+		// },
 		adapter: adapter({
 			// default options are shown. On some platforms
 			// these options are set automatically — see below
 			pages: 'build',
 			assets: 'build',
-			fallback: undefined,
+			fallback: 'index.html',
 			precompress: false,
 			strict: true
 		}),
@@ -61,6 +63,10 @@ const config = {
 			crawl: true,
 			entries: generatePrerenderEntries()
 			// entries: ['/pt-br/', '/en/', '/es/']
+		},
+		paths: {
+			base: '', // Set this to '' if your site is at the root of the domain
+			assets: '' // Set this if your assets are served from a different URL
 		}
 	},
 	preprocess: vitePreprocess()

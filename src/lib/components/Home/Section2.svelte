@@ -1,4 +1,23 @@
+<!-- EBOOK HIGHLIGHTS -->
 <script lang="ts">
+	// register Swiper elements
+	import { register } from 'swiper/element/bundle';
+
+	register();
+
+	const spaceBetween = 10;
+
+	// event handlers for Swiper events
+	const onProgress = (e: any) => {
+		const [swiper, progress] = e.detail;
+		// console.log(progress);
+	};
+	const onSlideChange = (e: any) => {
+		// console.log('slide changed');
+	};
+
+	// Import Swiper styles
+	import 'swiper/swiper-bundle.css';
 	// import * as m from '$lib/paraglide/messages';
 	import {
 		EBOOK_EXTRACT2_webp,
@@ -22,152 +41,186 @@
 	};
 </script>
 
-<!-- {$t('xxxxx')} -->
-
 <!-- EBOOK_REMOTEWORK EBOOK_MARKET -->
-<section class="w-full max-sm:p-2 bg-white py-10" data-sveltekit-preload-data="viewport">
-	<div class="lg:max-w-[90rem] mx-auto max-sm:p-2">
-		<h2 class="text-4xl md:text-4xl lg:text-5xl text-center my-6">{$t('S5_T')}</h2>
-		<p class="text-2xl max-sm:text-xl my-6 text-center lg:px-10 px-3">
+<!-- <section class="w-full max-sm:p-2 py-10 background-img1" data-sveltekit-preload-data="viewport">
+ -->
+<section class="w-full max-sm:p-2 py-10 background-img4" data-sveltekit-preload-data="viewport">
+	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
+		<div></div>
+		<h2 class="Inter-Bold text-3xl md:text-4xl text-center my-6">{$t('S5_T')}</h2>
+		<p class="Lora text-md sm:text-xl my-6 text-center lg:px-10 px-3">
 			{$t('S5_D')}
 		</p>
-		<div
-			class="sm:grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 m-auto sm:rounded-2xl lg:py-6 gap-3 max-sm:space-y-3"
+		<!-- Swiper slider container with navigation enabled -->
+		<swiper-container
+			spaceBetween={30}
+			lazy={true}
+			navigation={true}
+			manipulation={true}
+			autoplay={true}
+			class="mySwiper"
+			space-between={spaceBetween}
+			slides-per-view={1}
+			breakpoints={{
+				640: {
+					slidesPerView: 2
+				},
+				768: {
+					slidesPerView: 2
+				},
+				1024: {
+					slidesPerView: 3
+				},
+				1280: {
+					slidesPerView: 3
+				}
+			}}
+			loop={true}
+			speed={300}
+			on:swiperprogress={onProgress}
+			on:swiperslidechange={onSlideChange}
 		>
-			<!----------------------- EBOOK_STARTUP ------------------------------------->
-			<div
-				class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
+			<!-- Slider content -->
+			<swiper-slide
+				><!----------------------- EBOOK_STARTUP ------------------------------------->
+				<div
+					class="p-2 bg-gradient-to-b from-emerald-500 to-emerald-400 rounded-2xl max-md:text-center section-bg"
+				>
+					<p class="Lora text-emerald-100 min-h-24 text-xl text-center relative top-0">
+						{$t('EBOOK_STARTUP')}
+					</p>
+					<img
+						class=" size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+						src={EBOOK_STARTUP_webp}
+						loading="lazy"
+						alt="ebook"
+					/>
+					<div class="ml-auto w-fit mt-3">
+						<BtnHotmart dynamicLink={ebookLinks.EBOOK_STARTUP} />
+					</div>
+				</div></swiper-slide
 			>
-				<p class="text-2xl text-center p-3 relative top-0">{$t('EBOOK_STARTUP')}</p>
-				<img
-					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
-					src={EBOOK_STARTUP_webp}
-					loading="lazy"
-					alt="ebook"
-				/>
-				<div class="ml-auto w-fit mt-3">
-					<BtnHotmart dynamicLink={ebookLinks.EBOOK_STARTUP} />
-				</div>
-			</div>
-			<!----------------------- EBOOK_PLAN ------------------------------------->
+			<div class="swiper-button-prev"></div>
+			<swiper-slide>
+				<!----------------------- EBOOK_PLAN ------------------------------------->
+				<div
+					class="p-2 bg-gradient-to-b from-emerald-500 to-emerald-400
+ rounded-2xl max-md:text-center section-bg"
+				>
+					<p class="Lora text-emerald-100 min-h-24 text-xl text-center relative top-0">
+						{$t('EBOOK_PLAN')}
+					</p>
+					<img
+						class="size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+						src={EBOOK_PLAN_webp}
+						loading="lazy"
+						alt="ebook"
+					/>
+					<div class="ml-auto w-fit mt-3">
+						<BtnHotmart dynamicLink={ebookLinks.EBOOK_PLAN} />
+					</div>
+				</div></swiper-slide
+			>
+			<swiper-slide>
+				<!----------------------- EBOOK_KID_MONEY ------------------------------------->
 
-			<div
-				class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
+				<div
+					class="p-2 bg-gradient-to-b from-emerald-500 to-emerald-400 rounded-2xl max-md:text-center section-bg"
+				>
+					<p class="Lora text-emerald-100 min-h-24 text-xl text-center relative top-0">
+						{$t('EBOOK_KID_MONEY')}
+					</p>
+					<img
+						class="size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+						src={EBOOK_KID_MONEY_webp}
+						loading="lazy"
+						alt="ebook"
+					/>
+					<div class="ml-auto w-fit mt-3">
+						<BtnHotmart dynamicLink={ebookLinks.EBOOK_KID_MONEY} />
+					</div>
+				</div></swiper-slide
 			>
-				<p class="text-2xl text-center p-3">{$t('EBOOK_PLAN')}</p>
-				<img
-					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
-					src={EBOOK_PLAN_webp}
-					loading="lazy"
-					alt="ebook"
-				/>
-				<div class="ml-auto w-fit mt-3">
-					<BtnHotmart dynamicLink={ebookLinks.EBOOK_PLAN} />
-				</div>
-			</div>
-			<!----------------------- EBOOK_KID_MONEY ------------------------------------->
+			<swiper-slide
+				><!----------------------- EBOOK_EXTRACT ------------------------------------->
 
-			<div
-				class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
+				<div
+					class="p-2 bg-gradient-to-b from-emerald-500 to-emerald-400 rounded-2xl row-end-3 max-md:text-center section-bg"
+				>
+					<p class="Lora text-emerald-100 min-h-24 text-xl text-center relative top-0">
+						{$t('EBOOK_EXTRACT')}
+					</p>
+					<img
+						class="size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+						src={EBOOK_EXTRACT_webp}
+						loading="lazy"
+						alt="ebook"
+					/>
+					<div class="ml-auto w-fit mt-3">
+						<BtnHotmart dynamicLink={ebookLinks.EBOOK_EXTRACT} />
+					</div>
+				</div></swiper-slide
 			>
-				<p class="text-2xl text-center p-3">{$t('EBOOK_KID_MONEY')}</p>
-				<img
-					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
-					src={EBOOK_KID_MONEY_webp}
-					loading="lazy"
-					alt="ebook"
-				/>
-				<div class="ml-auto w-fit mt-3">
-					<BtnHotmart dynamicLink={ebookLinks.EBOOK_KID_MONEY} />
-				</div>
-			</div>
-			<!----------------------- EBOOK_EXTRACT ------------------------------------->
+			<swiper-slide
+				><!----------------------- EBOOK_REMOTEWORK ------------------------------------->
 
-			<div
-				class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl row-end-3 max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
+				<div
+					class="p-2 bg-gradient-to-b from-emerald-500 to-emerald-400 rounded-2xl max-md:text-center section-bg"
+				>
+					<p class="Lora text-emerald-100 min-h-24 text-xl text-center relative top-0">
+						{$t('EBOOK_REMOTEWORK')}
+					</p>
+					<img
+						class="size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+						src={EBOOK_REMOTEWORK_webp}
+						loading="lazy"
+						alt="ebook"
+					/>
+					<div class="ml-auto w-fit mt-3">
+						<BtnHotmart dynamicLink={ebookLinks.EBOOK_REMOTEWORK} />
+					</div>
+				</div></swiper-slide
 			>
-				<p class="text-2xl text-center p-3">{$t('EBOOK_EXTRACT')}</p>
-				<img
-					class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
-					src={EBOOK_EXTRACT_webp}
-					loading="lazy"
-					alt="ebook"
-				/>
-				<div class="ml-auto w-fit mt-3">
-					<BtnHotmart dynamicLink={ebookLinks.EBOOK_EXTRACT} />
-				</div>
-			</div>
-			<!----------------------- EBOOK_REMOTEWORK ------------------------------------->
+			<swiper-slide
+				><!----------------------- EBOOK_MARKET ------------------------------------->
 
-			<div
-				class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
+				<div
+					class="p-2 bg-gradient-to-b from-emerald-500 to-emerald-400 rounded-2xl max-md:text-center section-bg"
+				>
+					<p class="Lora text-emerald-100 min-h-24 text-xl text-center relative top-0">
+						{$t('EBOOK_MARKET')}
+					</p>
+					<img
+						class=" size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+						src={EBOOK_MARKET_webp}
+						loading="lazy"
+						alt="ebook"
+					/>
+					<div class="ml-auto w-fit mt-3">
+						<BtnHotmart dynamicLink={ebookLinks.EBOOK_MARKET} />
+					</div>
+				</div></swiper-slide
 			>
-				<p class="text-2xl text-center p-3">{$t('EBOOK_REMOTEWORK')}</p>
-				<img
-					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
-					src={EBOOK_REMOTEWORK_webp}
-					loading="lazy"
-					alt="ebook"
-				/>
-				<div class="ml-auto w-fit mt-3">
-					<BtnHotmart dynamicLink={ebookLinks.EBOOK_REMOTEWORK} />
-				</div>
-			</div>
-			<!----------------------- EBOOK_MARKET ------------------------------------->
 
-			<div
-				class="bg-gradient-to-b from-teal-200 to-teal-300 rounded-2xl max-md:flex lg:flex lg:flex-col max-md:flex-col max-md:text-center p-3"
-			>
-				<p class="text-2xl text-center p-3">{$t('EBOOK_MARKET')}</p>
-				<img
-					class="object-contain aspect-[4/3] max-h-72 max-md:maxh-60 mx-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
-					src={EBOOK_MARKET_webp}
-					loading="lazy"
-					alt="ebook"
-				/>
-				<div class="ml-auto w-fit mt-3">
-					<BtnHotmart dynamicLink={ebookLinks.EBOOK_MARKET} />
-				</div>
-			</div>
-		</div>
+			<!-- Add as many swiper slides as needed -->
+		</swiper-container>
+		<!-- {$t('xxxxx')} -->
+		<!-- <div
+			class="sm:grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 m-auto sm:rounded-2xl lg:py-6 gap-3 max-sm:space-y-3 text-emerald-100"
+		>
+		</div> -->
 	</div>
 </section>
 
 <style>
-	/* .parent {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(5, 1fr);
-		grid-column-gap: 0px;
-		grid-row-gap: 0px;
+	.section-bg {
+		background-image: url('$lib/assets/svg/patterns/dragon-scales.svg');
+		background-size: contain;
+		background-repeat: repeat;
+		background-position: center;
 	}
 
-	.div1 {
-		grid-area: 1 / 1 / 2 / 2;
-	}
-	.div2 {
-		grid-area: 1 / 2 / 2 / 3;
-	}
-	.div3 {
-		grid-area: 1 / 3 / 2 / 4;
-	}
-	.div4 {
-		grid-area: 2 / 1 / 3 / 3;
-	}
-	.div5 {
-		grid-area: 2 / 3 / 3 / 4;
-	} */
-	h2 {
-		font-family: 'Inter', sans-serif;
-		font-optical-sizing: auto;
-		font-weight: 700; /* Bold weight for titles */
-		font-style: normal;
-	}
-
-	p {
-		font-family: 'Lora', serif;
-		font-optical-sizing: auto;
-		font-weight: 400; /* Regular weight for body text */
-		font-style: normal;
+	.background-img4 {
+		background-image: url('$lib/assets/svg/patterns/brushed-alum-dark.png');
 	}
 </style>

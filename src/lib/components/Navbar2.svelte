@@ -1,20 +1,21 @@
 <script>
+	import { toptier_png } from '$lib';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	// export let data;
 </script>
 
 <nav
-	class="block w-full max-w-screen-xl px-6 py-3 mx-auto text-[#4A4A4A] bg-white border shadow-md rounded-xl border-white/80 bg-opacity-80"
+	class="bg-transparent block w-full px-6 py-3 mx-auto text-[#4A4A4A] shadow-xs bg-opacity-80 absolute top-0 left-0"
 >
-	<div class="flex items-center justify-between text-blue-gray-900">
+	<div class="flex items-center justify-between text-blue-gray-900 max-w-screen-lg mx-auto px-2">
 		<a
 			href="/"
 			class="mr-4 block cursor-pointer py-1.5 font-sans text-base font-semibold leading-relaxed tracking-normal text-inherit antialiased"
 		>
-			"LOGO IMG"
+			<img src={toptier_png} class=" size-20" alt="" />
 		</a>
 
-		<button
+		<!-- <button
 			class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
 			type="button"
 			title="burger icon"
@@ -36,13 +37,16 @@
 					></path>
 				</svg>
 			</span>
-		</button>
+		</button> -->
 		<LanguageSwitcher />
 	</div>
 </nav>
 
 <style>
+	/* * {
+		border: black 1px solid;
+	}
 	a {
 		font-size: large;
-	}
+	} */
 </style>
