@@ -6,31 +6,30 @@
 	import Section6 from '$lib/components/Home/Section6.svelte';
 	import Section7 from '$lib/components/Home/Section7.svelte';
 	import Navbar2 from '$lib/components/Navbar2.svelte';
-	// import { onMount } from 'svelte';
-	// let loading = true;
+	import { onMount } from 'svelte';
+	let loading = true;
 
-	// onMount(() => {
-	// 	setTimeout(() => {}, 500);
-	// 	loading = false;
-	// });
+	onMount(() => {
+		setTimeout(() => {}, 500);
+		loading = false;
+	});
 </script>
 
 <Navbar2 />
-<!-- {#if loading}
+{#if loading}
 	<div class="w-full h-screen flex justify-center items-center pb-24">
 		<div class="loading-spinner"></div>
 	</div>
-{:else} -->
-<Section1 />
-<Section2 />
-<Section3 />
-<Section4 />
-<Section7 />
-<Section6 />
+{:else}
+	<Section1 />
+	<Section2 />
+	<Section3 />
+	<Section4 />
+	<Section7 />
+	<Section6 />
+{/if}
 
-<!-- {/if} -->
-
-<!-- <style>
+<style>
 	.loading-spinner {
 		margin: 2rem auto;
 		width: 50px;
@@ -49,4 +48,4 @@
 			transform: rotate(360deg);
 		}
 	}
-</style> -->
+</style>
