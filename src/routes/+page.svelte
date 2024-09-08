@@ -2,13 +2,13 @@
 	import { browser } from '$app/environment';
 	import headerhero_webp from '$lib/assets/images/headerhero.webp?enhanced';
 	import { t } from '$lib/translations';
-	import { onMount } from 'svelte';
+	// import { onMount } from 'svelte';
 
-	let loading = true;
+	// let loading = true;
 
-	onMount(() => {
-		loading = false;
-	});
+	// onMount(() => {
+	// 	loading = false;
+	// });
 </script>
 
 <!-- {#if loading}

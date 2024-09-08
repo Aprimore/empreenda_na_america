@@ -28,10 +28,10 @@
 	// export const lang;
 </script>
 
-<svelte:head>
-	<!-- <title>{$page.data.post?.title || 'My Menthor | Home'}</title> -->
+<!-- <title>{$page.data.post?.title || 'My Menthor | Home'}</title> -->
+<!-- <title>{getPageTitle(pagePath)}</title> -->
+<!-- <svelte:head>
 	<title>Empreenda na America</title>
-	<!-- <title>{getPageTitle(pagePath)}</title> -->
 	<link rel="canonical" href={SITE_URL + pagePath} />
 	<meta property="og:url" content={SITE_URL} />
 	<meta property="og:type" content="article" />
@@ -45,7 +45,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={SITE_TITLE} />
 	<meta name="twitter:description" content={SITE_DESCRIPTION} />
-</svelte:head>
+</svelte:head> -->
 
 <slot />
 
@@ -67,26 +67,6 @@
 		:global(html) {
 			zoom: 1;
 		}
-	} */
-	/* :global(html) {
-		font-family: 'Lora Variable, sans-serif;';
-	}
-	:global(.Lora) {
-		font-family: 'Lora Variable', serif;
-		font-weight: 400;
-	}
-	:global(.Lora-Bold) {
-		font-family: 'Lora Variable', serif;
-		font-weight: 700;
-	}
-	:global(.Inter) {
-		font-family: 'Inter Variable', sans-serif;
-		font-weight: 400;
-	}
-
-	:global(.Inter-Bold) {
-		font-family: 'Inter Variable', sans-serif;
-		font-weight: 700;
 	} */
 
 	:global(html) {
