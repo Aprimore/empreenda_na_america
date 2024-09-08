@@ -10,11 +10,8 @@
 	// event handlers for Swiper events
 	const onProgress = (e: any) => {
 		const [swiper, progress] = e.detail;
-		// console.log(progress);
 	};
-	const onSlideChange = (e: any) => {
-		// console.log('slide changed');
-	};
+	const onSlideChange = (e: any) => {};
 
 	// Import Swiper styles
 	import 'swiper/swiper-bundle.css';

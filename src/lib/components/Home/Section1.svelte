@@ -10,17 +10,17 @@
 >
 	<div class="lg:max-w-screen-lg mx-auto max-sm:p-0">
 		<div class=" sm:p-5 flex max-md:flex-col items-center md:gap-10">
-			<div class="md:max-w-[45%] border-black align-middle lg:m-10 md:m-5 max-md:p-5 max-md:mt-7">
-				<h1 class="Inter-Bold text-2xl md:text-3xl xl:text-5xl uppercase p-1">
+			<div class="md:max-w-[45%] border-black align-middle lg:m-10 md:m-5 max-md:p-5">
+				<h1 class="Inter-Bold text-3xl md:text-4xl xl:text-5xl uppercase p-1 max-sm:text-center">
 					{$t('home.HERO_T')}
 				</h1>
-				<h2 class="Lora text-xl lg:text-2xl lg:mt-8 md:mt-5 mt-3 p-1">
+				<h2 class="Lora text-xl lg:text-2xl lg:mt-8 md:mt-5 mt-3 p-1 max-sm:text-center">
 					{$t('home.HERO_D')}
 				</h2>
 			</div>
 			<div class="relative w-full max-md:p-20 max-sm:p-10">
 				<enhanced:img
-					class="max-w-[400px] h-auto"
+					class="md:max-w-[400px] h-auto"
 					style="object-fit:cover"
 					src={headerhero_webp}
 					alt="landing page header"

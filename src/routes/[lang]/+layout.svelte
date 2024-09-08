@@ -1,19 +1,44 @@
 <script lang="ts">
 	import '@fontsource-variable/lora';
 	import '@fontsource-variable/inter';
-	// import { browser } from '$app/environment';
-	import { EBOOK_REMOTEWORK_webp } from '$lib';
+	import { EBOOK_REMOTEWORK_webp, toptier_png } from '$lib';
 	import Footer from '$lib/components/Footer.svelte';
 	import '../../app.css';
+	import {
+		OG_IMAGE_HEIGHT,
+		OG_IMAGE_WIDTH,
+		SITE_DESCRIPTION,
+		SITE_TITLE,
+		SITE_URL
+	} from '$lib/siteConfig';
+	import { page } from '$app/stores';
+	import { getPageTitle } from '$lib/functions/pageTitle';
 
-	// import { page } from '$app/stores';
-
-	// $: ({ route } = $page.data);
+	let pagePath = $page.url.pathname;
+	$: pagePath = $page.url.pathname;
 </script>
 
-<main>
-	<slot />
-</main>
+<svelte:head>
+	<!-- <title>{$page.data.post?.title || 'My Menthor | Home'}</title> -->
+	<!-- {#if pagePath && pagePath !== '/'}
+	{/if} -->
+	<title>{getPageTitle(pagePath)}</title>
+	<link rel="canonical" href={SITE_URL + pagePath} />
+	<meta property="og:url" content={SITE_URL} />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={SITE_TITLE} />
+	<meta name="description" content={SITE_DESCRIPTION} />
+	<meta property="og:description" content={SITE_DESCRIPTION} />
+	<meta property="og:image" content={toptier_png} />
+	<meta property="og:image:width" content={OG_IMAGE_WIDTH} />
+	<meta property="og:image:height" content={OG_IMAGE_HEIGHT} />
+	<meta name="twitter:image" content={toptier_png} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={SITE_TITLE} />
+	<meta name="twitter:description" content={SITE_DESCRIPTION} />
+</svelte:head>
+
+<slot />
 <Footer />
 
 <!-- <nav class="max-w-2xl mx-auto border border-blue-950 rounded p-2 m-2">

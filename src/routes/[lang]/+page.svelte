@@ -4,6 +4,7 @@
 	import Section3 from '$lib/components/Home/Section3.svelte';
 	import Section4 from '$lib/components/Home/Section4.svelte';
 	import Section6 from '$lib/components/Home/Section6.svelte';
+	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
 	import Section7 from '$lib/components/Home/Section7.svelte';
 	import Navbar2 from '$lib/components/Navbar2.svelte';
 	import { onMount } from 'svelte';

@@ -1,34 +1,46 @@
 // src/lib/pageTitles.ts
 
 export function getPageTitle(pagePath: string): string {
-	const isPortuguese = pagePath.startsWith('/pt-br/');
+	const isPortuguese = pagePath.startsWith('/pt/');
+	const isSpanish = pagePath.startsWith('/es/');
 	if (isPortuguese) {
-		if (pagePath === '/pt-br/') return 'Início | My Menthor';
-		if (pagePath.startsWith('/pt-br/about')) return 'Sobre Nós | My Menthor';
-		if (pagePath.startsWith('/pt-br/products')) return 'Produtos | My Menthor';
-		if (pagePath.startsWith('/pt-br/contact')) return 'Contato | My Menthor';
-		if (pagePath.startsWith('/pt-br/solutions')) return 'Soluções | My Menthor';
-		if (pagePath.startsWith('/pt-br/customers_and_partners'))
-			return 'Clientes e Parceiros | My Menthor';
-		if (pagePath.startsWith('/pt-br/resources')) return 'Recursos | My Menthor';
-		if (pagePath.startsWith('/pt-br/company')) return 'Empresa | My Menthor';
-		if (pagePath.startsWith('/pt-br/privacy')) return 'Política de Privacidade | My Menthor';
-		if (pagePath.startsWith('/pt-br/terms')) return 'Termos de Serviço | My Menthor';
-		if (pagePath.startsWith('/pt-br/cookies')) return 'Cookies | My Menthor';
+		if (pagePath === '/pt/') return 'Início | Top Tier';
+		// if (pagePath.startsWith('/pt/about')) return 'Sobre Nós | Top Tier';
+		// if (pagePath.startsWith('/pt/products')) return 'Produtos | Top Tier';
+		// if (pagePath.startsWith('/pt/contact')) return 'Contato | Top Tier';
+		// if (pagePath.startsWith('/pt/solutions')) return 'Soluções | Top Tier';
+		// if (pagePath.startsWith('/pt/customers_and_partners')) return 'Clientes e Parceiros | Top Tier';
+		// if (pagePath.startsWith('/pt/resources')) return 'Recursos | Top Tier';
+		// if (pagePath.startsWith('/pt/company')) return 'Empresa | Top Tier';
+		if (pagePath.startsWith('/pt/privacy')) return 'Política de Privacidade | Top Tier';
+		if (pagePath.startsWith('/pt/terms')) return 'Termos de Serviço | Top Tier';
+		if (pagePath.startsWith('/pt/cookies')) return 'Cookies | Top Tier';
+	}
+	if (isSpanish) {
+		if (pagePath === '/es/') return 'Inicio | Top Tier';
+		// if (pagePath.startsWith('/es/about')) return 'Sobre Nós | Top Tier';
+		// if (pagePath.startsWith('/es/products')) return 'Produtos | Top Tier';
+		// if (pagePath.startsWith('/es/contact')) return 'Contato | Top Tier';
+		// if (pagePath.startsWith('/es/solutions')) return 'Soluções | Top Tier';
+		// if (pagePath.startsWith('/es/customers_and_partners')) return 'Clientes e Parceiros | Top Tier';
+		// if (pagePath.startsWith('/es/resources')) return 'Recursos | Top Tier';
+		// if (pagePath.startsWith('/es/company')) return 'Empresa | Top Tier';
+		if (pagePath.startsWith('/es/privacy')) return 'Política de Privacidad | Top Tier';
+		if (pagePath.startsWith('/es/terms')) return 'Términos de Servicio | Top Tier';
+		if (pagePath.startsWith('/es/cookies')) return 'Cookies | Top Tier';
 	} else {
-		if (pagePath === '/') return 'Home | My Menthor';
-		if (pagePath.startsWith('/about')) return 'About Us | My Menthor';
-		if (pagePath.startsWith('/products')) return 'Products | My Menthor';
-		if (pagePath.startsWith('/contact')) return 'Contact | My Menthor';
-		if (pagePath.startsWith('/solutions')) return 'Solutions | My Menthor';
-		if (pagePath.startsWith('/customers_and_partners'))
-			return 'Customers and Partners | My Menthor';
-		if (pagePath.startsWith('/resources')) return 'Resources | My Menthor';
-		if (pagePath.startsWith('/company')) return 'Company | My Menthor';
-		if (pagePath.startsWith('/privacy')) return 'Privacy Policy | My Menthor';
-		if (pagePath.startsWith('/terms')) return 'Terms of Service | My Menthor';
-		if (pagePath.startsWith('/cookies')) return 'Cookies | My Menthor';
+		if (pagePath === '/en/') return 'Home | Top Tier';
+		// if (pagePath.startsWith('/en/about')) return 'Sobre Nós | Top Tier';
+		// if (pagePath.startsWith('/en/products')) return 'Produtos | Top Tier';
+		// if (pagePath.startsWith('/en/contact')) return 'Contato | Top Tier';
+		// if (pagePath.startsWith('/en/solutions')) return 'Soluções | Top Tier';
+		// if (pagePath.startsWith('/en/customers_and_partners')) return 'Clientes e Parceiros | Top Tier';
+		// if (pagePath.startsWith('/en/resources')) return 'Recursos | Top Tier';
+		// if (pagePath.startsWith('/en/company')) return 'Empresa | Top Tier';
+		if (pagePath.startsWith('/en/privacy')) return 'Privacy Policy | Top Tier';
+		if (pagePath.startsWith('/en/terms')) return 'Terms of Service | Top Tier';
+		if (pagePath.startsWith('/en/cookies')) return 'Cookies | Top Tier';
 	}
 
-	return 'My Menthor';
+	return 'Top Tier';
 }

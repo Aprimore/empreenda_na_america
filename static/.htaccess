@@ -29,7 +29,7 @@ RewriteRule ^(.*)$ - [L]
 ##############################################
 # Skip redirection if locale already present #
 ##############################################
-RewriteRule ^pt(\/.*)?$ - [L]
+RewriteRule ^pt-br(\/.*)?$ - [L]
 RewriteRule ^es(\/.*)?$ - [L]
 RewriteRule ^en(\/.*)?$ - [L]
 
@@ -37,7 +37,7 @@ RewriteRule ^en(\/.*)?$ - [L]
 # Set custom locales if fits #
 ##############################
 RewriteCond %{HTTP:Accept-Language} ^pt [NC]
-RewriteRule ^ /pt%{REQUEST_URI} [R=301,L]
+RewriteRule ^ /pt-br%{REQUEST_URI} [R=301,L]
 
 RewriteCond %{HTTP:Accept-Language} ^es [NC]
 RewriteRule ^ /es%{REQUEST_URI} [R=301,L]
@@ -51,10 +51,10 @@ RewriteRule ^ /en%{REQUEST_URI} [R=301,L]
 # Set error pages for custom locales #
 ######################################
 <If "%{REQUEST_URI} =~ /^\x2Fpt(\x2F.*)?$/">
-    ErrorDocument 401 /pt/401/index.html
-    ErrorDocument 403 /pt/403/index.html
-    ErrorDocument 404 /pt/404/index.html
-    ErrorDocument 500 /pt/500/index.html
+    ErrorDocument 401 /pt-br/401/index.html
+    ErrorDocument 403 /pt-br/403/index.html
+    ErrorDocument 404 /pt-br/404/index.html
+    ErrorDocument 500 /pt-br/500/index.html
 </If>
 <ElseIf "%{REQUEST_URI} =~ /^\x2Fde(\x2F.*)?$/">
     ErrorDocument 401 /es/401/index.html

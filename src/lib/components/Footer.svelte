@@ -21,7 +21,7 @@
 							fetchpriority="low"
 							src={toptier_png}
 							alt="logo"
-							class="aspect-video transition-transform transform hover:-translate-y-1"
+							class="aspect-square transition-transform transform hover:-translate-y-1"
 						/>
 					</a>
 				</div>

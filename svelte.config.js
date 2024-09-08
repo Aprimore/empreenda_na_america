@@ -66,6 +66,5 @@ export default config;
 // 			entries.push(`/${lang}${page}`);
 // 		});
 // 	});
-// 	console.log(entries);
 // 	return entries;
 // }

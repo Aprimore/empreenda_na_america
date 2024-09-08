@@ -3,7 +3,7 @@ import { dev } from '$app/environment';
 import i18n from 'sveltekit-i18n';
 import en from './en';
 import es from './es';
-import pt from './pt-br';
+import pt from './pt';
 import lang from './lang';
 
 /** @type {import('sveltekit-i18n').Config} */
@@ -28,17 +28,19 @@ const config = {
 };
 
 // Locale normalization function
-const normalizeLocale = (locale) => {
-	if (locale === 'pt-BR') return 'pt'; // Convert 'pt-BR' to 'pt'
-	return locale;
-};
+// const normalizeLocale = (locale) => {
+// 	if (locale === 'pt-BR') return 'pt'; // Convert 'pt-BR' to 'pt'
+// 	return locale;
+// };
+
+// export const { t, locale, locales, loading, setLocale, setRoute, translations } = new i18n(config);
+
+// // Override the setLocale function to use the normalized locale
+// const originalSetLocale = setLocale;
+// export const setNormalizedLocale = (newLocale) => {
+// 	originalSetLocale(normalizeLocale(newLocale));
+// };
 
 export const defaultLocale = 'en';
 
 export const { t, locale, locales, loading, setLocale, setRoute, translations } = new i18n(config);
-
-// Override the setLocale function to use the normalized locale
-const originalSetLocale = setLocale;
-export const setNormalizedLocale = (newLocale) => {
-	originalSetLocale(normalizeLocale(newLocale));
-};

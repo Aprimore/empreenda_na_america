@@ -7,7 +7,7 @@
 <!-- 1111111111111111111111111111111111111111111111111111111111 -->
 <section
 	class="w-full max-sm:p-2 bg-gradient-to-b from-emerald-500 to-emerald-600 section-bg4
- text-balance py-10 px-1 max-sm:px-2 text-emerald-100"
+ text-balance py-10 px-1 max-sm:px-2 text-emerald-100 sm:bg-center"
 	data-sveltekit-preload-data="viewport"
 >
 	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
@@ -100,6 +100,5 @@
 		/* background-image: url('$lib/assets/svg/patterns/dragon-scales.svg'); */
 		background-size: cover;
 		background-repeat: repeat;
-		background-position: center;
 	}
 </style>
