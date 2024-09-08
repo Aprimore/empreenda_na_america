@@ -22,9 +22,9 @@
 				/>
 			</div>
 			<div class="md:w-1/2 m-auto border-black align-middle">
-				<h2 class="Inter-Bold text-3xl md:text-4xl my-6 text-center">{$t('S4_T')}</h2>
+				<h2 class="Inter-Bold text-3xl md:text-4xl my-6 text-center">{$t('home.S4_T')}</h2>
 				<p class="Lora text-lg max-sm:text-md my-6 text-center">
-					{$t('S4_D')}
+					{$t('home.S4_D')}
 				</p>
 			</div>
 			<!-- <div class="md:max-w-[50%] max-sm:mt-6 h-full">

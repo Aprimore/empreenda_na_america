@@ -16,10 +16,10 @@
 
 	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
 		<h2 class="Inter-Bold text-3xl md:text-4xl text-center my-6">
-			{$t('S7_T')}
+			{$t('home.S7_T')}
 		</h2>
 		<p class="Inter text-md sm:text-xl my-6 text-center px-3">
-			{$t('S7_D')}
+			{$t('home.S7_D')}
 		</p>
 		<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 py-5 px-1 max-sm:px-2">
 			<div class=" rounded-md w-full flex flex-col items-center justify-start py-5 space-y-5">
@@ -32,10 +32,10 @@
 				/>
 
 				<p class="Lora text-xl md:text-2xl text-center font-semibold mb-1">
-					{$t('TEST_DrSten_name')}
+					{$t('home.TEST_DrSten_name')}
 				</p>
 				<p class="Lora text-md md:text-lg text-center w-full">
-					{$t('TEST_DrSten')}
+					{$t('home.TEST_DrSten')}
 				</p>
 			</div>
 			<div class=" rounded-md w-full flex flex-col items-center justify-start py-5 space-y-5">
@@ -48,10 +48,10 @@
 				/>
 
 				<p class="Lora text-xl md:text-2xl text-center font-semibold mb-1">
-					{$t('TEST_Cassia_name')}
+					{$t('home.TEST_Cassia_name')}
 				</p>
 				<p class="Lora text-md md:text-lg text-center w-full">
-					{$t('TEST_Cassia')}
+					{$t('home.TEST_Cassia')}
 				</p>
 			</div>
 			<div class=" rounded-md w-full flex flex-col items-center justify-start py-5 space-y-5">
@@ -64,11 +64,11 @@
 				/>
 
 				<p class="Lora text-xl md:text-2xl text-center font-semibold mb-1">
-					{$t('TEST_Maria_name')}
+					{$t('home.TEST_Maria_name')}
 				</p>
 				<p class="Lora text-md md:text-lg text-center w-full">
-					{$t('TEST_Maria')}
-					<!-- {$t('S2_T')} -->
+					{$t('home.TEST_Maria')}
+					<!-- {$t('home.S2_T')} -->
 				</p>
 			</div>
 		</div>

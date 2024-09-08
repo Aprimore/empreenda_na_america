@@ -4,8 +4,6 @@
 	import { t } from '$lib/translations';
 </script>
 
-<!-- 5555555555555555555555555555555555555 -->
-<!-- bg-gradient-to-b from-emerald-500 to-emerald-900 -->
 <section
 	class="w-full
  text-balance -z-10 text-emerald-100 section-bg2 pt-32"
@@ -14,10 +12,10 @@
 		<div class=" sm:p-5 flex max-md:flex-col items-center md:gap-10">
 			<div class="md:max-w-[45%] border-black align-middle lg:m-10 md:m-5 max-md:p-5 max-md:mt-7">
 				<h1 class="Inter-Bold text-2xl md:text-3xl xl:text-5xl uppercase p-1">
-					{$t('HERO_T')}
+					{$t('home.HERO_T')}
 				</h1>
 				<h2 class="Lora text-xl lg:text-2xl lg:mt-8 md:mt-5 mt-3 p-1">
-					{$t('HERO_D')}
+					{$t('home.HERO_D')}
 				</h2>
 			</div>
 			<div class="relative w-full max-md:p-20 max-sm:p-10">
@@ -30,17 +28,6 @@
 					sizes="(min-width:1080px) 744px, (min-width:768px) 640px, 400px"
 				/>
 			</div>
-			<!-- Placeholder for the image to prevent layout shift -->
-			<!-- The aspect ratio is maintained using padding-bottom (100% for a square) -->
-			<!-- <div class="relative w-full" style="padding-bottom: 100%;">
-				<enhanced:img
-					class="absolute top-0 left-0 w-full h-full object-cover"
-					src={headerhero_webp}
-					alt="landing page header"
-					loading="eager"
-					sizes="(min-width:1080px) 744px, (min-width:768px) 640px, 400px"
-				/>
-			</div> -->
 		</div>
 	</div>
 </section>
@@ -51,7 +38,6 @@
 	} */
 	.section-bg2 {
 		background-image: url('$lib/assets/svg/patterns/sun-tornado.svg');
-		/* background-image: url('$lib/assets/svg/patterns/dragon-scales.svg'); */
 		background-size: cover;
 		background-repeat: repeat;
 		background-position: center;

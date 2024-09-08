@@ -1,6 +1,6 @@
 <script>
 	import { toptier_png } from '$lib';
-	import LanguageSwitcher from './LanguageSwitcher.svelte';
+	// import LanguageSwitcher from './LanguageSwitcher.svelte';
 	// export let data;
 </script>
 
@@ -121,7 +121,7 @@
 				</svg>
 			</span>
 		</button>
-		<LanguageSwitcher />
+		<!-- <LanguageSwitcher /> -->
 	</div>
 </nav>
 

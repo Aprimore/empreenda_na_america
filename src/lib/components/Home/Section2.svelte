@@ -47,9 +47,9 @@
 <section class="w-full max-sm:p-2 py-10 background-img4" data-sveltekit-preload-data="viewport">
 	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
 		<div></div>
-		<h2 class="Inter-Bold text-3xl md:text-4xl text-center my-6">{$t('S5_T')}</h2>
+		<h2 class="Inter-Bold text-3xl md:text-4xl text-center my-6">{$t('home.S5_T')}</h2>
 		<p class="Lora text-md sm:text-xl my-6 text-center lg:px-10 px-3">
-			{$t('S5_D')}
+			{$t('home.S5_D')}
 		</p>
 		<!-- Swiper slider container with navigation enabled -->
 		<swiper-container
@@ -87,7 +87,7 @@
 					class="p-2 bg-gradient-to-b from-emerald-500 to-emerald-400 rounded-2xl max-md:text-center section-bg"
 				>
 					<p class="Lora text-emerald-100 min-h-24 text-xl text-center relative top-0">
-						{$t('EBOOK_STARTUP')}
+						{$t('home.EBOOK_STARTUP')}
 					</p>
 					<img
 						class=" size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
@@ -108,7 +108,7 @@
  rounded-2xl max-md:text-center section-bg"
 				>
 					<p class="Lora text-emerald-100 min-h-24 text-xl text-center relative top-0">
-						{$t('EBOOK_PLAN')}
+						{$t('home.EBOOK_PLAN')}
 					</p>
 					<img
 						class="size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
@@ -128,7 +128,7 @@
 					class="p-2 bg-gradient-to-b from-emerald-500 to-emerald-400 rounded-2xl max-md:text-center section-bg"
 				>
 					<p class="Lora text-emerald-100 min-h-24 text-xl text-center relative top-0">
-						{$t('EBOOK_KID_MONEY')}
+						{$t('home.EBOOK_KID_MONEY')}
 					</p>
 					<img
 						class="size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
@@ -148,7 +148,7 @@
 					class="p-2 bg-gradient-to-b from-emerald-500 to-emerald-400 rounded-2xl row-end-3 max-md:text-center section-bg"
 				>
 					<p class="Lora text-emerald-100 min-h-24 text-xl text-center relative top-0">
-						{$t('EBOOK_EXTRACT')}
+						{$t('home.EBOOK_EXTRACT')}
 					</p>
 					<img
 						class="size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
@@ -168,7 +168,7 @@
 					class="p-2 bg-gradient-to-b from-emerald-500 to-emerald-400 rounded-2xl max-md:text-center section-bg"
 				>
 					<p class="Lora text-emerald-100 min-h-24 text-xl text-center relative top-0">
-						{$t('EBOOK_REMOTEWORK')}
+						{$t('home.EBOOK_REMOTEWORK')}
 					</p>
 					<img
 						class="size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
@@ -188,7 +188,7 @@
 					class="p-2 bg-gradient-to-b from-emerald-500 to-emerald-400 rounded-2xl max-md:text-center section-bg"
 				>
 					<p class="Lora text-emerald-100 min-h-24 text-xl text-center relative top-0">
-						{$t('EBOOK_MARKET')}
+						{$t('home.EBOOK_MARKET')}
 					</p>
 					<img
 						class=" size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
@@ -204,7 +204,7 @@
 
 			<!-- Add as many swiper slides as needed -->
 		</swiper-container>
-		<!-- {$t('xxxxx')} -->
+		<!-- {$t('home.xxxxx')} -->
 		<!-- <div
 			class="sm:grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 m-auto sm:rounded-2xl lg:py-6 gap-3 max-sm:space-y-3 text-emerald-100"
 		>

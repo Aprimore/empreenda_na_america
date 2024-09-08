@@ -1,34 +1,34 @@
-//@ts-nocheck
-import { writable } from 'svelte/store';
+// //@ts-nocheck
+// import { writable } from 'svelte/store';
 
-export const localStore = (key, initial) => {
-	const toString = (value) => JSON.stringify(value, null, 2);
-	const toObj = JSON.parse;
+// export const localStore = (key, initial) => {
+// 	const toString = (value) => JSON.stringify(value, null, 2);
+// 	const toObj = JSON.parse;
 
-	if (typeof window !== 'undefined' && window.localStorage) {
-		if (localStorage.getItem(key) === null) {
-			localStorage.setItem(key, toString(initial));
-		}
+// 	if (typeof window !== 'undefined' && window.localStorage) {
+// 		if (localStorage.getItem(key) === null) {
+// 			localStorage.setItem(key, toString(initial));
+// 		}
 
-		const saved = toObj(localStorage.getItem(key));
+// 		const saved = toObj(localStorage.getItem(key));
 
-		const { subscribe, set, update } = writable(saved);
+// 		const { subscribe, set, update } = writable(saved);
 
-		return {
-			subscribe,
-			set: (value) => {
-				localStorage.setItem(key, toString(value));
-				return set(value);
-			},
-			update
-		};
-	} else {
-		const { subscribe, set, update } = writable(initial);
+// 		return {
+// 			subscribe,
+// 			set: (value) => {
+// 				localStorage.setItem(key, toString(value));
+// 				return set(value);
+// 			},
+// 			update
+// 		};
+// 	} else {
+// 		const { subscribe, set, update } = writable(initial);
 
-		return {
-			subscribe,
-			set,
-			update
-		};
-	}
-};
+// 		return {
+// 			subscribe,
+// 			set,
+// 			update
+// 		};
+// 	}
+// };

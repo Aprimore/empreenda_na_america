@@ -12,7 +12,7 @@
 >
 	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
 		<h2 class="Inter-Bold text-3xl md:text-4xl text-center my-6">
-			{$t('S2_T')}
+			{$t('home.S2_T')}
 		</h2>
 		<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
 			<div
@@ -33,9 +33,9 @@
 					/>
 				</svg>
 				<h3 class="Inter text-2xl text-center font-semibold mb-1">
-					{$t('S2_T')}
+					{$t('home.S2_T')}
 				</h3>
-				<p class="Lora text-md sm:text-lg text-center w-full px-4 md:px-2">{$t('S2_D')}</p>
+				<p class="Lora text-md sm:text-lg text-center w-full px-4 md:px-2">{$t('home.S2_D')}</p>
 			</div>
 			<div
 				class="border border-black rounded-md w-full flex flex-col items-center justify-start p-5 space-y-3"
@@ -55,10 +55,10 @@
 					/>
 				</svg>
 				<h3 class="Inter text-2xl text-center font-semibold mb-1">
-					{$t('S3_T')}
+					{$t('home.S3_T')}
 				</h3>
 				<p class="Lora text-md sm:text-lg text-center w-full px-4 md:px-2">
-					{$t('S3_D')}
+					{$t('home.S3_D')}
 				</p>
 			</div>
 			<div
@@ -79,12 +79,12 @@
 					/>
 				</svg>
 				<h3 class="Inter text-2xl text-center font-semibold mb-1">
-					<!-- {$t('S2_T')} --> Beatae commodi cumque quod adih2isci!
+					<!-- {$t('home.S2_T')} --> Beatae commodi cumque quod adih2isci!
 				</h3>
 				<p class="Lora text-md sm:text-lg text-center w-full px-4 md:px-2">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed dolore sint odio
 					praesentium id saepe eum minus omnis nihil.
-					<!-- {$t('S2_T')} -->
+					<!-- {$t('home.S2_T')} -->
 				</p>
 			</div>
 		</div>

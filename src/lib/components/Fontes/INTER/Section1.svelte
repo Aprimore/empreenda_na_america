@@ -8,9 +8,9 @@
 	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
 		<div class="p-5 flex max-md:flex-col">
 			<div class="md:max-w-[45%] m-auto border-black align-middle">
-				<h1 class="font-extrabold text-6xl xl:text-7xl uppercase">{$t('HERO_T')}</h1>
+				<h1 class="font-extrabold text-6xl xl:text-7xl uppercase">{$t('home.HERO_T')}</h1>
 				<h2 class="font-bold text-xl lg:text-2xl mt-10">
-					{$t('HERO_D')}
+					{$t('home.HERO_D')}
 				</h2>
 			</div>
 			<div class="md:max-w-[50%] max-sm:mt-6 h-full"></div>

@@ -31,7 +31,8 @@
 							<a
 								href="/"
 								title="Learn more about our company"
-								class="text-emerald-100 text-base hover:text-emerald-950">{$t('FOOT_contact')}</a
+								class="text-emerald-100 text-base hover:text-emerald-950"
+								>{$t('home.FOOT_contact')}</a
 							>
 						</li>
 						<li>
@@ -40,14 +41,14 @@
 								title="Learn more about our company"
 								class="text-emerald-100 text-base hover:text-emerald-950"
 							>
-								{$t('FOOT_help')}
+								{$t('home.FOOT_help')}
 							</a>
 						</li>
 						<li>
 							<a
 								href="/"
 								title="Learn more about our company"
-								class="text-emerald-100 text-base hover:text-emerald-950">{$t('FOOT_terms')}</a
+								class="text-emerald-100 text-base hover:text-emerald-950">{$t('home.FOOT_terms')}</a
 							>
 						</li>
 						<li>
@@ -56,14 +57,15 @@
 								title="Learn more about our company"
 								class="text-emerald-100 text-base hover:text-emerald-950"
 							>
-								{$t('FOOT_privacy')}
+								{$t('home.FOOT_privacy')}
 							</a>
 						</li>
 						<li>
 							<a
 								href="/"
 								title="Learn more about our company"
-								class="text-emerald-100 text-base hover:text-emerald-950">{$t('FOOT_aboutus')}</a
+								class="text-emerald-100 text-base hover:text-emerald-950"
+								>{$t('home.FOOT_aboutus')}</a
 							>
 						</li>
 					</ul>
@@ -77,14 +79,15 @@
 									title="Learn more about our company"
 									class="text-emerald-100 text-base hover:text-emerald-950"
 								>
-									{$t('FOOT_community')}
+									{$t('home.FOOT_community')}
 								</a>
 							</li>
 							<li>
 								<a
 									href="/"
 									title="Learn more about our company"
-									class="text-emerald-100 text-base hover:text-emerald-950">{$t('FOOT_shop')}</a
+									class="text-emerald-100 text-base hover:text-emerald-950"
+									>{$t('home.FOOT_shop')}</a
 								>
 							</li>
 							<li>
@@ -93,7 +96,7 @@
 									title="Learn more about our company"
 									class="text-emerald-100 text-base hover:text-emerald-950"
 								>
-									{$t('FOOT_company')}
+									{$t('home.FOOT_company')}
 								</a>
 							</li>
 							<li>
@@ -102,7 +105,7 @@
 									title="Learn more about our company"
 									class="text-emerald-100 text-base hover:text-emerald-950"
 								>
-									{$t('FOOT_support')}
+									{$t('home.FOOT_support')}
 								</a>
 							</li>
 							<li>
@@ -111,7 +114,7 @@
 									title="Learn more about our company"
 									class="text-emerald-100 text-base hover:text-emerald-950"
 								>
-									{$t('FOOT_documentation')}
+									{$t('home.FOOT_documentation')}
 								</a>
 							</li>
 						</ul>

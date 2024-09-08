@@ -13,9 +13,9 @@
 	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
 		<div class="p-5 flex max-md:flex-col">
 			<div class=" border-black">
-				<h2 class="Inter-Bold text-3xl md:text-4xl uppercase">{$t('S5_T')}</h2>
+				<h2 class="Inter-Bold text-3xl md:text-4xl uppercase">{$t('home.S5_T')}</h2>
 				<p class="Lora text-lg max-sm:text-md my-6 text-center">
-					{$t('S5_D')}
+					{$t('home.S5_D')}
 				</p>
 			</div>
 		</div>

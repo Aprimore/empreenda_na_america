@@ -8,11 +8,13 @@
 	import Navbar2 from '$lib/components/Navbar2.svelte';
 	import { onMount } from 'svelte';
 	let loading = true;
+	import { t } from '$lib/translations';
+	const link = 'https://kit.svelte.dev';
 
 	onMount(() => {
 		setTimeout(() => {
 			loading = false;
-		}, 500);
+		}, 100);
 	});
 </script>
 
@@ -23,11 +25,11 @@
 	</div>
 {:else}
 	<Section1 />
-	<!-- <Section2 />
+	<Section2 />
 	<Section3 />
 	<Section4 />
 	<Section7 />
-	<Section6 /> -->
+	<Section6 />
 {/if}
 
 <style>

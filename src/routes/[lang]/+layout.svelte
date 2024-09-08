@@ -1,31 +1,20 @@
 <script lang="ts">
 	import '@fontsource-variable/lora';
 	import '@fontsource-variable/inter';
-	import { browser } from '$app/environment';
-	import { page } from '$app/stores';
+	// import { browser } from '$app/environment';
 	import { EBOOK_REMOTEWORK_webp } from '$lib';
 	import Footer from '$lib/components/Footer.svelte';
-	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
-	// import Navbar from '$lib/components/Navbar.svelte';
-	// import Navbar2 from '$lib/components/Navbar2.svelte';
-	// import { currentLocale } from '$lib/store.js';
-	// import { get } from 'svelte/store';
+	import '../../app.css';
 
-	// let localeUrl = get(currentLocale);
+	// import { page } from '$app/stores';
 
-	// // Only run this in the browser (to avoid SSR issues)
-	// if (browser) {
-	// 	// Check if there's a saved locale in localStorage
-	// 	let savedLocale = localStorage.getItem('locale');
-	// 	if (savedLocale) {
-	// 		currentLocale.set(savedLocale); // Set the locale from localStorage
-	// 		localeUrl = savedLocale;
-	// 	} else {
-	// 		// Optionally, handle the default locale logic
-	// 		currentLocale.set(localeUrl); // Set to default
-	// 	}
-	// }
+	// $: ({ route } = $page.data);
 </script>
+
+<main>
+	<slot />
+</main>
+<Footer />
 
 <!-- <nav class="max-w-2xl mx-auto border border-blue-950 rounded p-2 m-2">
 	<div class="flex items-center justify-between text-blue-gray-900">
@@ -61,7 +50,55 @@
 		</a>
 	</div>
 </nav> -->
-<main>
-	<slot />
-</main>
-<Footer />
+<style>
+	/* Zoom responsiveness */
+	/* @media only screen and (min-width: 600px) {
+		:global(html) {
+			zoom: 0.8;
+		}
+	}
+
+	@media only screen and (min-width: 1000x) {
+		:global(html) {
+			zoom: 0.9;
+		}
+	}
+
+	@media only screen and (min-width: 1400px) {
+		:global(html) {
+			zoom: 1;
+		}
+	} */
+
+	:global(html) {
+		font-family: 'Inter Variable';
+		font-weight: 700;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+	:global(.Lora) {
+		font-family: 'Lora Variable', serif;
+		font-weight: 400;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+	:global(.Lora-Bold) {
+		font-family: 'Lora Variable', serif;
+		font-weight: 700;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+	:global(.Inter) {
+		font-family: 'Inter Variable', sans-serif;
+		font-weight: 400;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+
+	:global(.Inter-Bold) {
+		font-family: 'Inter Variable', sans-serif;
+		font-weight: 700;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+</style>
