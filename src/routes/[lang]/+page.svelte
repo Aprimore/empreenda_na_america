@@ -10,8 +10,9 @@
 	let loading = true;
 
 	onMount(() => {
-		setTimeout(() => {}, 500);
-		loading = false;
+		setTimeout(() => {
+			loading = false;
+		}, 500);
 	});
 </script>
 
@@ -22,11 +23,11 @@
 	</div>
 {:else}
 	<Section1 />
-	<Section2 />
+	<!-- <Section2 />
 	<Section3 />
 	<Section4 />
 	<Section7 />
-	<Section6 />
+	<Section6 /> -->
 {/if}
 
 <style>
