@@ -1,30 +1,36 @@
-// import { browser } from '$app/environment';
+import { browser } from '$app/environment';
 import { redirect } from '@sveltejs/kit';
-// import { onMount } from 'svelte';
 
 export async function load({ params, url }) {
 	// This block should only run on the client side
-	// onMount(() => {
-	// if (browser) {
-	const lang = params.lang || 'en'; // Fallback to 'en' if lang is not provided
+	if (browser) {
+		const lang = params.lang || 'en'; // Fallback to 'en' if lang is not provided
 
-	// Check if the URL already has the language prefix to avoid infinite redirect
-	// const validLocales = ['en', 'pt-br', 'es']; // Your supported languages
-	// const urlPathSegments = url.pathname.split('/').filter(Boolean); // Remove empty segments
+		// Supported locales
+		const validLocales = ['en', 'pt-br', 'es'];
 
-	// If no language is detected in the first URL segment, redirect to the correct one
-	// if (!validLocales.includes(urlPathSegments[0])) {
-	// 	throw redirect(307, `/${lang}${url.pathname}`);
-	// }
+		// Split the URL path into segments and filter out empty ones
+		const urlPathSegments = url.pathname.split('/').filter(Boolean);
 
-	// Return the language in the response
-	return {
-		lang
-	};
-	// }
-	// });
+		// If no language is detected in the first URL segment, and we're not at the root,
+		// redirect to the default language path.
+		if (!urlPathSegments[0] && url.pathname === '/') {
+			// At the root path, redirect to default language
+			throw redirect(307, `/${lang}`);
+		}
+
+		// If the first segment is not a valid locale, redirect
+		if (!validLocales.includes(urlPathSegments[0])) {
+			throw redirect(307, `/${lang}${url.pathname}`);
+		}
+
+		// Return the language in the response
+		return {
+			lang
+		};
+	}
 }
 
 export const prerender = true;
-// export const trailingSlash = 'always';
+export const trailingSlash = 'always';
 export const ssr = true;
