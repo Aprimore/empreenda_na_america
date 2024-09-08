@@ -25,7 +25,7 @@
 # Enable mod_rewrite
 RewriteEngine On
 
-# Ensure every URL ends with a slash (optional based on previous needs)
+## Ensure every URL ends with a slash (optional based on previous needs)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*[^/])$ /$1/ [L,R=301]
