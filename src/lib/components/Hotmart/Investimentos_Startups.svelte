@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { onMount } from 'svelte';
 
 	// Função para carregar o script e o CSS do Hotmart
@@ -23,11 +23,9 @@
 	});
 </script>
 
-<!-- O botão que irá usar o widget do Hotmart -->
-<!-- onclick="return false;" -->
 <a
 	href="https://pay.hotmart.com/D93514468N?checkoutMode=2"
 	class="hotmart-fb hotmart__button-checkout"
 >
 	<img src="https://static.hotmart.com/img/btn-buy-green.png" alt="Buy Now" />
-</a>
+</a> -->
