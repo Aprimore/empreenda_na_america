@@ -32,6 +32,7 @@ function generatePrerenderEntries() {
 			entries.push(`/${lang}${page}`);
 		});
 	});
+	console.log(entries);
 	return entries;
 }
 
@@ -53,11 +54,11 @@ const config = {
 		adapter: adapter({
 			// default options are shown. On some platforms
 			// these options are set automatically — see below
-			pages: 'build',
-			assets: 'build',
-			fallback: 'index.html',
-			precompress: false,
-			strict: true
+			// pages: 'build',
+			// assets: 'build',
+			// fallback: 'index.html',
+			// precompress: false,
+			// strict: true
 		}),
 		prerender: {
 			crawl: true,
@@ -66,7 +67,7 @@ const config = {
 		},
 		paths: {
 			base: '', // Set this to '' if your site is at the root of the domain
-			assets: '' // Set this if your assets are served from a different URL
+			// assets: '' // Set this if your assets are served from a different URL
 		}
 	},
 	preprocess: vitePreprocess()

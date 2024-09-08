@@ -14,15 +14,15 @@ export async function load({ params, url }) {
 
 		// If no language is detected in the first URL segment, and we're not at the root,
 		// redirect to the default language path.
-		if (!urlPathSegments[0] && url.pathname === '/') {
-			// At the root path, redirect to default language
-			throw redirect(307, `/${lang}`);
-		}
+		// if (!urlPathSegments[0] && url.pathname === '/') {
+		// 	// At the root path, redirect to default language
+		// 	throw redirect(307, `/${lang}`);
+		// }
 
-		// If the first segment is not a valid locale, redirect
-		if (!validLocales.includes(urlPathSegments[0])) {
-			throw redirect(307, `/${lang}${url.pathname}`);
-		}
+		// // If the first segment is not a valid locale, redirect
+		// if (!validLocales.includes(urlPathSegments[0])) {
+		// 	throw redirect(307, `/${lang}${url.pathname}`);
+		// }
 
 		// Return the language in the response
 		return {
