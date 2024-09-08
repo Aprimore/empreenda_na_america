@@ -14,8 +14,8 @@
 	} from '$lib/siteConfig';
 	import '../app.css';
 
-	let pagePath = $page.url.pathname;
-	$: pagePath = $page.url.pathname;
+	// let pagePath = $page.url.pathname;
+	// $: pagePath = $page.url.pathname;
 
 	// export async function load({ url }) {
 	// 	const lang = url.pathname.split('/')[1] || 'en'; // Extract language from URL path
