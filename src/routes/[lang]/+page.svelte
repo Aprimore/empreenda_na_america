@@ -41,7 +41,7 @@
 		border: 5px solid #dfdad6;
 		border-top-color: #333;
 		border-radius: 50%;
-		animation: spin 1s linear infinite;
+		animation: spin .3s linear infinite;
 	}
 
 	@keyframes spin {
