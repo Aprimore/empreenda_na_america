@@ -21,14 +21,14 @@
 
 <svelte:head>
 	<!-- Preconnect to Google's font servers -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
 
 	<!-- Preload the fonts for Inter 700 and Lora 400 -->
-	<link
+	<!-- <link
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lora:wght@400&display=swap"
 		rel="stylesheet"
-	/>
+	/> -->
 
 	<title>{getPageTitle(pagePath)}</title>
 	<link rel="canonical" href={SITE_URL + pagePath} />
