@@ -24,14 +24,14 @@
 		rel="preload"
 		as="font"
 		type="font/woff2"
-		href="/node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2"
+		href="@fontsource-variable/inter/files/inter-latin-wght-normal.woff2"
 		crossorigin="anonymous"
 	/>
 	<link
 		rel="preload"
 		as="font"
 		type="font/woff2"
-		href="/node_modules/@fontsource-variable/lora/files/lora-latin-wght-normal.woff2"
+		href="@fontsource-variable/lora/files/lora-latin-wght-normal.woff2"
 		crossorigin="anonymous"
 	/>
 	<title>{getPageTitle(pagePath)}</title>
@@ -81,21 +81,21 @@
 		font-display: swap;
 	}
 	:global(.Lora) {
-		font-family: 'Lora Variable', serif;
+		font-family: 'Lora Variable', serif, Arial;
 		font-weight: 400;
 		font-optical-sizing: auto;
 		font-style: normal;
 		font-display: swap;
 	}
 	:global(.Lora-Bold) {
-		font-family: 'Lora Variable', serif;
+		font-family: 'Lora Variable', serif, Arial;
 		font-weight: 700;
 		font-optical-sizing: auto;
 		font-style: normal;
 		font-display: swap;
 	}
 	:global(.Inter) {
-		font-family: 'Inter Variable', sans-serif;
+		font-family: 'Inter Variable', sans-serif, Arial;
 		font-weight: 400;
 		font-optical-sizing: auto;
 		font-style: normal;
@@ -103,7 +103,7 @@
 	}
 
 	:global(.Inter-Bold) {
-		font-family: 'Inter Variable', sans-serif;
+		font-family: 'Inter Variable', sans-serif, Arial;
 		font-weight: 700;
 		font-optical-sizing: auto;
 		font-style: normal;

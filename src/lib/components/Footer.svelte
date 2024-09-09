@@ -17,8 +17,6 @@
 					<a href="/" class="mb-6 inline-block max-w-[150px]">
 						<img
 							loading="lazy"
-							decoding="sync"
-							fetchpriority="low"
 							src={toptier_webp}
 							alt="logo"
 							class="aspect-square transition-transform transform hover:-translate-y-1 w-36 h-36"
