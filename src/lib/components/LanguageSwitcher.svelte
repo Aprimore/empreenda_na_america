@@ -3,9 +3,6 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import { brazil_svg, spain_svg, usa_svg } from '$lib';
-	// import { onMount } from 'svelte';
-
-	$: ({ route } = $page.data);
 
 	const languages = [
 		{ code: 'en', name: 'English', flag: usa_svg },
@@ -13,14 +10,21 @@
 		{ code: 'pt', name: 'Português', flag: brazil_svg }
 	];
 
-	// Change the language and navigate to the correct route
 	function handleLanguageChange(langCode: string) {
-		const currentPath = route || '';
+		const currentPath = $page.data.route || '';
 		goto(`/${langCode}${currentPath}`);
+	}
+
+	function getHreflangUrl(langCode: string): string {
+		const currentPath = $page.data.route || '';
+		return `/${langCode}${currentPath}`;
 	}
 </script>
 
-<!-- Dropdown with flags and buttons -->
+{#each languages as lang}
+	<link rel="alternate" hreflang={lang.code} href={getHreflangUrl(lang.code)} />
+{/each}
+
 <div class="dropdown bg-emerald-100 rounded-md">
 	<button
 		class="flex items-center bg-[#f1f1f9] border-none p-3 rounded-md cursor-pointer"
@@ -38,6 +42,25 @@
 		{/each}
 	</div>
 </div>
+
+<!-- Dropdown with flags and buttons -->
+<!-- <div class="dropdown bg-emerald-100 rounded-md">
+	<button
+		class="flex items-center bg-[#f1f1f9] border-none p-3 rounded-md cursor-pointer"
+		title="dropdown button"
+	>
+		<img src={languages.find((l) => l.code === $locale)?.flag} class="flag" alt="country flag" />
+		{$t(`lang.${$locale}`)}
+	</button>
+	<div class="dropdown-content rounded-md">
+		{#each languages as lang}
+			<button on:click={() => handleLanguageChange(lang.code)}>
+				<img src={lang.flag} alt="{lang.name} flag" class="flag" />
+				<span>{lang.name}</span>
+			</button>
+		{/each}
+	</div>
+</div> -->
 
 <style>
 	.dropdown {
