@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '@fontsource-variable/lora';
 	import '@fontsource-variable/inter';
-	import { EBOOK_REMOTEWORK_webp, toptier_png } from '$lib';
+	import { EBOOK_REMOTEWORK_webp, toptier_webp } from '$lib';
 	import Footer from '$lib/components/Footer.svelte';
 	import '../../app.css';
 	import {
@@ -29,10 +29,10 @@
 	<meta property="og:title" content={SITE_TITLE} />
 	<meta name="description" content={SITE_DESCRIPTION} />
 	<meta property="og:description" content={SITE_DESCRIPTION} />
-	<meta property="og:image" content={toptier_png} />
+	<meta property="og:image" content={toptier_webp} />
 	<meta property="og:image:width" content={OG_IMAGE_WIDTH} />
 	<meta property="og:image:height" content={OG_IMAGE_HEIGHT} />
-	<meta name="twitter:image" content={toptier_png} />
+	<meta name="twitter:image" content={toptier_webp} />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={SITE_TITLE} />
 	<meta name="twitter:description" content={SITE_DESCRIPTION} />

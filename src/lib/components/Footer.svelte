@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { toptier_png } from '$lib';
+	import { toptier_webp } from '$lib';
 	import { t } from '$lib/translations';
 </script>
 
@@ -12,16 +12,16 @@
 			<!-- <div class="flex justify-center items-center"> -->
 			<!-- <div class="footer1 xl:col-span-2 md:col-span-2 col-span-2 max-md:flex justify-center">
 				</div> -->
-			<div class="flex justify-around items-center space-x-10">
+			<div class="sm:flex justify-around items-center space-x-10">
 				<div class=" ">
 					<a href="/" class="mb-6 inline-block max-w-[150px]">
 						<img
 							loading="lazy"
 							decoding="sync"
 							fetchpriority="low"
-							src={toptier_png}
+							src={toptier_webp}
 							alt="logo"
-							class="aspect-square transition-transform transform hover:-translate-y-1"
+							class="aspect-square transition-transform transform hover:-translate-y-1 w-36 h-36"
 						/>
 					</a>
 				</div>

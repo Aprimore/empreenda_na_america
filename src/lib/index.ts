@@ -10,7 +10,8 @@ export { default as EBOOK_STARTUP_webp } from './assets/images/ebooks/EBOOK_STAR
 export { default as headerhero_webp } from './assets/images/headerhero.webp';
 export { default as cassia_a_webp } from './assets/images/testimonials/cassia_a.webp';
 export { default as dr_sten_webp } from './assets/images/testimonials/dr_sten.webp';
-export { default as toptier_png } from './assets/images/toptier.png';
+export { default as toptier_webp } from './assets/images/toptier.webp';
+// export { default as toptier_png } from './assets/images/toptier.png';
 export { default as maria_d_webp } from './assets/images/testimonials/maria_d.webp';
 export { default as brazil_svg } from './assets/svg/brazil.svg';
 

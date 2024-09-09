@@ -1,8 +1,13 @@
 <!-- Benefits of Following Our YouTube Channel -->
 <script lang="ts">
-	// import * as m from '$lib/paraglide/messages';
 	import { t } from '$lib/translations';
+	import { onMount } from 'svelte';
 	import Youtube from 'svelte-youtube-embed';
+	let youtubeVisible = false;
+	// Defer rendering the Youtube component until the page is mounted
+	onMount(() => {
+		youtubeVisible = true;
+	});
 </script>
 
 <section
@@ -25,9 +30,10 @@
 				/>
 			</div> -->
 
-			<div class="md:w-1/2 aspect-video px-2 my-auto">
-				<Youtube id="zuAFIMEaS-o" />
-				<!-- <iframe
+			{#if youtubeVisible}
+				<div class="md:w-1/2 aspect-video px-2 my-auto">
+					<Youtube id="zuAFIMEaS-o" />
+					<!-- <iframe
 					data-sveltekit-preload-data="viewport"
 					loading="lazy"
 					class="aspect-[16/9] w-full h-auto rounded-lg"
@@ -37,7 +43,8 @@
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 					allowfullscreen
 				></iframe> -->
-			</div>
+				</div>
+			{/if}
 		</div>
 	</div>
 </section>

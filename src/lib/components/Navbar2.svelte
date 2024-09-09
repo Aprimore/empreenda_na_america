@@ -1,5 +1,5 @@
 <script>
-	import { toptier_png } from '$lib';
+	import { toptier_webp } from '$lib';
 	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
 </script>
 
@@ -11,7 +11,11 @@
 			href="/"
 			class="mr-4 block cursor-pointer py-1.5 font-sans text-base font-semibold leading-relaxed tracking-normal text-inherit antialiased"
 		>
-			<img src={toptier_png} class="size-20" alt="toptier" />
+			<img
+				src={toptier_webp}
+				class="aspect-square transition-transform transform hover:-translate-y-1 w-20 h-20"
+				alt="toptier"
+			/>
 		</a>
 
 		<!-- <button
