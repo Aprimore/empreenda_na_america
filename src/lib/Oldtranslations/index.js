@@ -17,7 +17,7 @@ const config = {
 		{
 			locale: 'ptbr',
 			key: '',
-			loader: async () => (await import('./ptbr/common.json')).default
+			loader: async () => (await import('./pt-br/common.json')).default
 		}
 	]
 };

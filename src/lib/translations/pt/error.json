@@ -1,6 +1,6 @@
 {
-    "error.happens": "Ops...",
-    "404": "Página não encontrada.",
-    "500": "Erro interno do servidor.",
-    "default": "Ocorreu um erro."
+	"error.happens": "Ops...",
+	"404": "Página não encontrada.",
+	"500": "Erro interno do servidor.",
+	"default": "Ocorreu um erro."
 }

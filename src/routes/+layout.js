@@ -29,7 +29,7 @@ import { setLocale, setRoute } from '$lib/translations';
 
 export const prerender = true;
 export const trailingSlash = 'always';
-export const ssr = true;
+export const ssr = false;
 
 /** @type { import('@sveltejs/kit').Load } */
 export const load = async ({ url }) => {

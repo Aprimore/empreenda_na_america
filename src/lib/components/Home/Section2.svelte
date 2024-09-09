@@ -57,7 +57,7 @@
 			autoplay={true}
 			class="mySwiper"
 			space-between={spaceBetween}
-			slides-per-view={1}
+			slides-per-view={3}
 			breakpoints={{
 				640: {
 					slidesPerView: 2

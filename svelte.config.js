@@ -39,6 +39,12 @@ const config = {
 			// entries: ['/pt-br/', '/en/', '/es/']
 		},
 		adapter: sitemapWrapAdapter(adapter())
+		// csp: {
+		// 	mode: 'hash',
+
+		//   }
+		// }
+
 		// paths: {
 		// base: '' // Set this to '' if your site is at the root of the domain
 		// assets: '' // Set this if your assets are served from a different URL
