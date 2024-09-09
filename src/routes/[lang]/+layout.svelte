@@ -20,20 +20,16 @@
 </script>
 
 <svelte:head>
+	<!-- Preconnect to Google's font servers -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+	<!-- Preload the fonts for Inter 700 and Lora 400 -->
 	<link
-		rel="preload"
-		as="font"
-		type="font/woff2"
-		href="@fontsource-variable/inter/files/inter-latin-wght-normal.woff2"
-		crossorigin="anonymous"
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Lora:wght@400&display=swap"
+		rel="stylesheet"
 	/>
-	<link
-		rel="preload"
-		as="font"
-		type="font/woff2"
-		href="@fontsource-variable/lora/files/lora-latin-wght-normal.woff2"
-		crossorigin="anonymous"
-	/>
+
 	<title>{getPageTitle(pagePath)}</title>
 	<link rel="canonical" href={SITE_URL + pagePath} />
 	<meta property="og:url" content={SITE_URL} />
