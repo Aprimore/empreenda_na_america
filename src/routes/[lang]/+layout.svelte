@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '@fontsource-variable/lora';
 	import '@fontsource-variable/inter';
+	import interWoff2 from '@fontsource-variable/inter/files/inter-latin-700-normal.woff2?url';
+	import loraWoff2 from '@fontsource-variable/lora/files/lora-latin-400-normal.woff2?url';
 	import { EBOOK_REMOTEWORK_webp, toptier_webp } from '$lib';
 	import Footer from '$lib/components/Footer.svelte';
 	import '../../app.css';
@@ -19,6 +21,9 @@
 </script>
 
 <svelte:head>
+	<link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin="anonymous" />
+	<link rel="preload" as="font" type="font/woff2" href={loraWoff2} crossorigin="anonymous" />
+
 	<!-- <title>{$page.data.post?.title || 'My Menthor | Home'}</title> -->
 	<!-- {#if pagePath && pagePath !== '/'}
 	{/if} -->
@@ -100,24 +105,28 @@
 		font-weight: 700;
 		font-optical-sizing: auto;
 		font-style: normal;
+		font-display: swap;
 	}
 	:global(.Lora) {
 		font-family: 'Lora Variable', serif;
 		font-weight: 400;
 		font-optical-sizing: auto;
 		font-style: normal;
+		font-display: swap;
 	}
 	:global(.Lora-Bold) {
 		font-family: 'Lora Variable', serif;
 		font-weight: 700;
 		font-optical-sizing: auto;
 		font-style: normal;
+		font-display: swap;
 	}
 	:global(.Inter) {
 		font-family: 'Inter Variable', sans-serif;
 		font-weight: 400;
 		font-optical-sizing: auto;
 		font-style: normal;
+		font-display: swap;
 	}
 
 	:global(.Inter-Bold) {
@@ -125,5 +134,6 @@
 		font-weight: 700;
 		font-optical-sizing: auto;
 		font-style: normal;
+		font-display: swap;
 	}
 </style>
