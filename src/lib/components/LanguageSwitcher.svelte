@@ -5,7 +5,7 @@
 	import { brazil_svg, spain_svg, usa_svg } from '$lib';
 
 	const languages = [
-		{ code: 'en', name: 'English', flag: usa_svg },
+		// { code: 'en', name: 'English', flag: usa_svg },
 		{ code: 'es', name: 'Español', flag: spain_svg },
 		{ code: 'pt', name: 'Português', flag: brazil_svg }
 	];

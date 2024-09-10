@@ -1,5 +1,5 @@
 <script lang="ts">
-	import CookieConsent from '$lib/components/CookieConsent.svelte';
+	// import CookieConsent from '$lib/components/CookieConsent.svelte';
 	import '@fontsource-variable/lora';
 	import '@fontsource-variable/inter';
 	import { EBOOK_REMOTEWORK_webp, toptier_webp } from '$lib';
@@ -46,7 +46,7 @@
 	<meta name="twitter:description" content={SITE_DESCRIPTION} />
 </svelte:head>
 
-<CookieConsent />
+<!-- <CookieConsent /> -->
 <slot />
 <Footer />
 

@@ -1,7 +1,7 @@
 //@ts-nocheck
 import { dev } from '$app/environment';
 import i18n from 'sveltekit-i18n';
-import en from './en';
+// import en from './en';
 import es from './es';
 import pt from './pt';
 import lang from './lang';
@@ -12,10 +12,10 @@ const config = {
 		level: dev ? 'warn' : 'error'
 	},
 	translations: {
-		en: {
-			...en,
-			lang
-		},
+		// en: {
+		// 	...en,
+		// 	lang
+		// },
 		es: {
 			...es,
 			lang
@@ -41,6 +41,6 @@ const config = {
 // 	originalSetLocale(normalizeLocale(newLocale));
 // };
 
-export const defaultLocale = 'en';
+export const defaultLocale = 'pt';
 
 export const { t, locale, locales, loading, setLocale, setRoute, translations } = new i18n(config);
