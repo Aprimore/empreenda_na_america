@@ -14,12 +14,7 @@
 	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
 		<div class="p-5 flex max-md:flex-col">
 			<div class="md:w-1/2 align-middle flex items-center max-md:order-2 lg:m-10 md:m-5">
-				<img
-					class="rounded-xl aspect-[4/3] w-full h-auto"
-					src={business_webp}
-					alt="business "
-					loading="lazy"
-				/>
+				<img class="rounded-xl w-full h-auto" src={business_webp} alt="business " loading="lazy" />
 			</div>
 			<div class="md:w-1/2 m-auto border-black align-middle">
 				<h2 class="Inter-Bold text-3xl md:text-4xl my-6 text-center">{$t('home.S4_T')}</h2>

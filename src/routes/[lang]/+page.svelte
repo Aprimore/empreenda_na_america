@@ -9,7 +9,6 @@
 	import { onMount } from 'svelte';
 	let loading = true;
 	import { t } from '$lib/translations';
-	export let data
 	onMount(() => {
 		loading = false;
 	});
@@ -22,7 +21,7 @@
 	</div>
 {:else}
 	<Section1 />
-	<Section2 {data}/>
+	<Section2 />
 	<Section3 />
 	<Section4 />
 	<Section7 />

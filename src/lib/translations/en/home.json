@@ -1,7 +1,8 @@
 {
 	"title": "Welcome to SvelteKit",
 	"text": "Visit <a href=\"{{link}}\">kit.svelte.dev</a> to read the documentation",
-	"HERO_T": "Entrepreneur in America: Your Complete Map to Success in the USA",
+	"HERO_T": "Entrepreneur in America: ",
+	"HERO_T2": "Your Complete Map to Success in the USA",
 	"HERO_D": "Discover exclusive strategies for business, investment, and financial education to grow in the United States.",
 	"S1_T": "Transform Your Life with Our Exclusive Ebooks!",
 	"S1_D": "Access the knowledge you need to thrive in America. From artificial intelligence to smart investments.",

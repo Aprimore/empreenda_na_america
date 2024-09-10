@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.no-transition {
+/* .no-transition {
 	view-transition-name: none;
-}
+} */
+
 @media (prefers-reduced-motion) {
 	::view-transition-group(*),
 	::view-transition-old(*),
@@ -13,6 +14,10 @@
 	}
 }
 
-.navbar {
+/* .navbar {
 	view-transition-name: 'navbar';
+} */
+
+.blur-load {
+	background-size: cover;
 }

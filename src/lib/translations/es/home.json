@@ -1,7 +1,8 @@
 {
 	"title": "Willkommen bei SvelteKit",
 	"text": "Besuchen Sie <a href=\"{{link}}\">kit.svelte.dev</a>, um die Dokumentation zu lesen",
-	"HERO_T": "Empreende en América: Tu Mapa Completo para el Éxito en EE. UU.",
+	"HERO_T": "Empreende en América: ",
+	"HERO_T2": "Tu Mapa Completo para el Éxito en Estados Unidos",
 	"HERO_D": "Descubre estrategias exclusivas de negocios, inversiones y educación financiera para crecer en Estados Unidos.",
 	"S1_T": "¡Transforma tu Vida con Nuestros Ebooks Exclusivos!",
 	"S1_D": "Accede al conocimiento que necesitas para prosperar en América. Desde inteligencia artificial hasta inversiones inteligentes.",

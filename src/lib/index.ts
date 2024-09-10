@@ -8,6 +8,7 @@ export { default as EBOOK_PLAN_webp } from './assets/images/ebooks/EBOOK_PLAN.we
 export { default as EBOOK_REMOTEWORK_webp } from './assets/images/ebooks/EBOOK_REMOTEWORK.webp';
 export { default as EBOOK_CELERIDADE_webp } from './assets/images/ebooks/EBOOK_CERELIDADE.webp';
 export { default as EBOOK_STARTUP_webp } from './assets/images/ebooks/EBOOK_STARTUP.webp';
+export { default as BLURRED_EBOOK_webp } from './assets/images/ebooks/BLURRED_EBOOK.webp';
 export { default as headerhero_webp } from './assets/images/headerhero.webp';
 export { default as cassia_a_webp } from './assets/images/testimonials/cassia_a.webp';
 export { default as dr_sten_webp } from './assets/images/testimonials/dr_sten.webp';
