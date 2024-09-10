@@ -1,7 +1,7 @@
 <script lang="ts">
+	import CookieConsent from '$lib/components/CookieConsent.svelte';
 	import '@fontsource-variable/lora';
 	import '@fontsource-variable/inter';
-
 	import { EBOOK_REMOTEWORK_webp, toptier_webp } from '$lib';
 	import Footer from '$lib/components/Footer.svelte';
 	import '../../app.css';
@@ -46,6 +46,7 @@
 	<meta name="twitter:description" content={SITE_DESCRIPTION} />
 </svelte:head>
 
+<CookieConsent />
 <slot />
 <Footer />
 

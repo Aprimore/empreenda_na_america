@@ -4,18 +4,14 @@
 	import Section3 from '$lib/components/Home/Section3.svelte';
 	import Section4 from '$lib/components/Home/Section4.svelte';
 	import Section6 from '$lib/components/Home/Section6.svelte';
-	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
 	import Section7 from '$lib/components/Home/Section7.svelte';
 	import Navbar2 from '$lib/components/Navbar2.svelte';
 	import { onMount } from 'svelte';
 	let loading = true;
 	import { t } from '$lib/translations';
-	const link = 'https://kit.svelte.dev';
-
+	export let data
 	onMount(() => {
-		setTimeout(() => {
-			loading = false;
-		}, 100);
+		loading = false;
 	});
 </script>
 
@@ -26,7 +22,7 @@
 	</div>
 {:else}
 	<Section1 />
-	<Section2 />
+	<Section2 {data}/>
 	<Section3 />
 	<Section4 />
 	<Section7 />
@@ -41,7 +37,7 @@
 		border: 5px solid #dfdad6;
 		border-top-color: #333;
 		border-radius: 50%;
-		animation: spin .3s linear infinite;
+		animation: spin 0.3s linear infinite;
 	}
 
 	@keyframes spin {

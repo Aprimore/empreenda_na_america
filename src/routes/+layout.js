@@ -27,10 +27,6 @@
 
 import { setLocale, setRoute } from '$lib/translations';
 
-export const prerender = true;
-export const trailingSlash = 'always';
-export const ssr = true;
-
 /** @type { import('@sveltejs/kit').Load } */
 export const load = async ({ url }) => {
 	const { pathname } = url;
@@ -51,5 +47,9 @@ export const load = async ({ url }) => {
 	await setLocale(lang);
 	await setRoute(route);
 
-	return { route, lang };
+	return { route, lang, pathname };
 };
+
+export const prerender = true;
+export const trailingSlash = 'always';
+export const ssr = true;
