@@ -1,0 +1,135 @@
+RewriteEngine On
+RewriteBase /
+# Prevent dot directories (hidden directories like .git) to be exposed to the public
+# Except for the .well-known directory used by LetsEncrypt a.o
+# RewriteRule "/\.|^\.(?!well-known/)" - [F]
+
+# Rewrite www.example.com -> example.com -- used with SEO Strict URLs plugin
+# RewriteCond %{HTTP_HOST} .
+# RewriteCond %{HTTP_HOST} ^www.(.*)$ [NC]
+# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Rewrite secure requests properly to prevent SSL cert warnings, e.g. prevent 
+# https://www.example.com when your cert only allows https://secure.example.com
+# RewriteCond %{SERVER_PORT} !^443
+# RewriteRule (.*) https://%{SERVER_NAME}/$1 [R=301,L]
+
+# Remove trailing slashes
+# NOTE: Use with `DirectorySlash Off`.
+# RewriteRule ^(.*[^/])$ /$1/ [L]
+# DirectorySlash Off
+
+# Redireciona qualquer URL que não seja um arquivo ou diretório existente para o index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.html [L]
+<!-- RewriteRule . /index.html [L] -->
+
+#########################
+# SEO-friendly 404 Page #
+#########################
+# ErrorDocument 404 /404.html
+
+##############################################
+# Skip redirection if locale already present #
+##############################################
+RewriteRule ^pt(\/.*)?$ - [L]
+RewriteRule ^es(\/.*)?$ - [L]
+# RewriteRule ^en(\/.*)?$ - [L]
+
+########################################################################################################################
+# Set custom locales if fits // >>>>> MUDAR PARA 301 QUANDO TERMINAR DE TESTAR <<<< ###############################
+########################################################################################################################
+RewriteCond %{HTTP:Accept-Language} ^pt [NC]
+RewriteRule ^ /pt%{REQUEST_URI} [R=301,L]
+# RewriteCond %{REQUEST_URI} !^/pt
+# RewriteRule ^(.*)$ /pt/$1 [R=302,L]
+
+RewriteCond %{HTTP:Accept-Language} ^es [NC]
+RewriteRule ^ /es%{REQUEST_URI} [R=301,L]
+# RewriteRule ^(.*)$ /es/$1 [R=302,L]
+# RewriteCond %{REQUEST_URI} !^/es
+
+###############################################
+# Set default locale if no custom locale fits #
+###############################################
+# RewriteCond %{HTTP:Accept-Language} ^en [NC]
+# RewriteRule ^ /en%{REQUEST_URI} [R=301,L]
+# RewriteCond %{REQUEST_URI} !^/en
+# RewriteRule ^(.*)$ /en/$1 [R=302,L]
+RewriteRule ^ /pt%{REQUEST_URI} [R=301,L]
+
+#########################################################
+# Especificar a língua com o cabeçalho Content-Language #
+#########################################################
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Para Português (Brasil)
+    RewriteRule ^pt(\/.*)?$ - [E=LANG:pt-BR,L]
+
+    # Para Espanhol
+    RewriteRule ^es(\/.*)?$ - [E=LANG:es-ES,L]
+
+    # Para Inglês
+    # RewriteRule ^en(\/.*)?$ - [E=LANG:en-US,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set Content-Language "%{LANG}e" env=LANG
+</IfModule>
+
+#########################################################
+# Especificar a língua com o cabeçalho Content-Language #
+#########################################################
+RewriteCond %{HTTP:Accept-Language} ^pt [NC]
+RewriteCond %{REQUEST_URI} !^/pt
+RewriteRule ^(.*)$ /pt/ [R=302,L]
+
+RewriteCond %{HTTP:Accept-Language} ^es [NC]
+RewriteCond %{REQUEST_URI} !^/es
+RewriteRule ^(.*)$ /es/ [R=302,L]
+
+RewriteCond %{HTTP:Accept-Language} ^en [NC]
+RewriteCond %{REQUEST_URI} !^/en
+RewriteRule ^(.*)$ /en/ [R=302,L]
+
+#########################################################
+# Especificar a língua com o cabeçalho Content-Language #
+#########################################################
+#<IfModule mod_expires.c>
+#    ExpiresActive On
+#    ExpiresByType text/html "access plus 1 hour"
+#    ExpiresByType image/gif "access plus 1 month"
+#    ExpiresByType image/jpeg "access plus 1 month"
+#    ExpiresByType image/png "access plus 1 month"
+#    ExpiresByType text/css "access plus 1 week"
+#    ExpiresByType text/javascript "access plus 1 week"
+#    ExpiresByType application/javascript "access plus 1 week"
+#</IfModule>
+
+
+######################################
+# Set error pages for custom locales #
+######################################
+#<If "%{REQUEST_URI} =~ /^\x2Fpt(\x2F.*)?$/">
+#    ErrorDocument 401 /pt-br/401/index.html
+#    ErrorDocument 403 /pt-br/403/index.html
+#   ErrorDocument 404 /pt-br/404/index.html
+#</If>
+#<ElseIf "%{REQUEST_URI} =~ /^\x2Fde(\x2F.*)?$/">
+#   ErrorDocument 401 /es/401/index.html
+#  ErrorDocument 403 /es/403/index.html
+# ErrorDocument 404 /es/404/index.html
+#ErrorDocument 500 /es/500/index.html
+#</ElseIf>
+
+##################################
+# Set default locale error pages #
+##################################
+#<Else>
+#   ErrorDocument 401 /en/401/index.html
+#  ErrorDocument 403 /en/403/index.html
+# ErrorDocument 404 /en/404/index.html
+#ErrorDocument 500 /en/500/index.html
+#</Else>
