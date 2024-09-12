@@ -8,5 +8,3 @@ export const load = (async ({ setHeaders }) => {
 
 	return {};
 }) satisfies PageServerLoad;
-
-export const prerender = true;

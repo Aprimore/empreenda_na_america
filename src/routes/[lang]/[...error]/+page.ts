@@ -16,4 +16,4 @@ export const load = async ({ params }) => {
 		status
 	};
 };
-export const prerender = true;
+
