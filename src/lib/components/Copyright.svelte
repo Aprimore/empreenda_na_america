@@ -12,7 +12,7 @@
         "
 		>
 			<li class=" text-[#D4D4ED]">
-				<a href="/" class="">{@html m.footer_Copyright()}</a>
+				<a href="#" class="">{@html m.footer_Copyright()}</a>
 			</li>
 		</ul>
 
@@ -51,7 +51,7 @@
 				<button
 					class="bg-[#D4D4ED] size-[36px] flex justify-center items-center rounded-md Exo transition-transform duration-200 transform hover:scale-105"
 				>
-					<a href="/"
+					<a href="#"
 						><img
 							src={arrow_up_svg}
 							alt="arrow top"

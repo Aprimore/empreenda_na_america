@@ -15,7 +15,7 @@ const config = {
 			// these options are set automatically — see below
 			// pages: 'build',
 			// assets: 'build',
-			// fallback: 'index.html',
+			fallback: 'index.html'
 			// precompress: false,
 			// strict: true
 		}),
@@ -23,17 +23,21 @@ const config = {
 			entries: supportedLocales.reduce(
 				(acc, locale) => [
 					...acc,
+
 					`/${locale}`,
 					`/${locale}/401`,
 					`/${locale}/403`,
 					`/${locale}/404`,
 					`/${locale}/500`,
-					`/${locale}/about`
+					`/${locale}/about`,
+					`/${locale}/about2`,
+					`/${locale}/test1`,
+					`/${locale}/test2`
 				],
 				['*']
 			),
-			origin: 'https://www.empreendanaamerica.com'
-			// crawl: true,
+			origin: 'https://www.empreendanaamerica.com',
+			crawl: false
 			// entries: generatePrerenderEntries()
 			// 	handleMissingId: 'warn' // or 'ignore' to completely suppress the error
 			// entries: ['/pt-br/', '/en/', '/es/']
@@ -41,7 +45,6 @@ const config = {
 		adapter: sitemapWrapAdapter(adapter())
 		// csp: {
 		// 	mode: 'hash',
-
 		//   }
 		// }
 

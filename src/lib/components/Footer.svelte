@@ -14,7 +14,7 @@
 				</div> -->
 			<div class="sm:flex justify-around items-center space-x-10">
 				<div class=" ">
-					<a href="/" class="mb-6 inline-block max-w-[150px]">
+					<a href="#" class="mb-6 inline-block max-w-[150px]">
 						<img
 							loading="lazy"
 							src={toptier_webp}
@@ -27,7 +27,7 @@
 					<ul class="space-y-3">
 						<li>
 							<a
-								href="/"
+								href="#"
 								title="Learn more about our company"
 								class="text-emerald-100 text-base hover:text-emerald-950"
 								>{$t('home.FOOT_contact')}</a
@@ -35,7 +35,7 @@
 						</li>
 						<li>
 							<a
-								href="/"
+								href="#"
 								title="Learn more about our company"
 								class="text-emerald-100 text-base hover:text-emerald-950"
 							>
@@ -44,14 +44,14 @@
 						</li>
 						<li>
 							<a
-								href="/"
+								href="#"
 								title="Learn more about our company"
 								class="text-emerald-100 text-base hover:text-emerald-950">{$t('home.FOOT_terms')}</a
 							>
 						</li>
 						<li>
 							<a
-								href="/"
+								href="#"
 								title="Learn more about our company"
 								class="text-emerald-100 text-base hover:text-emerald-950"
 							>
@@ -60,7 +60,7 @@
 						</li>
 						<li>
 							<a
-								href="/"
+								href="#"
 								title="Learn more about our company"
 								class="text-emerald-100 text-base hover:text-emerald-950"
 								>{$t('home.FOOT_aboutus')}</a
@@ -73,7 +73,7 @@
 						<ul class="space-y-3">
 							<li>
 								<a
-									href="/"
+									href="#"
 									title="Learn more about our company"
 									class="text-emerald-100 text-base hover:text-emerald-950"
 								>
@@ -82,7 +82,7 @@
 							</li>
 							<li>
 								<a
-									href="/"
+									href="#"
 									title="Learn more about our company"
 									class="text-emerald-100 text-base hover:text-emerald-950"
 									>{$t('home.FOOT_shop')}</a
@@ -90,7 +90,7 @@
 							</li>
 							<li>
 								<a
-									href="/"
+									href="#"
 									title="Learn more about our company"
 									class="text-emerald-100 text-base hover:text-emerald-950"
 								>
@@ -99,7 +99,7 @@
 							</li>
 							<li>
 								<a
-									href="/"
+									href="#"
 									title="Learn more about our company"
 									class="text-emerald-100 text-base hover:text-emerald-950"
 								>
@@ -108,7 +108,7 @@
 							</li>
 							<li>
 								<a
-									href="/"
+									href="#"
 									title="Learn more about our company"
 									class="text-emerald-100 text-base hover:text-emerald-950"
 								>

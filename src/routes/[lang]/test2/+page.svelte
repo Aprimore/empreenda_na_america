@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { cubicInOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
-	import Section1 from '$lib/components/Home/Section1.svelte';
-	import Section2 from '$lib/components/Home/Section2.svelte';
-	import Section3 from '$lib/components/Home/Section3.svelte';
-	import Section4 from '$lib/components/Home/Section4.svelte';
-	import Section6 from '$lib/components/Home/Section6.svelte';
-	import Section7 from '$lib/components/Home/Section7.svelte';
+	import Section1 from '$lib/components/HomeTest2/Section1.svelte';
+	import Section2 from '$lib/components/HomeTest2/Section2.svelte';
+	import Section3 from '$lib/components/HomeTest2/Section3.svelte';
+	import Section4 from '$lib/components/HomeTest2/Section4.svelte';
+	import Section6 from '$lib/components/HomeTest2/Section6.svelte';
+	import Section7 from '$lib/components/HomeTest2/Section7.svelte';
 	import Navbar2 from '$lib/components/Navbar2.svelte';
 	import { onMount } from 'svelte';
 	// let loading = true;

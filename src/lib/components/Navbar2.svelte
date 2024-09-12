@@ -8,7 +8,7 @@
 >
 	<div class="flex items-center justify-between text-blue-gray-900 max-w-screen-lg mx-auto px-2">
 		<a
-			href="/"
+			href="#"
 			class="mr-4 block cursor-pointer py-1.5 font-sans text-base font-semibold leading-relaxed tracking-normal text-inherit antialiased"
 		>
 			<img
