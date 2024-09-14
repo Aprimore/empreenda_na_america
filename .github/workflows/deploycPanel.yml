@@ -9,6 +9,19 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    env:
+      PUBLIC_CONTACT_EMAIL: ${{ secrets.PUBLIC_CONTACT_EMAIL }}
+      PUBLIC_FACEBOOK_AUTHOR_PAGE: ${{ secrets.PUBLIC_FACEBOOK_AUTHOR_PAGE }}
+      PUBLIC_FACEBOOK_PAGE: ${{ secrets.PUBLIC_FACEBOOK_PAGE }}
+      PUBLIC_GITHUB_PAGE: ${{ secrets.PUBLIC_GITHUB_PAGE }}
+      PUBLIC_LINKEDIN_PROFILE: ${{ secrets.PUBLIC_LINKEDIN_PROFILE }}
+      PUBLIC_SITE_URL: ${{ secrets.PUBLIC_SITE_URL }}
+      PUBLIC_TELEGRAM_USERNAME: ${{ secrets.PUBLIC_TELEGRAM_USERNAME }}
+      PUBLIC_TIKTOK_USERNAME: ${{ secrets.PUBLIC_TIKTOK_USERNAME }}
+      PUBLIC_TWITTER_USERNAME: ${{ secrets.PUBLIC_TWITTER_USERNAME }}
+      PUBLIC_TWITTER_USER_ID: ${{ secrets.PUBLIC_TWITTER_USER_ID }}
+      PUBLIC_WIRE_USERNAME: ${{ secrets.PUBLIC_WIRE_USERNAME }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -30,7 +43,6 @@ jobs:
       - name: Build SvelteKit app
         # run: npm run build
         run: bun run build
-        
 
       - name: Upload to HostGator
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
