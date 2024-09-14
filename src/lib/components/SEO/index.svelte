@@ -4,6 +4,7 @@
 	import defaultOgSquareImage from '$lib/assets/home/home-open-graph-square.jpg';
 	import defaultTwitterImage from '$lib/assets/home/home-twitter.jpg';
 	import website from '$lib/config/website';
+	import websiteES from '$lib/config/websiteES';
 	import { VERTICAL_LINE_ENTITY } from '$lib/constants/entities';
 	import OpenGraph from './OpenGraph.svelte';
 	import SchemaOrg from './SchemaOrg.svelte';
@@ -28,7 +29,7 @@
 		telegramUsername,
 		tiktokUsername,
 		twitterUsername
-	} = website;
+	} = isPortuguese ? website : websiteES;
 
 	export let article = false;
 	export let breadcrumbs = [];

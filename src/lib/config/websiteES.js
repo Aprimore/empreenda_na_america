@@ -17,12 +17,12 @@ const facebookAuthorPageName = PUBLIC_FACEBOOK_AUTHOR_PAGE;
 
 const website = {
 	author: 'André Silva',
-	ogLanguage: 'pt',
-	siteLanguage: 'pt',
-	siteTitle: 'Empreenda na America',
-	siteShortTitle: 'Empreenda na America - Seu Mapa Completo para o Sucesso nos EUA',
+	ogLanguage: 'es',
+	siteLanguage: 'es',
+	siteTitle: 'Empreende en América',
+	siteShortTitle: 'Empreende en América - Tu Mapa Completo para el Éxito en Estados Unidos',
 	description:
-		'Descubra estratégias exclusivas de negócios, investimentos e educação financeira para crescer nos Estados Unidos.',
+		'Descubre estrategias exclusivas de negocios, inversiones y educación financiera para crecer en Estados Unidos.',
 	siteUrl: PUBLIC_SITE_URL,
 	backgroundColor: '#fff',
 	themeColor: '#fff',
