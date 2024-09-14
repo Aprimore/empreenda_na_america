@@ -39,17 +39,17 @@
 	];
 
 	let metadescription = isPortuguese
-		? 'My Menthor é uma plataforma SaaS de Arquitetura Empresarial que aprimora a visibilidade dos processos, integrando estratégia, pessoas e tecnologia para melhorar o desempenho e a maturidade organizacional'
-		: 'My Menthor is a Business Architecture SaaS platform that enhances process visibility by integrating strategy, people, and technology to improve organizational performance and maturity.';
+		? 'Descubra estratégias exclusivas para imigrantes hispanos e brasileiros empreenderem nos EUA. Acesse e-books, vídeos e guias práticos para transformar suas ideias em negócios de sucesso. Aprenda sobre planejamento financeiro, inteligência artificial e muito mais para garantir um futuro seguro e próspero!'
+		: 'Descubra estrategias exclusivas para que inmigrantes hispanos y brasileños emprendan en los EE.UU. Acceda a e-books, videos y guías prácticas para transformar sus ideas en negocios exitosos. Aprenda sobre planificación financiera, inteligencia artificial y mucho más para asegurar un futuro seguro y próspero.';
 	const featuredImageAlt = isPortuguese
-		? 'Imagem de uma pessoa vetorizada, o logo do site da My Menthor'
-		: 'picture of a vectorized person, the logo for My Menthor website';
+		? 'imagem  vetorizada da logo do website escrito toptier'
+		: 'imagen vectorizada del logo del sitio web con el texto toptier';
 	const featuredImage = {
 		url: featuredImageSrc,
 		alt: featuredImageAlt,
 		width: 672,
 		height: 448,
-		caption: 'Home page'
+		caption: isPortuguese ? 'Início' : 'Inicio'
 	};
 	const ogImage = {
 		url: ogImageSrc,
@@ -74,8 +74,8 @@
 		title,
 		slug: '',
 		entityMeta,
-		datePublished: '2024-05-01T14:19:33.000+0100',
-		lastUpdated: '2024-09-05T14:19:33.000+0100',
+		datePublished: '2024-09-01T14:19:33.000+0100',
+		lastUpdated: '2024-09-14T14:19:33.000+0100',
 		breadcrumbs,
 		metadescription,
 		article: false,

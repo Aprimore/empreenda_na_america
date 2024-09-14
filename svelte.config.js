@@ -52,7 +52,12 @@ const config = {
 		// assets: '' // Set this if your assets are served from a different URL
 		// }
 	},
-	preprocess: vitePreprocess()
+	onwarn: (warning, handler) => {
+		// Disable the specific A11y warning
+		if (warning.code === 'a11y-invalid-attribute') return;
+		// Handle all other warnings normally
+		handler(warning);
+	}
 };
 
 export default config;

@@ -19,6 +19,7 @@
 		}
 	});
 
+	const spaceBetween = 10;
 
 	// event handlers for Swiper events
 	// const onProgress = (e: any) => {
@@ -89,7 +90,6 @@
 			</p>
 			<!-- Swiper slider container with navigation enabled -->
 			<swiper-container
-				spaceBetween={30}
 				lazy={true}
 				navigation={true}
 				manipulation={true}

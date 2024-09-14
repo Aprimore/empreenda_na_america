@@ -1,14 +1,4 @@
-# Allow all robots to access all content
 User-agent: *
-Allow: /
+Disallow:
 
-# Provide the sitemap location
-# Sitemap: https://empreendanaamerica.com/sitemap.xml
-
-# Allow Googlebot to access everything
-User-agent: Googlebot
-Allow: /
-
-# Allow Bingbot to access everything
-User-agent: Bingbot
-Allow: /
+Sitemap: https://empreendanaamerica.com/sitemap.xml
