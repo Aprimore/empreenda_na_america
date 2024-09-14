@@ -35,7 +35,7 @@ const config = {
 				],
 				['*']
 			),
-			origin: 'https://www.empreendanaamerica.com',
+			origin: 'https://www.empreendanaamerica.com'
 			// crawl: false
 			// entries: generatePrerenderEntries()
 			// 	handleMissingId: 'warn' // or 'ignore' to completely suppress the error

@@ -1,6 +1,8 @@
 <!-- EBOOK HIGHLIGHTS -->
 <script lang="ts">
 	// register Swiper elements
+	import { browser } from '$app/environment';
+
 	import { register } from 'swiper/element/bundle';
 	import BtnHotmart from '$lib/components/BtnHotmart.svelte';
 	import { t } from '$lib/translations';
@@ -17,7 +19,6 @@
 		}
 	});
 
-	const spaceBetween = 10;
 
 	// event handlers for Swiper events
 	// const onProgress = (e: any) => {
@@ -38,8 +39,7 @@
 		EBOOK_STARTUP_webp,
 		EBOOK_CELERIDADE_webp
 	} from '$lib';
-	import { browser } from '$app/environment';
-	import { page } from '$app/stores';
+	// import { page } from '$app/stores';
 
 	// console.log(`BEROWSAERRe`, browser);
 

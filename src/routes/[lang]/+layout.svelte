@@ -14,13 +14,13 @@
 		SITE_URL
 	} from '$lib/siteConfig';
 	import { page } from '$app/stores';
-	import { getPageTitle } from '$lib/functions/pageTitle';
+	// import { getPageTitle } from '$lib/functions/pageTitle';
 
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
 </script>
 
-<svelte:head>
+<!-- <svelte:head>
 	<title>{getPageTitle(pagePath)}</title>
 	<link rel="canonical" href={SITE_URL + pagePath} />
 	<meta property="og:url" content={SITE_URL} />
@@ -35,7 +35,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={SITE_TITLE} />
 	<meta name="twitter:description" content={SITE_DESCRIPTION} />
-</svelte:head>
+</svelte:head> -->
 
 <!-- <ViewTransition /> -->
 <!-- <CookieConsent /> -->
