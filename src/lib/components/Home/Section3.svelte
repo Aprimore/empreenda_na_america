@@ -7,7 +7,7 @@
 <!-- 1111111111111111111111111111111111111111111111111111111111 -->
 <section
 	class="w-full max-sm:p-2 bg-gradient-to-b from-emerald-500 to-emerald-600 section-bg4
- text-balance py-10 px-1 max-sm:px-2 text-emerald-100 sm:bg-center"
+py-10 px-1 max-sm:px-2 text-emerald-100 sm:bg-center"
 	data-sveltekit-preload-data="viewport"
 >
 	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
@@ -16,7 +16,7 @@
 		</h2>
 		<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
 			<div
-				class="border border-black rounded-md w-full flex flex-col items-center justify-start py-5 space-y-5"
+				class="border border-black rounded-md w-full flex flex-col items-center justify-start py-5"
 			>
 				<svg
 					class="w-12 h-12 mb-2 flex justify-start items-start align-top"
@@ -32,10 +32,10 @@
 						d="M5 13l4 4L19 7"
 					/>
 				</svg>
-				<h3 class="Inter text-2xl text-center font-semibold mb-1">
+				<h3 class="Inter text-2xl text-center font-semibold my-5">
 					{$t('home.S2_T1')}
 				</h3>
-				<p class="Lora text-md sm:text-lg text-center w-full px-4 md:px-2">{$t('home.S2_D1')}</p>
+				<p class=" Lora text-md sm:text-lg w-full px-4 md:px-4">{$t('home.S2_D1')}</p>
 			</div>
 			<div
 				class="border border-black rounded-md w-full flex flex-col items-center justify-start p-5 space-y-3"
@@ -54,15 +54,15 @@
 						d="M5 13l4 4L19 7"
 					/>
 				</svg>
-				<h3 class="Inter text-2xl text-center font-semibold mb-1">
+				<h3 class="Inter text-2xl text-center font-semibold">
 					{$t('home.S2_T2')}
 				</h3>
-				<p class="Lora text-md sm:text-lg text-center w-full px-4 md:px-2">
+				<p class="Lora text-md sm:text-lg w-full px-4 md:px-2">
 					{$t('home.S2_D2')}
 				</p>
 			</div>
 			<div
-				class="border border-black rounded-md w-full flex flex-col items-center justify-start p-5 space-y-5"
+				class="border border-black rounded-md w-full flex flex-col items-center justify-start p-5"
 			>
 				<svg
 					class="w-12 h-12 mb-2 flex justify-start items-start align-top"
@@ -78,10 +78,10 @@
 						d="M5 13l4 4L19 7"
 					/>
 				</svg>
-				<h3 class="Inter text-2xl text-center font-semibold mb-1">
+				<h3 class="Inter text-2xl text-center font-semibold my-3">
 					{$t('home.S2_T3')}
 				</h3>
-				<p class="Lora text-md sm:text-lg text-center w-full px-4 md:px-2">
+				<p class="Lora text-md sm:text-lg w-full px-4 md:px-2">
 					{$t('home.S2_D3')}
 				</p>
 			</div>
