@@ -15,10 +15,16 @@
 	} from '$lib/siteConfig';
 	import { page } from '$app/stores';
 	// import { getPageTitle } from '$lib/functions/pageTitle';
-
+	export let data
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
 </script>
+
+<svelte:head>
+	<link rel="alternate" hreflang="pt-BR" href="https://empreendanaamerica.com/pt/" />
+	<link rel="alternate" hreflang="es" href="https://empreendanaamerica.com/es/" />
+	<link rel="canonical" href="https://empreendanaamerica.com/{data.lang}/" />
+</svelte:head>
 
 <!-- <svelte:head>
 	<title>{getPageTitle(pagePath)}</title>

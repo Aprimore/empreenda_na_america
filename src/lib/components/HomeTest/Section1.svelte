@@ -36,10 +36,8 @@
 			<div class="max-sm:p-10 max-md:p-20">
 				<enhanced:img
 					alt="landing page header"
-					loading="lazy"
 					sizes="(min-width:1080px) 744px, (min-width:768px) 640px, 300px"
 					src={EBOOK_IADVOCATICIA_webp}
-					blurDataURL={BLURRED_EBOOK_webp}
 				/>
 			</div>
 		</div>

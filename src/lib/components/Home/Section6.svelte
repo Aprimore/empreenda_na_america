@@ -10,10 +10,7 @@
 	});
 </script>
 
-<section
-	class="w-full max-sm:p-2  py-10 background-img4 "
-	data-sveltekit-preload-data="viewport"
->
+<section class="w-full max-sm:p-2 py-10 background-img4" data-sveltekit-preload-data="viewport">
 	<div class="lg:max-w-screen-xl mx-auto max-sm:p-2">
 		<div class="p-1 flex max-md:flex-col text-pretty">
 			<div class="md:w-[40%] m-auto border-black align-middle lg:m-10 md:m-5">

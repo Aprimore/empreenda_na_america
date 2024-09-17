@@ -28,7 +28,7 @@
 	// const onSlideChange = (e: any) => {};
 
 	// Import Swiper styles
-	import 'swiper/swiper-bundle.css';
+	// import 'swiper/swiper-bundle.css';
 	// import * as m from '$lib/paraglide/messages';
 	import {
 		EBOOK_IADVOCATICIA2_webp,
@@ -81,16 +81,15 @@
 	// }
 </script>
 
-{#if !loading}
-	<section class="text-pretty py-16 background-img4" data-sveltekit-preload-data="viewport">
-		<div class="lg:max-w-screen-lg sm:mx-auto max-sm:p-2">
-			<h2 class="Inter-Bold text-3xl md:text-4xl text-center my-6">{$t('home.S5_T')}</h2>
-			<p class="Lora text-md sm:text-xl my-6 sm:text-center lg:px-10 px-4">
-				{$t('home.S5_D')}
-			</p>
-			<!-- Swiper slider container with navigation enabled -->
+<section class="text-pretty py-16 background-img4 min-h-[690px]">
+	<div class="lg:max-w-screen-lg sm:mx-auto max-sm:p-2">
+		<h2 class="Inter-Bold text-3xl md:text-4xl text-center my-6">{$t('home.S5_T')}</h2>
+		<p class="Lora text-md sm:text-xl my-6 sm:text-center lg:px-10 px-4">
+			{$t('home.S5_D')}
+		</p>
+		<!-- Swiper slider container with navigation enabled -->
+		{#if !loading}
 			<swiper-container
-				lazy={true}
 				navigation={true}
 				manipulation={true}
 				autoplay={true}
@@ -253,9 +252,9 @@
 					</div></swiper-slide
 				>
 			</swiper-container>
-		</div>
-	</section>
-{/if}
+		{/if}
+	</div>
+</section>
 
 <style>
 	.section-bg {
