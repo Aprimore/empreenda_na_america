@@ -8,23 +8,11 @@ export default defineConfig({
 		// imagetools(),
 		enhancedImages(),
 		sveltekit()
-	],
-	build: {
-		cssCodeSplit: true
-		// rollupOptions: {
-		// 	output: {
-		// 		manualChunks: (id) => {
-		// 			if (id.includes('node_modules')) {
-		// 				if (id.includes('@inlang/paraglide')) {
-		// 					return 'vendor-paraglide';
-		// 				}
-		// 				return 'vendor';
-		// 			}
-		// 		}
-		// 	}
-		// }
-	},
-	optimizeDeps: {
-		include: ['swiper', 'sveltekit-i18n', '@boxfish-studio/sveltekit-cookie-manager']
-	}
+	]
+	// build: {
+	// cssCodeSplit: true
+	// },
+	// optimizeDeps: {
+	// include: ['swiper', 'sveltekit-i18n', '@boxfish-studio/sveltekit-cookie-manager']
+	// }
 });

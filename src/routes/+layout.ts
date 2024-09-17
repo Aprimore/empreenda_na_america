@@ -15,11 +15,11 @@ export const load = async ({ url }) => {
 	// 	lang = 'en'; // Default to English
 	// }
 
-	// if (lang.startsWith('es')) {
-	// 	lang = 'es';
-	// } else {
-	// 	lang = 'pt'; // Default to PT
-	// }
+	if (lang.startsWith('es')) {
+		lang = 'es';
+	} else {
+		lang = 'pt'; // Default to PT
+	}
 
 	const route = pathname.replace(new RegExp(`^/${lang}`), '');
 	// Set locale and route
@@ -28,3 +28,7 @@ export const load = async ({ url }) => {
 
 	return { route, lang, pathname };
 };
+
+export const prerender = true;
+export const trailingSlash = 'always';
+export const ssr = true;

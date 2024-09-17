@@ -20,11 +20,11 @@ const config = {
 	// },
 	kit: {
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: null,
-			precompress: true,
-			strict: false
+			// pages: 'build',
+			// assets: 'build',
+			// fallback: null,
+			// precompress: true,
+			// strict: false
 		}),
 		// prerender: {
 		// 	entries: ['*']
