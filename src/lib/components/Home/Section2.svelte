@@ -82,10 +82,10 @@
 </script>
 
 {#if !loading}
-	<section class="text-balance py-16 background-img4" data-sveltekit-preload-data="viewport">
+	<section class="text-pretty py-16 background-img4" data-sveltekit-preload-data="viewport">
 		<div class="lg:max-w-screen-lg sm:mx-auto max-sm:p-2">
 			<h2 class="Inter-Bold text-3xl md:text-4xl text-center my-6">{$t('home.S5_T')}</h2>
-			<p class="Lora 0text-md sm:text-xl my-6 text-center lg:px-10 px-3">
+			<p class="Lora text-md sm:text-xl my-6 sm:text-center lg:px-10 px-4">
 				{$t('home.S5_D')}
 			</p>
 			<!-- Swiper slider container with navigation enabled -->

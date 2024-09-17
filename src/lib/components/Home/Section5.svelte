@@ -7,14 +7,13 @@
 
 <section
 	class="w-full max-sm:p-2 bg-gradient-to-b from-gray-900 via-purple-900 to-black
- text-balance"
-	data-sveltekit-preload-data="viewport"
+ "
 >
-	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
+	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2 text-balance">
 		<div class="p-5 flex max-md:flex-col">
 			<div class=" border-black">
 				<h2 class="Inter-Bold text-3xl md:text-4xl uppercase">{$t('home.S5_T')}</h2>
-				<p class="Lora text-lg max-sm:text-md my-6 text-center">
+				<p class="Lora text-lg max-sm:text-md my-6 sm:text-center">
 					{$t('home.S5_D')}
 				</p>
 			</div>

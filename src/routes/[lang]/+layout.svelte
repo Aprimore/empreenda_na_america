@@ -5,7 +5,7 @@
 	import '@fontsource-variable/inter';
 	import { EBOOK_REMOTEWORK_webp, toptier_webp } from '$lib';
 	import Footer from '$lib/components/Footer.svelte';
-	import '../../app.css';
+	import '../../app.postcss';
 	import {
 		OG_IMAGE_HEIGHT,
 		OG_IMAGE_WIDTH,
@@ -62,7 +62,7 @@
 		}
 	} */
 
-	:global(html) {
+	/* :global(html) {
 		font-family: 'Inter Variable';
 		font-weight: 700;
 		font-optical-sizing: auto;
@@ -97,5 +97,5 @@
 		font-optical-sizing: auto;
 		font-style: normal;
 		font-display: swap;
-	}
+	} */
 </style>

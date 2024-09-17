@@ -9,16 +9,26 @@ const supportedLocales = Object.keys(lang);
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: vitePreprocess(),
+	// onwarn: (warning, handler) => {
+	// 	if (warning.filename.includes('@lottiefiles/svelte-lottie-player')) {
+	// 		return;
+	// 	}
+
+	// 	if (warning.code === 'a11y-click-events-have-key-events') return;
+	// 	if (warning.code === 'a11y-no-static-element-interactions') return;
+	// 	handler(warning);
+	// },
 	kit: {
 		adapter: adapter({
-			// default options are shown. On some platforms
-			// these options are set automatically — see below
-			// pages: 'build',
-			// assets: 'build',
-			// fallback: 'index.html'
-			// precompress: false,
-			// strict: true
+			pages: 'build',
+			assets: 'build',
+			fallback: null,
+			precompress: true,
+			strict: false
 		}),
+		// prerender: {
+		// 	entries: ['*']
+		// },
 		prerender: {
 			entries: supportedLocales.reduce(
 				(acc, locale) => [

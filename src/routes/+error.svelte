@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../app.css';
+	import '../app.postcss';
 	// import * as m from '$lib/paraglide/messages';
 	// import { t, locale } from '$lib/translations';
 	// import { page } from '$app/stores';

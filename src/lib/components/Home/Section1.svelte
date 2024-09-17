@@ -2,14 +2,15 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { BLURRED_EBOOK_webp } from '$lib';
-	import EBOOK_IADVOCATICIA_webp from '$lib/assets/images/ebooks/EBOOK_IADVOCATICIA.webp?enhanced';
+	// import EBOOK_IADVOCATICIA_webp from '$lib/assets/images/ebooks/EBOOK_IADVOCATICIA.webp?enhanced';
+	import EBOOK_HEADER from '$lib/assets/images/ebooks/EBOOK_KID_MONEY.webp?enhanced';
 	import { t } from '$lib/translations';
 	import { onMount } from 'svelte';
 </script>
 
-<section 
+<section
 	class=" 
- text-balance text-emerald-100 section-bg2 pt-32"
+ text-balance text-emerald-100 section-bg2 pt-32 bg-emerald-600"
 >
 	<div class="lg:max-w-screen-lg mx-auto">
 		<div class="sm:p-5 flex max-md:flex-col md:gap-10 max-sm:py-14">
@@ -28,7 +29,7 @@
 					alt="landing page header"
 					loading="lazy"
 					sizes="(min-width:1080px) 744px, (min-width:768px) 640px, 300px"
-					src={EBOOK_IADVOCATICIA_webp}
+					src={EBOOK_HEADER}
 					blurDataURL={BLURRED_EBOOK_webp}
 				/>
 			</div>

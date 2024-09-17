@@ -2,11 +2,12 @@
 <script lang="ts">
 	// import * as m from '$lib/paraglide/messages';
 	import { cassia_a_webp, dr_sten_webp, maria_d_webp } from '$lib';
+	import quote_svg from './298854_quote_icon.svg';
 	import { t } from '$lib/translations';
 </script>
 
 <section
-	class="w-full max-sm:p-2 background-img4 text-balance py-10"
+	class="w-full max-sm:p-2 background-img4 text-pretty sm:text-balance py-10"
 	data-sveltekit-preload-data="viewport"
 >
 	<!-- <section
@@ -18,12 +19,15 @@
 		<h2 class="Inter-Bold text-3xl md:text-4xl text-center my-6">
 			{$t('home.S7_T')}
 		</h2>
-		<p class="Inter text-md sm:text-xl my-6 text-center px-3">
+		<p class="Inter text-md sm:text-xl my-6 sm:text-center px-3">
 			{$t('home.S7_D')}
 		</p>
 		<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 py-5 px-1 max-sm:px-2">
-			<div class=" rounded-md w-full flex flex-col items-center justify-start py-5 space-y-5">
+			<div
+				class=" rounded-md w-full flex flex-col items-center justify-start py-5 space-y-5 relative"
+			>
 				<!-- Replace with actual SVG -->
+				<!-- <img src={quote_svg} class="absolute w-16 left-0 top-0" alt="" /> -->
 				<img
 					src={dr_sten_webp}
 					loading="lazy"
@@ -34,7 +38,7 @@
 				<p class="Lora text-xl md:text-2xl text-center font-semibold mb-1">
 					{$t('home.TEST_DrSten_name')}
 				</p>
-				<p class="Lora text-md md:text-lg text-center w-full">
+				<p class="Lora text-md md:text-lg sm:text-center w-full">
 					{$t('home.TEST_DrSten')}
 				</p>
 			</div>
@@ -50,7 +54,7 @@
 				<p class="Lora text-xl md:text-2xl text-center font-semibold mb-1">
 					{$t('home.TEST_Cassia_name')}
 				</p>
-				<p class="Lora text-md md:text-lg text-center w-full">
+				<p class="Lora text-md md:text-lg sm:text-center w-full">
 					{$t('home.TEST_Cassia')}
 				</p>
 			</div>
@@ -66,7 +70,7 @@
 				<p class="Lora text-xl md:text-2xl text-center font-semibold mb-1">
 					{$t('home.TEST_Maria_name')}
 				</p>
-				<p class="Lora text-md md:text-lg text-center w-full">
+				<p class="Lora text-md md:text-lg sm:text-center w-full">
 					{$t('home.TEST_Maria')}
 					<!-- {$t('home.S2_T')} -->
 				</p>

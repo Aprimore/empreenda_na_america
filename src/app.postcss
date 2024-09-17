@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		@apply font-inter;
+	}
+
+	.Lora {
+		@apply font-lora;
+	}
+
+	.Inter {
+		@apply font-inter;
+	}
+
+	.Inter-Regular {
+		@apply font-inter font-normal;
+	}
+
+	.Inter-Semibold {
+		@apply font-inter font-semibold;
+	}
+
+	.Inter-Bold {
+		@apply font-inter font-bold;
+	}
+}
+
+@media (prefers-reduced-motion) {
+	::view-transition-group(*),
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation: none !important;
+	}
+}
+
+.blur-load {
+	background-size: cover;
+}
+
+/* .navbar {
+	view-transition-name: 'navbar';
+} */
+
+/* .no-transition {
+	view-transition-name: none;
+} */

@@ -27,7 +27,7 @@
 	$: pagePath = $page.url.pathname;
 
 	const isPortuguese = pagePath.startsWith('/pt/');
-	console.log(isPortuguese);
+	// console.log(isPortuguese);
 
 	const { author, siteUrl } = website;
 	let title = isPortuguese ? 'Início' : 'Home';

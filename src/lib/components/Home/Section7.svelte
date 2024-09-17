@@ -9,7 +9,7 @@
 <!-- 11111111111111111111111111111111111111111111111111111111111111 -->
 <section
 	class="w-full max-sm:p-2 bg-gradient-to-r from-emerald-500 to-emerald-600 section-bg2
- text-balance py-10 text-emerald-100"
+ text-pretty py-10 text-emerald-100"
 >
 	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
 		<div class="p-5 flex max-md:flex-col">
@@ -18,7 +18,7 @@
 			</div>
 			<div class="md:w-1/2 m-auto border-black align-middle">
 				<h2 class="Inter-Bold text-3xl md:text-4xl my-6 text-center">{$t('home.S4_T')}</h2>
-				<p class="Lora text-lg max-sm:text-md my-6 text-center">
+				<p class="Lora text-lg max-sm:text-md my-6 sm:text-center">
 					{$t('home.S4_D')}
 				</p>
 			</div>
