@@ -13,8 +13,10 @@
 		>
 			<img
 				src={toptier_webp}
-				class="aspect-square transition-transform transform hover:-translate-y-1 w-20 h-20"
+				class="aspect-square transition-transform transform hover:-translate-y-1"
 				alt="toptier"
+				width="80"
+				height="80"
 			/>
 		</a>
 

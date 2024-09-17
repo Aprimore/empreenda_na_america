@@ -30,13 +30,19 @@
 		class="flex items-center bg-[#f1f1f9] border-none p-3 rounded-md cursor-pointer"
 		title="dropdown button"
 	>
-		<img src={languages.find((l) => l.code === $locale)?.flag} class="flag" alt="country flag" />
+		<img
+			width="16"
+			height="16"
+			src={languages.find((l) => l.code === $locale)?.flag}
+			class="flag"
+			alt="country flag"
+		/>
 		{$t(`lang.${$locale}`)}
 	</button>
 	<div class="dropdown-content rounded-md">
 		{#each languages as lang}
 			<button on:click={() => handleLanguageChange(lang.code)}>
-				<img src={lang.flag} alt="{lang.name} flag" class="flag" />
+				<img width="16" height="16" src={lang.flag} alt="{lang.name} flag" class="flag" />
 				<span>{lang.name}</span>
 			</button>
 		{/each}

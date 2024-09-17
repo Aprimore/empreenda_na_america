@@ -125,10 +125,12 @@
 							{$t('home.EBOOK_STARTUP')}
 						</p>
 						<img
-							class=" size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+							class="m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 							src={EBOOK_STARTUP_webp}
 							loading="lazy"
 							alt="ebook"
+							width="208"
+							height="208"
 						/>
 						<div class="ml-auto w-fit mt-3">
 							<BtnHotmart dynamicLink={$t('home.HOTMART_EBOOK_STARTUP')} />
@@ -146,10 +148,12 @@
 							{$t('home.EBOOK_PLAN')}
 						</p>
 						<img
-							class="size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+							class="m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 							src={EBOOK_PLAN_webp}
 							loading="lazy"
 							alt="ebook"
+							width="208"
+							height="208"
 						/>
 						<div class="ml-auto w-fit mt-3">
 							<BtnHotmart dynamicLink={$t('home.HOTMART_EBOOK_PLAN')} />
@@ -165,10 +169,12 @@
 							{$t('home.EBOOK_KID_MONEY')}
 						</p>
 						<img
-							class="size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+							class="m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 							src={EBOOK_KID_MONEY_webp}
 							loading="lazy"
 							alt="ebook"
+							width="208"
+							height="208"
 						/>
 						<div class="ml-auto w-fit mt-3">
 							<BtnHotmart dynamicLink={$t('home.HOTMART_EBOOK_KID_MONEY')} />
@@ -184,10 +190,12 @@
 							{$t('home.EBOOK_IADVOCATICIA')}
 						</p>
 						<img
-							class="size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+							class="m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 							src={EBOOK_IADVOCATICIA_webp}
 							loading="lazy"
 							alt="ebook"
+							width="208"
+							height="208"
 						/>
 						<div class="ml-auto w-fit mt-3">
 							<BtnHotmart dynamicLink={$t('home.HOTMART_EBOOK_IADVOCATICIA')} />
@@ -203,10 +211,12 @@
 							{$t('home.EBOOK_REMOTEWORK')}
 						</p>
 						<img
-							class="size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+							class="m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 							src={EBOOK_REMOTEWORK_webp}
 							loading="lazy"
 							alt="ebook"
+							width="208"
+							height="208"
 						/>
 						<div class="ml-auto w-fit mt-3">
 							<BtnHotmart dynamicLink={$t('home.HOTMART_EBOOK_REMOTEWORK')} />
@@ -222,10 +232,12 @@
 							{$t('home.EBOOK_MARKET')}
 						</p>
 						<img
-							class=" size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+							class=" m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 							src={EBOOK_MARKET_webp}
 							loading="lazy"
 							alt="ebook"
+							width="208"
+							height="208"
 						/>
 						<div class="ml-auto w-fit mt-3">
 							<BtnHotmart dynamicLink={$t('home.HOTMART_EBOOK_MARKET')} />
@@ -241,10 +253,12 @@
 							{$t('home.EBOOK_CELERIDADE')}
 						</p>
 						<img
-							class=" size-52 m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
+							class=" m-auto transition-transform duration-300 ease-in-out transform hover:scale-105"
 							src={EBOOK_CELERIDADE_webp}
 							loading="lazy"
 							alt="ebook"
+							width="208"
+							height="208"
 						/>
 						<div class="ml-auto w-fit mt-3">
 							<BtnHotmart dynamicLink={$t('home.HOTMART_EBOOK_CELERIDADE')} />
@@ -265,6 +279,7 @@
 	}
 
 	.background-img4 {
-		background-image: url('$lib/assets/svg/patterns/brushed-alum-dark.png');
+		/* background-image: url('$lib/assets/svg/patterns/brushed-alum-dark.png'); */
+		background-image: url('$lib/assets/svg/patterns/brushed-alum-dark2.webp');
 	}
 </style>

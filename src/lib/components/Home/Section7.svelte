@@ -9,12 +9,19 @@
 <!-- 11111111111111111111111111111111111111111111111111111111111111 -->
 <section
 	class="w-full max-sm:p-2 bg-gradient-to-r from-emerald-500 to-emerald-600 section-bg2
- text-pretty py-10 text-emerald-100"
+ text-pretty text-emerald-100 py-10"
 >
 	<div class="lg:max-w-screen-lg mx-auto max-sm:p-2">
-		<div class="p-5 flex max-md:flex-col">
+		<div class="max-md:p-5 flex max-md:flex-col">
 			<div class="md:w-1/2 align-middle flex items-center max-md:order-2 lg:m-10 md:m-5">
-				<img class="rounded-xl w-full h-auto" src={business_webp} alt="business " loading="lazy" />
+				<img
+					class="rounded-xl w-full h-auto"
+					src={business_webp}
+					alt="business "
+					loading="lazy"
+					width="452"
+					height="254"
+				/>
 			</div>
 			<div class="md:w-1/2 m-auto border-black align-middle">
 				<h2 class="Inter-Bold text-3xl md:text-4xl my-6 text-center">{$t('home.S4_T')}</h2>

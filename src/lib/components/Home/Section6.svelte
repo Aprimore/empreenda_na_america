@@ -52,7 +52,8 @@
 	} */
 
 	.background-img4 {
-		background-image: url('$lib/assets/svg/patterns/brushed-alum-dark.png');
+		/* background-image: url('$lib/assets/svg/patterns/brushed-alum-dark.png'); */
+		background-image: url('$lib/assets/svg/patterns/brushed-alum-dark2.webp');
 	}
 
 	/* button:hover {

@@ -33,6 +33,8 @@
 					loading="lazy"
 					alt="testimonial"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
+					width="128"
+					height="128"
 				/>
 
 				<p class="Lora text-xl md:text-2xl text-center font-semibold mb-1">
@@ -49,6 +51,8 @@
 					loading="lazy"
 					alt="testimonial"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
+					width="128"
+					height="128"
 				/>
 
 				<p class="Lora text-xl md:text-2xl text-center font-semibold mb-1">
@@ -65,6 +69,8 @@
 					loading="lazy"
 					alt="testimonial"
 					class="size-32 rounded-full object-cover aspect-[4/3]"
+					width="128"
+					height="128"
 				/>
 
 				<p class="Lora text-xl md:text-2xl text-center font-semibold mb-1">
@@ -85,6 +91,8 @@
 	} */
 
 	.background-img4 {
-		background-image: url('$lib/assets/svg/patterns/brushed-alum-dark.png');
+		/* background-image: url('$lib/assets/svg/patterns/brushed-alum-dark.png');
+		 */
+		background-image: url('$lib/assets/svg/patterns/brushed-alum-dark2.webp');
 	}
 </style>

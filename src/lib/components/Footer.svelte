@@ -19,7 +19,9 @@
 							loading="lazy"
 							src={toptier_webp}
 							alt="logo"
-							class="aspect-square transition-transform transform hover:-translate-y-1 w-36 h-36"
+							class="aspect-square transition-transform transform hover:-translate-y-1"
+							width="144"
+							height="144"
 						/>
 					</a>
 				</div>
