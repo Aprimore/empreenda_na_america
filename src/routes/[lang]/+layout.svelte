@@ -23,8 +23,8 @@
 </script>
 
 <svelte:head>
-	<link rel="alternate" hreflang="pt-BR" href="https://empreendanaamerica.com/pt/" />
-	<link rel="alternate" hreflang="es" href="https://empreendanaamerica.com/es/" />
+	<!-- <link rel="alternate" hreflang="pt-BR" href="https://empreendanaamerica.com/pt/" /> -->
+	<!-- <link rel="alternate" hreflang="es" href="https://empreendanaamerica.com/es/" /> -->
 	<link rel="canonical" href="https://empreendanaamerica.com/{dataLang}/" />
 </svelte:head>
 
