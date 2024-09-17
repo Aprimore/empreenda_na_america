@@ -13,7 +13,7 @@
 // };
 
 module.exports = {
-	content: ['./src/**/*.{html,js,ts,svelte,postcss}'],
+	content: ['./src/**/*.{html,js,ts,svelte,postcss,css}'],
 	theme: {
 		// extend: {}
 		extend: {
@@ -28,8 +28,5 @@ module.exports = {
 			}
 		}
 	},
-	plugins: [require('@tailwindcss/typography')],
-	safelist: [
-		// Add any classes that are dynamically created and might be missed by the purge process
-	]
+	plugins: [require('@tailwindcss/typography')]
 };
