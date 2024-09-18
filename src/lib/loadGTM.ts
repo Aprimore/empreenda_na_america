@@ -12,7 +12,7 @@ export function loadGTM() {
 			j.onload = resolve;
 			j.onerror = reject;
 			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-WSRLN9FV');
+		})(window, document, 'script', 'dataLayer', 'GTM-MNVT3N22');
 	});
 }
 // Google Analytics script (to be added after GTM loads)

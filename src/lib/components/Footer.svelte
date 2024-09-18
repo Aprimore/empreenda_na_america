@@ -5,7 +5,7 @@
 
 <!-- 1111111111111111111111111111111111111111111111111111111111 -->
 <footer
-	class="footer relative bg-gradient-to-tr from-emerald-500 to-emerald-800 section-bg3 font-normal"
+	class="Inter footer relative bg-gradient-to-tr from-emerald-500 to-emerald-800 section-bg3 font-normal"
 >
 	<div class=" max-sm:flex justify-center">
 		<div class=" lg:p-12 max-md:flex justify-center p-5">

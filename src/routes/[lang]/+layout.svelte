@@ -1,6 +1,7 @@
 <script lang="ts">
 	// import CookieConsent from '$lib/components/CookieConsent.svelte';
 	// import ViewTransition from '$lib/components/navigation.svelte';
+
 	import '@fontsource-variable/lora';
 	import '@fontsource-variable/inter';
 	import { EBOOK_REMOTEWORK_webp, toptier_webp } from '$lib';
@@ -30,7 +31,8 @@
 		{ lang: 'pt', url: `${baseURL}/pt/` }
 	];
 	import { onMount } from 'svelte';
-	
+	import CookieConsentComponent from '$lib/components/CookieConsentComponent.svelte';
+
 	onMount(async () => {
 		if (browser) {
 			Promise.all([loadGTM(), loadGA()]);
@@ -43,9 +45,18 @@
 	{#each hreflangs as { lang, url }}
 		<link rel="alternate" hreflang={lang} href={url} />
 	{/each}
+
+	<noscript>
+		<iframe
+			src="https://www.googletagmanager.com/ns.html?id=GTM-MNVT3N22"
+			height="0"
+			width="0"
+			style="display:none;visibility:hidden"
+		></iframe>
+	</noscript>
 </svelte:head>
 
 <!-- <ViewTransition /> -->
-<!-- <CookieConsent /> -->
 <slot />
 <Footer />
+<CookieConsentComponent />
