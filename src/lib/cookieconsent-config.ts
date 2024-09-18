@@ -37,29 +37,29 @@ const config: CookieConsent.CookieConsentConfig = {
 		// ads: {}
 	},
 
-	onFirstConsent: ({ cookie }) => {
-		console.log('onFirstConsent fired', cookie);
-	},
+	// onFirstConsent: ({ cookie }) => {
+	// 	console.log('onFirstConsent fired', cookie);
+	// },
 
-	onConsent: ({ cookie }) => {
-		console.log('onConsent fired!', cookie, CookieConsent.getUserPreferences());
-	},
+	// onConsent: ({ cookie }) => {
+	// 	console.log('onConsent fired!', cookie, CookieConsent.getUserPreferences());
+	// },
 
-	onChange: ({ changedCategories, changedServices }) => {
-		console.log('onChange fired!', changedCategories, changedServices);
-	},
+	// onChange: ({ changedCategories, changedServices }) => {
+	// 	console.log('onChange fired!', changedCategories, changedServices);
+	// },
 
-	onModalReady: ({ modalName }) => {
-		console.log('ready:', modalName);
-	},
+	// onModalReady: ({ modalName }) => {
+	// 	console.log('ready:', modalName);
+	// },
 
-	onModalShow: ({ modalName }) => {
-		console.log('visible:', modalName);
-	},
+	// onModalShow: ({ modalName }) => {
+	// 	console.log('visible:', modalName);
+	// },
 
-	onModalHide: ({ modalName }) => {
-		console.log('hidden:', modalName);
-	},
+	// onModalHide: ({ modalName }) => {
+	// 	console.log('hidden:', modalName);
+	// },
 
 	guiOptions: {
 		consentModal: {
@@ -82,7 +82,7 @@ const config: CookieConsent.CookieConsentConfig = {
 				consentModal: {
 					title: 'We use cookies',
 					description:
-						'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+						'We use cookies to enhance your browsing experience, remember your preferences, and provide personalized content.',
 					acceptAllBtn: 'Accept all',
 					acceptNecessaryBtn: 'Reject all',
 					showPreferencesBtn: 'Manage Individual preferences',
