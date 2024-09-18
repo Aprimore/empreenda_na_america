@@ -10,8 +10,14 @@
 		{ code: 'pt', name: 'Português', flag: brazil_svg }
 	];
 
+	// Update the <html lang> attribute
+	function updateHtmlLang(langCode: string) {
+		document.documentElement.lang = langCode;
+	}
+
 	function handleLanguageChange(langCode: string) {
 		const currentPath = $page.data.route || '';
+		updateHtmlLang(langCode);
 		goto(`/${langCode}${currentPath}`);
 	}
 
@@ -48,25 +54,6 @@
 		{/each}
 	</div>
 </div>
-
-<!-- Dropdown with flags and buttons -->
-<!-- <div class="dropdown bg-emerald-100 rounded-md">
-	<button
-		class="flex items-center bg-[#f1f1f9] border-none p-3 rounded-md cursor-pointer"
-		title="dropdown button"
-	>
-		<img src={languages.find((l) => l.code === $locale)?.flag} class="flag" alt="country flag" />
-		{$t(`lang.${$locale}`)}
-	</button>
-	<div class="dropdown-content rounded-md">
-		{#each languages as lang}
-			<button on:click={() => handleLanguageChange(lang.code)}>
-				<img src={lang.flag} alt="{lang.name} flag" class="flag" />
-				<span>{lang.name}</span>
-			</button>
-		{/each}
-	</div>
-</div> -->
 
 <style>
 	.dropdown {

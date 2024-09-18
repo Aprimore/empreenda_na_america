@@ -4,7 +4,7 @@ export function getPageTitle(pagePath: string): string {
 	const isPortuguese = pagePath.startsWith('/pt/');
 	const isSpanish = pagePath.startsWith('/es/');
 	if (isPortuguese) {
-		if (pagePath === '/pt/') return 'Início | Top Tier';
+		if (pagePath === '/pt/') return 'Início | Empreenda na América';
 		// if (pagePath.startsWith('/pt/about')) return 'Sobre Nós | Top Tier';
 		// if (pagePath.startsWith('/pt/products')) return 'Produtos | Top Tier';
 		// if (pagePath.startsWith('/pt/contact')) return 'Contato | Top Tier';
@@ -17,7 +17,7 @@ export function getPageTitle(pagePath: string): string {
 		if (pagePath.startsWith('/pt/cookies')) return 'Cookies | Top Tier';
 	}
 	if (isSpanish) {
-		if (pagePath === '/es/') return 'Inicio | Top Tier';
+		if (pagePath === '/es/') return 'Inicio | Empreende en América';
 		// if (pagePath.startsWith('/es/about')) return 'Sobre Nós | Top Tier';
 		// if (pagePath.startsWith('/es/products')) return 'Produtos | Top Tier';
 		// if (pagePath.startsWith('/es/contact')) return 'Contato | Top Tier';

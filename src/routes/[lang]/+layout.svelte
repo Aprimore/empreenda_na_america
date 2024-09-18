@@ -14,47 +14,38 @@
 		SITE_URL
 	} from '$lib/siteConfig';
 	import { page } from '$app/stores';
-	// import { getPageTitle } from '$lib/functions/pageTitle';
-	export let data;
+	import { getPageTitle } from '$lib/functions/pageTitle';
+	import { browser } from '$app/environment';
+	import { loadGA, loadGTM } from '$lib/loadGTM';
+	// export let data;
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
+	const isPortuguese = pagePath.startsWith('/pt');
 
-	let dataLang = data.lang;
+	// let dataLang = data.lang;
+
+	const baseURL = 'https://www.empreendanaamerica.com';
+	const hreflangs = [
+		{ lang: 'es', url: `${baseURL}/` },
+		{ lang: 'pt', url: `${baseURL}/pt/` }
+	];
+	import { onMount } from 'svelte';
+	
+	onMount(async () => {
+		if (browser) {
+			Promise.all([loadGTM(), loadGA()]);
+		}
+	});
 </script>
 
 <svelte:head>
-	<!-- <link rel="alternate" hreflang="pt-BR" href="https://empreendanaamerica.com/pt/" /> -->
-	<!-- <link rel="alternate" hreflang="es" href="https://empreendanaamerica.com/es/" /> -->
-	<link rel="canonical" href="https://empreendanaamerica.com/{dataLang}/" />
-</svelte:head>
-
-<!-- <svelte:head>
 	<title>{getPageTitle(pagePath)}</title>
-	<link rel="canonical" href={SITE_URL + pagePath} />
-</svelte:head> -->
+	{#each hreflangs as { lang, url }}
+		<link rel="alternate" hreflang={lang} href={url} />
+	{/each}
+</svelte:head>
 
 <!-- <ViewTransition /> -->
 <!-- <CookieConsent /> -->
 <slot />
 <Footer />
-
-<style>
-	/* Zoom responsiveness */
-	/* @media only screen and (min-width: 600px) {
-		:global(html) {
-			zoom: 0.8;
-		}
-	}
-
-	@media only screen and (min-width: 1000x) {
-		:global(html) {
-			zoom: 0.9;
-		}
-	}
-
-	@media only screen and (min-width: 1400px) {
-		:global(html) {
-			zoom: 1;
-		}
-	} */
-</style>

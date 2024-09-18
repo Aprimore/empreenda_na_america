@@ -17,8 +17,9 @@
 	import og_image from '$lib/assets/images/og_image.webp';
 	import website from '$lib/config/website';
 	import SEO from '$lib/components/SEO/index.svelte';
-	// let loading = true;
 	import { t } from '$lib/translations';
+
+	// let loading = true;
 	// onMount(() => {
 	// 	loading = false;
 	// });
@@ -27,13 +28,12 @@
 	$: pagePath = $page.url.pathname;
 
 	const isPortuguese = pagePath.startsWith('/pt/');
-	// console.log(isPortuguese);
 
 	const { author, siteUrl } = website;
-	let title = isPortuguese ? 'Início' : 'Home';
+	let title = isPortuguese ? 'Início | Empreenda na América' : 'Inicio | Empreende en América';
 	const breadcrumbs = [
 		{
-			name: isPortuguese ? 'Início' : 'Home',
+			name: isPortuguese ? 'Início' : 'Inicio',
 			slug: ''
 		}
 	];
@@ -91,11 +91,6 @@
 <div in:fade={{ delay: 150, duration: 250 }}>
 	<main>
 		<Navbar2 />
-		<!-- {#if loading} -->
-		<!-- <div class="w-full h-screen flex justify-center items-center pb-24">
-		<div class="loading-spinner"></div>
-	</div> -->
-		<!-- {:else} -->
 		<Section1 />
 		<Section2 />
 		<Section3 />
@@ -104,26 +99,3 @@
 		<Section6 />
 	</main>
 </div>
-
-<!-- {/if} -->
-
-<style>
-	/* .loading-spinner {
-		margin: 2rem auto;
-		width: 50px;
-		height: 50px;
-		border: 5px solid #dfdad6;
-		border-top-color: #333;
-		border-radius: 50%;
-		animation: spin 0.3s linear infinite;
-	} */
-	/* 
-	@keyframes spin {
-		0% {
-			transform: rotate(0deg);
-		}
-		100% {
-			transform: rotate(360deg);
-		}
-	} */
-</style>

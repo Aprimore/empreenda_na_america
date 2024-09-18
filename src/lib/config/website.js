@@ -23,7 +23,7 @@ const website = {
 	siteShortTitle: 'Empreenda na America - Seu Mapa Completo para o Sucesso nos EUA',
 	description:
 		'Descubra estratégias exclusivas de negócios, investimentos e educação financeira para crescer nos Estados Unidos.',
-	siteUrl: PUBLIC_SITE_URL,
+	siteUrl: `${PUBLIC_SITE_URL}/pt`,
 	backgroundColor: '#fff',
 	themeColor: '#fff',
 	contactEmail: PUBLIC_CONTACT_EMAIL,
