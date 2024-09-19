@@ -2,7 +2,7 @@
 <script lang="ts">
 	// import * as m from '$lib/paraglide/messages';
 	import { cassia_a_webp, dr_sten_webp, maria_d_webp, quote_png } from '$lib';
-	import quote_svg from './298854_quote_icon.svg';
+	// import quote_svg from './298854_quote_icon.svg';
 	import { t } from '$lib/translations';
 </script>
 

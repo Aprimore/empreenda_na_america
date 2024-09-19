@@ -2,6 +2,11 @@ RewriteEngine On
 RewriteBase /
 # DirectorySlash Off
 
+# Enable Gzip compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json
+</IfModule>
+
 # Prevent dot directories (hidden directories like .git) to be exposed to the public
 # Except for the .well-known directory used by LetsEncrypt a.o
 # RewriteRule "/\.|^\.(?!well-known/)" - [F]
