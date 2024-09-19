@@ -14,8 +14,10 @@
 	<div class="lg:max-w-screen-xl mx-auto max-sm:p-2">
 		<div class="p-1 flex max-md:flex-col text-pretty">
 			<div class="md:w-[40%] m-auto border-black align-middle lg:m-10 md:m-5">
-				<h2 class="Inter-Bold text-3xl md:text-4xl my-6 text-center">{$t('home.S6_T')}</h2>
-				<p class="Lora text-lg max-sm:text-md my-6 sm:text-center mx-4">
+				<h2 class="Inter-Bold text-3xl md:text-4xl my-6 text-center text-gray-900">
+					{$t('home.S6_T')}
+				</h2>
+				<p class="Lora text-lg max-sm:text-md my-6 sm:text-center mx-4 text-gray-800">
 					{$t('home.S5_D')}
 				</p>
 			</div>

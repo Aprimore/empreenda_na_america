@@ -83,8 +83,8 @@
 
 <section class="text-pretty py-16 background-img4 min-h-[690px]">
 	<div class="lg:max-w-screen-lg sm:mx-auto max-sm:p-2">
-		<h2 class="Inter-Bold text-3xl md:text-4xl text-center my-6">{$t('home.S5_T')}</h2>
-		<p class="Lora text-md sm:text-xl my-6 sm:text-center lg:px-10 px-4">
+		<h2 class="Inter-Bold text-3xl md:text-4xl text-center my-6 text-gray-900">{$t('home.S5_T')}</h2>
+		<p class="Lora text-md sm:text-xl my-6 sm:text-center lg:px-10 px-4 text-gray-800">
 			{$t('home.S5_D')}
 		</p>
 		<!-- Swiper slider container with navigation enabled -->
