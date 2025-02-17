@@ -17,7 +17,7 @@
 	import { page } from '$app/stores';
 	import { getPageTitle } from '$lib/functions/pageTitle';
 	import { browser } from '$app/environment';
-	import { loadGA, loadGTM } from '$lib/loadGTM';
+	import { loadGA, loadGTM, loadFacebookPixel, sendFacebookPixelEvent } from '$lib/loadGTM';
 	// export let data;
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
@@ -32,10 +32,12 @@
 	];
 	import { onMount } from 'svelte';
 	import CookieConsentComponent from '$lib/components/CookieConsentComponent.svelte';
+	// import { loadFacebookConversion } from '$lib/loadFacebookPixel';
 
 	onMount(async () => {
 		if (browser) {
-			Promise.all([loadGTM(), loadGA()]);
+			await sendFacebookPixelEvent();
+			// Promise.all([loadGTM(), loadGA()]);
 		}
 	});
 </script>
