@@ -18,6 +18,9 @@ const config = {
 	// 	if (warning.code === 'a11y-no-static-element-interactions') return;
 	// 	handler(warning);
 	// },
+
+	//123 test
+	
 	kit: {
 		adapter: adapter({
 			pages: 'build',
