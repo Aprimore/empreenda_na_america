@@ -17,7 +17,7 @@
 	import { page } from '$app/stores';
 	import { getPageTitle } from '$lib/functions/pageTitle';
 	import { browser } from '$app/environment';
-	import { loadGA, loadGTM, loadFacebookPixel, sendFacebookPixelEvent } from '$lib/loadGTM';
+	import { loadGA, loadGTM, sendFacebookPixelEvent } from '$lib/loadGTM';
 	// export let data;
 	let pagePath = $page.url.pathname;
 	$: pagePath = $page.url.pathname;
@@ -32,6 +32,7 @@
 	];
 	import { onMount } from 'svelte';
 	import CookieConsentComponent from '$lib/components/CookieConsentComponent.svelte';
+	import Navbar2 from '$lib/components/Navbar2.svelte';
 	// import { loadFacebookConversion } from '$lib/loadFacebookPixel';
 
 	onMount(async () => {
@@ -59,6 +60,7 @@
 </svelte:head>
 
 <!-- <ViewTransition /> -->
+<Navbar2 />
 <slot />
 <Footer />
 <CookieConsentComponent />

@@ -39,7 +39,8 @@
 		"svelte-youtube-embed": "^0.3.0",
 		"sveltekit-i18n": "^2.4.2",
 		"swiper": "^11.1.12",
-		"vanilla-cookieconsent": "^3.0.1"
+		"vanilla-cookieconsent": "^3.0.1",
+		"xss": "^1.0.15"
 	},
 	"type": "module"
 }

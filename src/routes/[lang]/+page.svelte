@@ -90,7 +90,7 @@
 <SEO {...seoProps} />
 <div in:fade={{ delay: 150, duration: 250 }}>
 	<main>
-		<Navbar2 />
+		
 		<Section1 />
 		<Section2 />
 		<Section3 />
