@@ -28,6 +28,7 @@ const config = {
 		}),
 		// prerender: {
 		// 	entries: ['*']
+		// 	// origin: 'https://empreendanaamerica.com/'
 		// },
 		prerender: {
 			entries: supportedLocales.reduce(
@@ -41,7 +42,8 @@ const config = {
 					`/${locale}/about`,
 					`/${locale}/about2`,
 					`/${locale}/test1`,
-					`/${locale}/test2`
+					`/${locale}/test2`,
+					`/${locale}/v1/blog`
 				],
 				['*']
 			),
