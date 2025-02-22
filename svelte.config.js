@@ -25,8 +25,8 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: null,
-			// fallback: 'index.html', // this is critical for handling dynamic routes
+			// fallback: null,
+			fallback: 'index.html', // this is critical for handling dynamic routes
 			precompress: false,
 			strict: false
 		}),
@@ -35,7 +35,7 @@ const config = {
 		// 	origin: 'https://empreendanaamerica.com/'
 		// },
 		prerender: {
-			// crawl: true,
+			crawl: true,
 			entries: supportedLocales.reduce(
 				(acc, locale) => [
 					...acc,
@@ -45,7 +45,8 @@ const config = {
 					`/${locale}/403`,
 					`/${locale}/404`,
 					`/${locale}/500`,
-					`/${locale}/about`
+					`/${locale}/about`,
+					`/${locale}/*`
 					// `/${locale}/test1`,
 					// `/${locale}/test2`,
 					// `/${locale}/v1/blog/`,
@@ -57,22 +58,21 @@ const config = {
 				['*']
 			),
 
-			origin: 'https://www.empreendanaamerica.com'
+			origin: 'https://www.empreendanaamerica.com',
 			// entries: generatePrerenderEntries()
-			// handleMissingId: 'warn' // or 'ignore' to completely suppress the error
+			handleMissingId: 'warn' // or 'ignore' to completely suppress the error
 			// entries: ['/pt-br/', '/en/', '/es/']
 		},
 		// prerender: {
 		// 	crawl: true,
-		// 	// entries: ['*'],
-		// 	entries: ['/*'],
+		//  entries: ['*'],
 
 		// 	origin: 'https://empreendanaamerica.com'
 		// },
 		version: {
 			name: Date.now().toString()
-		}
-		// adapter: sitemapWrapAdapter(adapter())
+		},
+		adapter: sitemapWrapAdapter(adapter())
 	},
 	onwarn: (warning, handler) => {
 		// Disable the specific A11y warning
