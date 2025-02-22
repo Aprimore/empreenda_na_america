@@ -15,20 +15,20 @@
 		return date.toISOString();
 	}
 
-	import SEO from '$lib/components/SEO/index.svelte';
-	import website from '$lib/config/website';
-	const { author, siteUrl } = website;
+	// import SEO from '$lib/components/SEO/index.svelte';
+	// import website from '$lib/config/website';
+	// const { author, siteUrl } = website;
 
-	const breadcrumbs = [
-		{
-			name: 'Home',
-			slug: ''
-		},
-		{
-			name: data.post.title,
-			slug: pagePath.substring(1)
-		}
-	];
+	// const breadcrumbs = [
+	// 	{
+	// 		name: 'Home',
+	// 		slug: ''
+	// 	},
+	// 	{
+	// 		name: data.post.title,
+	// 		slug: pagePath.substring(1)
+	// 	}
+	// ];
 
 	// let metadescription = isPortuguese
 	// 	? 'O Blog da My Menthor traz mais de 20 anos de experiência em consultoria de gestão organizacional, compartilhando insights e estratégias sobre Gestão de Arquitetura Empresarial. Explore artigos sobre melhores práticas, tendências do setor e como aproveitar plataformas SaaS para impulsionar o sucesso empresarial.'
@@ -36,32 +36,32 @@
 	// const featuredImageAlt = isPortuguese
 	// 	? 'Imagem de uma pessoa vetorizada, o logo do site da My Menthor'
 	// 	: 'picture of a vectorized person, the logo for My Menthor website';
-	const featuredImage = {
-		url: data.post.featuredImage?.node?.sourceUrl,
-		// alt: featuredImageAlt,
-		width: 672,
-		height: 448,
-		caption: data.post.title
-	};
-	const ogImage = {
-		url: data.post.featuredImage?.node?.sourceUrl,
-		// alt: featuredImageAlt
-	};
-	const ogSquareImage = {
-		url: data.post.featuredImage?.node?.sourceUrl,
-		// alt: featuredImageAlt
-	};
+	// const featuredImage = {
+	// 	url: data.post.featuredImage?.node?.sourceUrl,
+	// 	// alt: featuredImageAlt,
+	// 	width: 672,
+	// 	height: 448,
+	// 	caption: data.post.title
+	// };
+	// const ogImage = {
+	// 	url: data.post.featuredImage?.node?.sourceUrl,
+	// 	// alt: featuredImageAlt
+	// };
+	// const ogSquareImage = {
+	// 	url: data.post.featuredImage?.node?.sourceUrl,
+	// 	// alt: featuredImageAlt
+	// };
 
-	const twitterImage = {
-		url: data.post.featuredImage?.node?.sourceUrl,
-		// alt: featuredImageAlt
-	};
-	const entityMeta = {
-		url: `${siteUrl}/`,
-		faviconWidth: 512,
-		faviconHeight: 512,
-		caption: author
-	};
+	// const twitterImage = {
+	// 	url: data.post.featuredImage?.node?.sourceUrl,
+	// 	// alt: featuredImageAlt
+	// };
+	// const entityMeta = {
+	// 	url: `${siteUrl}/`,
+	// 	faviconWidth: 512,
+	// 	faviconHeight: 512,
+	// 	caption: author
+	// };
 	// const seoProps = {
 	// 	title: data.post.title,
 	// 	slug: pagePath.substring(1),

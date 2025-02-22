@@ -2,7 +2,7 @@
 	// import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
-	import SEO from '$lib/components/SEO/index.svelte';
+	// import SEO from '$lib/components/SEO/index.svelte';
 	import website from '$lib/config/website';
 	import { page } from '$app/stores';
 	let pagePath = $page.url.pathname;
@@ -11,7 +11,7 @@
 
 	export let data;
 	// console.log(data);
-	const { author, siteUrl } = website;
+	// const { author, siteUrl } = website;
 	let title = 'Blog';
 	const breadcrumbs = [
 		{ name: 'Home', slug: '' },
@@ -40,31 +40,31 @@
 	// 	url: twitterImageSrc,
 	// 	alt: featuredImageAlt
 	// };
-	const entityMeta = {
-		url: `${siteUrl}/`,
-		faviconWidth: 512,
-		faviconHeight: 512,
-		caption: author
-	};
-	const seoProps = {
-		title,
-		slug: pagePath.substring(1),
-		entityMeta,
-		datePublished: '2024-05-07T14:19:33.000+0100',
-		lastUpdated: '2024-09-08T14:19:33.000+0100',
-		breadcrumbs,
-		metadescription,
-		article: true
-		// featuredImage,
-		// ogImage,
-		// ogSquareImage,
-		// twitterImage
-	};
+	// const entityMeta = {
+	// 	url: `${siteUrl}/`,
+	// 	faviconWidth: 512,
+	// 	faviconHeight: 512,
+	// 	caption: author
+	// };
+	// const seoProps = {
+	// 	title,
+	// 	slug: pagePath.substring(1),
+	// 	entityMeta,
+	// 	datePublished: '2024-05-07T14:19:33.000+0100',
+	// 	lastUpdated: '2024-09-08T14:19:33.000+0100',
+	// 	breadcrumbs,
+	// 	metadescription,
+	// 	article: true
+	// 	// featuredImage,
+	// 	// ogImage,
+	// 	// ogSquareImage,
+	// 	// twitterImage
+	// };
 
 	// console.log(data.posts )
 </script>
 
-<SEO {...seoProps} />
+<!-- <SEO {...seoProps} /> -->
 
 <section
 	in:fade={{ delay: 0, duration: 150, easing: cubicInOut }}

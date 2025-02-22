@@ -4,12 +4,12 @@ import { sanitizeHtml } from '../../utils';
 export const prerender = true;
 
 export const load: PageServerLoad = async ({ fetch, params }) => {
-	console.log(params);
+	// console.log(params);
 	const endpoint = import.meta.env.VITE_PUBLIC_WORDPRESS_API_URL;
 	// console.log(params);
 	// console.log(endpoint);
 	const { slug } = params;
-	console.log(slug);
+	// console.log(slug);
 
 	const WPQL_QUERY = {
 		query: `{
@@ -77,40 +77,40 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
 	}
 };
 
-export const entries = async () => {
-	const endpoint = import.meta.env.VITE_PUBLIC_WORDPRESS_API_URL;
-	const WPQL_QUERY = {
-		query: `{
-            posts {
-                nodes {
-                    slug
-                }
-            }
-        }`
-	};
+// export const entries = async () => {
+// 	const endpoint = import.meta.env.VITE_PUBLIC_WORDPRESS_API_URL;
+// 	const WPQL_QUERY = {
+// 		query: `{
+//             posts {
+//                 nodes {
+//                     slug
+//                 }
+//             }
+//         }`
+// 	};
 
-	try {
-		const response = await fetch(endpoint, {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify(WPQL_QUERY)
-		});
+// 	try {
+// 		const response = await fetch(endpoint, {
+// 			method: 'POST',
+// 			headers: {
+// 				'Content-Type': 'application/json'
+// 			},
+// 			body: JSON.stringify(WPQL_QUERY)
+// 		});
 
-		if (!response.ok) throw new Error('Failed to fetch posts');
+// 		if (!response.ok) throw new Error('Failed to fetch posts');
 
-		const { data } = await response.json();
+// 		const { data } = await response.json();
 
-		const slugs = data.posts.nodes.map((post) => post.slug);
+// 		const slugs = data.posts.nodes.map((post) => post.slug);
 
-		return slugs.map((slug) => ({
-			lang: 'pt',
-			id: slug, // or whatever unique identifier you're using
-			slug: slug
-		}));
-	} catch (error) {
-		console.error('Error fetching posts:', error);
-		return [];
-	}
-};
+// 		return slugs.map((slug) => ({
+// 			lang: 'pt',
+// 			id: slug, // or whatever unique identifier you're using
+// 			slug: slug
+// 		}));
+// 	} catch (error) {
+// 		console.error('Error fetching posts:', error);
+// 		return [];
+// 	}
+// };
