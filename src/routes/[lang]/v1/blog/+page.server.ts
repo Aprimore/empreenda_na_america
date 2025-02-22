@@ -1,7 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { WPQL_QUERY, sanitizePost } from './utils';
 
-export const prerender = true;
+// export const prerender = true;
 
 export const load: PageServerLoad = async ({ fetch, url }) => {
 	const endpoint = import.meta.env.VITE_PUBLIC_WORDPRESS_API_URL;
