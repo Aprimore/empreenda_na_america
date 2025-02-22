@@ -25,17 +25,17 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			// fallback: null,
-			fallback: '404.html', // this is critical for handling dynamic routes
-			precompress: false
-			// strict: false
+			fallback: null,
+			// fallback: '404.html', // this is critical for handling dynamic routes
+			precompress: false,
+			strict: false
 		}),
 		// prerender: {
-		// entries: ['*']
-		// origin: 'https://empreendanaamerica.com/'
+		// 	entries: ['*'],
+		// 	origin: 'https://empreendanaamerica.com/'
 		// },
 		prerender: {
-			crawl: true,
+			// crawl: true,
 			entries: supportedLocales.reduce(
 				(acc, locale) => [
 					...acc,
@@ -45,33 +45,37 @@ const config = {
 					`/${locale}/404`,
 					`/${locale}/500`,
 					`/${locale}/about`,
-					`/${locale}/about2`,
 					`/${locale}/test1`,
 					`/${locale}/test2`,
-					`/${locale}/v1/blog`,
-					`/${locale}/v1/blog/*`
+					`/${locale}/v1/*`
+					// `/${locale}/v1/blog`,
+					// `/${locale}/v1/blog/[id]`,
+					// `/${locale}/v1/blog/[id]/[slug]`,
 				],
-				['*']
+				['/']
 			),
-			origin: 'https://www.empreendanaamerica.com'
+			origin: 'https://www.empreendanaamerica.com',
 			// entries: generatePrerenderEntries()
-			// handleMissingId: 'warn' // or 'ignore' to completely suppress the error
+			handleMissingId: 'warn' // or 'ignore' to completely suppress the error
 			// entries: ['/pt-br/', '/en/', '/es/']
 		},
-		adapter: sitemapWrapAdapter(adapter())
-		// csp: {
-		// 	mode: 'hash',
-		//   }
-		// }
+		// prerender: {
+		// 	crawl: true,
+		// 	// entries: ['*'],
+		// 	entries: ['/*'],
 
-		// paths: {
-		// base: '' // Set this to '' if your site is at the root of the domain
-		// assets: '' // Set this if your assets are served from a different URL
-		// }
+		// 	origin: 'https://empreendanaamerica.com'
+		// },
+		version: {
+			name: Date.now().toString()
+		}
+		// adapter: sitemapWrapAdapter(adapter())
 	},
 	onwarn: (warning, handler) => {
 		// Disable the specific A11y warning
 		if (warning.code === 'a11y-invalid-attribute') return;
+		if (warning.code === 'a11y-click-events-have-key-events') return;
+		if (warning.code === 'a11y-no-static-element-interactions') return;
 		// Handle all other warnings normally
 		handler(warning);
 	}
