@@ -51,6 +51,7 @@
 
 	<noscript>
 		<iframe
+			title="gtm"
 			src="https://www.googletagmanager.com/ns.html?id=GTM-MNVT3N22"
 			height="0"
 			width="0"

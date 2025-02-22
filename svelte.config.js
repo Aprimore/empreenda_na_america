@@ -25,9 +25,9 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			// fallback: null,
-			fallback: 'error.html',
-			precompress: false,
+			fallback: null,
+			// fallback: 'error.html',
+			precompress: false
 			// strict: false
 		}),
 		// prerender: {
@@ -51,10 +51,10 @@ const config = {
 				],
 				['*']
 			),
-			origin: 'https://www.empreendanaamerica.com',
+			origin: 'https://www.empreendanaamerica.com'
 			// crawl: false
 			// entries: generatePrerenderEntries()
-			handleMissingId: 'warn' // or 'ignore' to completely suppress the error
+			// handleMissingId: 'warn' // or 'ignore' to completely suppress the error
 			// entries: ['/pt-br/', '/en/', '/es/']
 		},
 		adapter: sitemapWrapAdapter(adapter())
