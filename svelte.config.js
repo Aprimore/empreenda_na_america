@@ -26,7 +26,7 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: null,
-			// fallback: '404.html', // this is critical for handling dynamic routes
+			// fallback: 'index.html', // this is critical for handling dynamic routes
 			precompress: false,
 			strict: false
 		}),
@@ -35,7 +35,7 @@ const config = {
 		// 	origin: 'https://empreendanaamerica.com/'
 		// },
 		prerender: {
-			// crawl: true,
+			crawl: true,
 			entries: supportedLocales.reduce(
 				(acc, locale) => [
 					...acc,
@@ -47,16 +47,17 @@ const config = {
 					`/${locale}/about`,
 					`/${locale}/test1`,
 					`/${locale}/test2`,
-					`/${locale}/v1/*`
+					`/${locale}/v1/blog/`,
+					`/${locale}/v1/blog/*`
 					// `/${locale}/v1/blog`,
 					// `/${locale}/v1/blog/[id]`,
 					// `/${locale}/v1/blog/[id]/[slug]`,
 				],
-				['/']
+				['*']
 			),
-			origin: 'https://www.empreendanaamerica.com',
+			origin: 'https://www.empreendanaamerica.com'
 			// entries: generatePrerenderEntries()
-			handleMissingId: 'warn' // or 'ignore' to completely suppress the error
+			// handleMissingId: 'warn' // or 'ignore' to completely suppress the error
 			// entries: ['/pt-br/', '/en/', '/es/']
 		},
 		// prerender: {
