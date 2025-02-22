@@ -35,26 +35,28 @@ const config = {
 		// 	origin: 'https://empreendanaamerica.com/'
 		// },
 		prerender: {
-			crawl: true,
+			// crawl: true,
 			entries: supportedLocales.reduce(
 				(acc, locale) => [
 					...acc,
 					`/${locale}`,
+					`/${locale}/301`,
 					`/${locale}/401`,
 					`/${locale}/403`,
 					`/${locale}/404`,
 					`/${locale}/500`,
-					`/${locale}/about`,
-					`/${locale}/test1`,
-					`/${locale}/test2`,
-					`/${locale}/v1/blog/`,
-					`/${locale}/v1/blog/*`
+					`/${locale}/about`
+					// `/${locale}/test1`,
+					// `/${locale}/test2`,
+					// `/${locale}/v1/blog/`,
+					// `/${locale}/v1/blog/*`
 					// `/${locale}/v1/blog`,
 					// `/${locale}/v1/blog/[id]`,
 					// `/${locale}/v1/blog/[id]/[slug]`,
 				],
 				['*']
 			),
+
 			origin: 'https://www.empreendanaamerica.com'
 			// entries: generatePrerenderEntries()
 			// handleMissingId: 'warn' // or 'ignore' to completely suppress the error
