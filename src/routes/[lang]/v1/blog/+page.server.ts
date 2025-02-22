@@ -45,7 +45,7 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
 		const sanitizedPosts = data.posts.edges.map((post) => sanitizePost(post));
 
 		return {
-			slug: { lang: language === 'PT' ? 'pt-BR' : 'es' },
+			slug: { lang: language === 'PT' ? 'pt' : 'es' },
 			posts: sanitizedPosts
 		};
 	} catch (error) {
@@ -54,7 +54,7 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
 
 		// Handle the error gracefully, e.g., by returning an empty posts array or error message
 		return {
-			slug: { lang: language === 'PT' ? 'pt-BR' : 'es' },
+			slug: { lang: language === 'PT' ? 'pt' : 'es' },
 			posts: [],
 			error: 'Failed to load posts. Please try again later.'
 		};
