@@ -35,6 +35,7 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
 
 		const { data } = await response.json();
 		// Ensure 'data' exists and log it
+		// console.log(data);
 		if (!data || !data.posts) {
 			throw new Error('No posts data returned from API');
 		}
@@ -44,7 +45,7 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
 		const sanitizedPosts = data.posts.edges.map((post) => sanitizePost(post));
 
 		return {
-			slug: { lang: language === 'PT' ? 'pt' : 'es' },
+			slug: { lang: language === 'PT' ? 'pt-BR' : 'es' },
 			posts: sanitizedPosts
 		};
 	} catch (error) {

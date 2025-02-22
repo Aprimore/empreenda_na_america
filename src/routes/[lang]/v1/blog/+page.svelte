@@ -10,7 +10,7 @@
 	const isPortuguese = pagePath.startsWith('/pt/');
 
 	export let data;
-
+	// console.log(data);
 	const { author, siteUrl } = website;
 	let title = 'Blog';
 	const breadcrumbs = [
@@ -60,16 +60,18 @@
 		// ogSquareImage,
 		// twitterImage
 	};
+
+	// console.log(data.posts )
 </script>
 
 <SEO {...seoProps} />
 
 <section
 	in:fade={{ delay: 0, duration: 150, easing: cubicInOut }}
-	class=" blog-list sm:bg-[#F1F1F9] w-full relative rounded-lg max-sm:p-2 py-5 Exo"
+	class="blog-list sm:bg-[#F1F1F9] w-full rounded-lg max-sm:p-2 Exo"
 >
 	<div
-		class="max-sm:bg-[#F1F1F9] max-w-screen-2xl mx-auto flex-col lg:flex-row rounded-lg p-4 mt-32"
+		class="max-sm:bg-[#F1F1F9] max-w-screen-2xl mx-auto flex-col lg:flex-row rounded-lg p-4 "
 	>
 		<h1 class="text-3xl font-bold mb-6">Blog Posts</h1>
 		{#if data.posts && data.posts.length > 0}

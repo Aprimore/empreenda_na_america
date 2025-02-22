@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import { brazil_svg, spain_svg, usa_svg } from '$lib';
+	import { browser } from '$app/environment';
 
 	const languages = [
 		// { code: 'en', name: 'English', flag: usa_svg },
@@ -10,12 +11,20 @@
 		{ code: 'pt', name: 'Português', flag: brazil_svg }
 	];
 
+	// import { derived, fromStore, get, readable, readonly, toStore, writable } from 'svelte/store';
+
+	// Subscribe to the store and log its value
+
 	// Update the <html lang> attribute
 	function updateHtmlLang(langCode: string) {
 		document.documentElement.lang = langCode;
 	}
 
 	function handleLanguageChange(langCode: string) {
+		// console.log(langCode);
+		// currentLocale.derived(langCode); // ✅ Update the global store
+		// console.log(langCode);
+		locale.set(langCode);
 		const currentPath = $page.data.route || '';
 		updateHtmlLang(langCode);
 		goto(`/${langCode}${currentPath}`);

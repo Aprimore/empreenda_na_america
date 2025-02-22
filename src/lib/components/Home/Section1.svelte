@@ -40,6 +40,7 @@
 		background-image: url('$lib/assets/svg/patterns/sun-tornado.svg');
 		background-size: cover;
 		background-repeat: repeat;
-		background-position: center;
+		/* background-position: center; */
+		background-position: fixed;
 	}
 </style>

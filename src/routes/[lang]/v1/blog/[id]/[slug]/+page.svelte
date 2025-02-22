@@ -37,23 +37,23 @@
 	// 	? 'Imagem de uma pessoa vetorizada, o logo do site da My Menthor'
 	// 	: 'picture of a vectorized person, the logo for My Menthor website';
 	const featuredImage = {
-		url: data.post.featuredImage.node.sourceUrl,
+		url: data.post.featuredImage?.node?.sourceUrl,
 		// alt: featuredImageAlt,
 		width: 672,
 		height: 448,
 		caption: data.post.title
 	};
 	const ogImage = {
-		url: data.post.featuredImage.node.sourceUrl
+		url: data.post.featuredImage?.node?.sourceUrl,
 		// alt: featuredImageAlt
 	};
 	const ogSquareImage = {
-		url: data.post.featuredImage.node.sourceUrl
+		url: data.post.featuredImage?.node?.sourceUrl,
 		// alt: featuredImageAlt
 	};
 
 	const twitterImage = {
-		url: data.post.featuredImage.node.sourceUrl
+		url: data.post.featuredImage?.node?.sourceUrl,
 		// alt: featuredImageAlt
 	};
 	const entityMeta = {
@@ -62,23 +62,23 @@
 		faviconHeight: 512,
 		caption: author
 	};
-	const seoProps = {
-		title: data.post.title,
-		slug: pagePath.substring(1),
-		entityMeta,
-		datePublished: formatDateToISO(data.post.date),
-		lastUpdated: formatDateToISO(data.post.modified),
-		breadcrumbs,
-		metadescription: data.post.seo.opengraphDescription,
-		article: true,
-		featuredImage,
-		ogImage,
-		ogSquareImage,
-		twitterImage
-	};
+	// const seoProps = {
+	// 	title: data.post.title,
+	// 	slug: pagePath.substring(1),
+	// 	entityMeta,
+	// 	datePublished: formatDateToISO(data.post.date),
+	// 	lastUpdated: formatDateToISO(data.post.modified),
+	// 	breadcrumbs,
+	// 	metadescription: data.post.seo.opengraphDescription,
+	// 	article: true,
+	// 	featuredImage,
+	// 	ogImage,
+	// 	ogSquareImage,
+	// 	twitterImage
+	// };
 </script>
 
-<SEO {...seoProps} />
+<!-- <SEO {...seoProps} /> -->
 <section
 	in:fade={{ delay: 0, duration: 150, easing: cubicInOut }}
 	class="sm:bg-[#F1F1F9] w-full items-center relative rounded-lg max-sm:p-2 py-5 Exo"
@@ -92,7 +92,7 @@
 					<h1 class="text-4xl font-bold mb-8">{data.post.title}</h1>
 					{#if data.post.featuredImage?.node?.sourceUrl}
 						<img
-							src={data.post.featuredImage.node.sourceUrl}
+							src={data.post.featuredImage?.node?.sourceUrl}
 							alt={data.post.title}
 							class="mb-4 rounded-lg shadow-lg"
 						/>

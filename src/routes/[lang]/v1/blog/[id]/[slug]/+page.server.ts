@@ -5,6 +5,8 @@ export const prerender = true;
 
 export const load: PageServerLoad = async ({ fetch, params }) => {
 	const endpoint = import.meta.env.VITE_PUBLIC_WORDPRESS_API_URL;
+	// console.log(params);
+	// console.log(endpoint);
 	const { slug } = params;
 
 	const WPQL_QUERY = {
@@ -17,18 +19,7 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
                 postId
                 date
 				modified
-				seo {
-					canonical
-					metaKeywords
-					opengraphAuthor
-					opengraphDescription
-					opengraphModifiedTime
-					opengraphPublishedTime
-					opengraphPublisher
-					opengraphTitle
-					readingTime
-					title
-					}
+			
                 featuredImage {
                     node {
                         sourceUrl
@@ -37,6 +28,19 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
             }
         }`
 	};
+
+	// seo {
+	// 			canonical
+	// 			metaKeywords
+	// 			opengraphAuthor
+	// 			opengraphDescription
+	// 			opengraphModifiedTime
+	// 			opengraphPublishedTime
+	// 			opengraphPublisher
+	// 			opengraphTitle
+	// 			readingTime
+	// 			title
+	// 			}
 
 	try {
 		const response = await fetch(endpoint, {
@@ -48,8 +52,11 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
 		});
 		if (!response.ok) throw new Error('Failed to fetch post');
 
-		const { data } = await response.json();
+		// const jsonResponse = await response.json();
+		// console.log('Full API Response:', jsonResponse);
 
+		const { data } = await response.json();
+		// console.log(data);
 		if (data.post && data.post.content) {
 			data.post.content = sanitizeHtml(data.post.content);
 		}
