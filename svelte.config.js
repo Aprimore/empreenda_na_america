@@ -18,7 +18,7 @@ const config = {
 			strict: false
 		}),
 		prerender: {
-			// crawl: true,
+			crawl: true,
 			entries: ['/pt/', '/pt/v1/blog', '/es/', '/es/v1/blog', '/pt/v1/blog/*', '/es/v1/blog/*'],
 			origin: 'https://www.empreendanaamerica.com',
 			// entries: generatePrerenderEntries()
