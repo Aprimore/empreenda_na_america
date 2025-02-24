@@ -59,6 +59,6 @@ export const load = async ({ url }) => {
 	return { route, lang, pathname };
 };
 
-export const prerender = 'auto';
+export const prerender = true;
 export const trailingSlash = 'always';
 export const ssr = true;

@@ -1,7 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { sanitizeHtml } from '../../utils';
 
-// export const prerender = true;
+export const prerender = true;
 
 // export const entries = async () => {
 // 	const endpoint = import.meta.env.VITE_PUBLIC_WORDPRESS_API_URL;
