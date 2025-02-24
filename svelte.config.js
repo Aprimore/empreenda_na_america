@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 // import { sitemapWrapAdapter } from 'sveltekit-static-sitemap';
 import lang from './src/lib/translations/lang.js';
@@ -13,20 +13,20 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: 'index.html', // Keep this only if using SPA-like behavior
+			fallback: null, // Keep this only if using SPA-like behavior
 			precompress: false,
 			strict: false
 		}),
 
-		// prerender: {
-		// entries: ['*']
-		// entries: supportedLocales.flatMap((locale) => [
-		// 	`/${locale}`,
-		// 	`/${locale}/v1/blog` // Main blog page
-		// ])
-		// origin: 'https://www.empreendanaamerica.com',
-		// handleMissingId: 'warn' // Prevent build failure due to missing dynamic pages
-		// },
+		prerender: {
+			entries: ['*'],
+			// entries: supportedLocales.flatMap((locale) => [
+			// 	`/${locale}`,
+			// 	`/${locale}/v1/blog` // Main blog page
+			// ])
+			origin: 'https://www.empreendanaamerica.com',
+			handleMissingId: 'warn' // Prevent build failure due to missing dynamic pages
+		},
 
 		version: {
 			name: Date.now().toString()
