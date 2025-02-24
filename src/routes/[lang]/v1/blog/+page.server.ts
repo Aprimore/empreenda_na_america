@@ -3,7 +3,7 @@ import type { PageServerLoad } from './$types';
 import { WPQL_QUERY, sanitizePost } from './utils';
 
 export const prerender = true;
-
+console.log(import.meta.env.VITE_PUBLIC_WORDPRESS_API_URL);
 export const load: PageServerLoad = async ({ fetch, params, url }) => {
 	const endpoint = import.meta.env.VITE_PUBLIC_WORDPRESS_API_URL;
 	// const language = url.pathname.includes('/pt') ? 'PT' : 'ES';
@@ -33,6 +33,7 @@ export const load: PageServerLoad = async ({ fetch, params, url }) => {
 		}
 
 		const sanitizedPosts = data.posts.edges.map((post: any) => sanitizePost(post));
+		console.log(`SANITIZED POSTS`, sanitizedPosts);
 
 		return {
 			slug: { lang: language === 'pt' ? 'pt' : 'es' },
