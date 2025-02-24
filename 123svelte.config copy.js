@@ -40,11 +40,11 @@ const config = {
 				(acc, locale) => [
 					...acc,
 					`/${locale}`,
-					// `/${locale}/301`,
-					// `/${locale}/401`,
-					// `/${locale}/403`,
-					// `/${locale}/404`,
-					// `/${locale}/500`,
+					`/${locale}/301`,
+					`/${locale}/401`,
+					`/${locale}/403`,
+					`/${locale}/404`,
+					`/${locale}/500`,
 					// `/${locale}/about`,
 					`/${locale}/*`
 					// `/${locale}/test1`,

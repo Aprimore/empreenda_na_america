@@ -13,20 +13,28 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: null, // Keep this only if using SPA-like behavior
+			fallback: undefined, // Keep this only if using SPA-like behavior
 			precompress: false,
 			strict: false
 		}),
-
 		prerender: {
+			crawl: true,
 			entries: ['*'],
-			// entries: supportedLocales.flatMap((locale) => [
-			// 	`/${locale}`,
-			// 	`/${locale}/v1/blog` // Main blog page
-			// ])
 			origin: 'https://www.empreendanaamerica.com',
-			handleMissingId: 'warn' // Prevent build failure due to missing dynamic pages
+			// entries: generatePrerenderEntries()
+			handleMissingId: 'warn' // or 'ignore' to completely suppress the error
+			// entries: ['/pt-br/', '/en/', '/es/']
 		},
+
+		// prerender: {
+		// 	entries: ['*'],
+		// 	// entries: supportedLocales.flatMap((locale) => [
+		// 	// 	`/${locale}`,
+		// 	// 	`/${locale}/v1/blog` // Main blog page
+		// 	// ])
+		// 	origin: 'https://www.empreendanaamerica.com',
+		// 	handleMissingId: 'warn' // Prevent build failure due to missing dynamic pages
+		// },
 
 		version: {
 			name: Date.now().toString()
