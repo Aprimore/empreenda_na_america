@@ -13,16 +13,16 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: undefined, // Keep this only if using SPA-like behavior
+			// fallback: 'index.html', // Keep this only if using SPA-like behavior
 			precompress: false,
 			strict: false
 		}),
 		prerender: {
-			crawl: true,
-			entries: ['*'],
+			// crawl: true,
+			entries: ['/pt/', '/pt/v1/blog', '/es/', '/es/v1/blog', '/pt/v1/blog/*', '/es/v1/blog/*'],
 			origin: 'https://www.empreendanaamerica.com',
 			// entries: generatePrerenderEntries()
-			handleMissingId: 'warn' // or 'ignore' to completely suppress the error
+			handleMissingId: 'ignore' // or 'ignore' to completely suppress the error
 			// entries: ['/pt-br/', '/en/', '/es/']
 		},
 
