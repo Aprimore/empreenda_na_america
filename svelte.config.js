@@ -13,8 +13,9 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: null, // Keep this only if using SPA-like behavior
-			precompress: false
+			fallback: 'index.html', // Keep this only if using SPA-like behavior
+			precompress: false,
+			strict: false
 		}),
 
 		// prerender: {
