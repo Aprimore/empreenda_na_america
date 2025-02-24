@@ -2,7 +2,7 @@
 import type { PageServerLoad } from './$types';
 import { WPQL_QUERY, sanitizePost } from './utils';
 
-export const prerender = true;
+// export const prerender = true;
 console.log(import.meta.env.VITE_PUBLIC_WORDPRESS_API_URL);
 export const load: PageServerLoad = async ({ fetch, params, url }) => {
 	const endpoint = import.meta.env.VITE_PUBLIC_WORDPRESS_API_URL;
@@ -33,10 +33,10 @@ export const load: PageServerLoad = async ({ fetch, params, url }) => {
 		}
 
 		const sanitizedPosts = data.posts.edges.map((post: any) => sanitizePost(post));
-		console.log(`SANITIZED POSTS`, sanitizedPosts);
+		// console.log(`SANITIZED POSTS`, sanitizedPosts);
 
 		return {
-			slug: { lang: language === 'pt' ? 'pt' : 'es' },
+			slug: { lang: language.toUpperCase() === 'PT' ? 'pt' : 'es' },
 			posts: sanitizedPosts
 		};
 	} catch (error) {
@@ -45,7 +45,7 @@ export const load: PageServerLoad = async ({ fetch, params, url }) => {
 
 		// Handle the error gracefully, e.g., by returning an empty posts array or error message
 		return {
-			slug: { lang: language === 'pt' ? 'pt' : 'es' },
+			slug: { lang: language.toUpperCase() === 'PT' ? 'pt' : 'es' },
 			posts: [],
 			error: 'Failed to load posts. Please try again later.'
 		};

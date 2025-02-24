@@ -33,8 +33,10 @@ export const load = async ({ url }) => {
 
 	// Extract the first part of the URL path for language
 	// let lang = pathname.match(/\w+?(?=\/|$)/)?.[0] || 'en';
-	let lang = pathname.match(/\w+?(?=\/|$)/)?.[0] || '';
+	// let lang = pathname.match(/\w+?(?=\/|$)/)?.[0] || '';
 
+	// Extract first segment of the URL path for language
+	let lang = pathname.split('/')[1] || '';
 	// Simplified language detection with default to 'en'
 	// if (lang.startsWith('pt')) {
 	// 	lang = 'pt';
@@ -47,9 +49,9 @@ export const load = async ({ url }) => {
 	} else {
 		lang = 'pt'; // Default to PT
 	}
-
+	// console.log(pathname);
 	const route = pathname.replace(new RegExp(`^/${lang}`), '');
-
+	// console.log(pathname);
 	// Set locale and route
 	await setLocale(lang);
 	await setRoute(route);
@@ -57,6 +59,6 @@ export const load = async ({ url }) => {
 	return { route, lang, pathname };
 };
 
-export const prerender = true;
+export const prerender = 'auto';
 export const trailingSlash = 'always';
 export const ssr = true;
