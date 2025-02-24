@@ -35,17 +35,17 @@ const config = {
 		// 	origin: 'https://empreendanaamerica.com/'
 		// },
 		prerender: {
-			crawl: true,
+			// crawl: true,
 			entries: supportedLocales.reduce(
 				(acc, locale) => [
 					...acc,
 					`/${locale}`,
-					`/${locale}/301`,
-					`/${locale}/401`,
-					`/${locale}/403`,
-					`/${locale}/404`,
-					`/${locale}/500`,
-					`/${locale}/about`,
+					// `/${locale}/301`,
+					// `/${locale}/401`,
+					// `/${locale}/403`,
+					// `/${locale}/404`,
+					// `/${locale}/500`,
+					// `/${locale}/about`,
 					`/${locale}/*`
 					// `/${locale}/test1`,
 					// `/${locale}/test2`,

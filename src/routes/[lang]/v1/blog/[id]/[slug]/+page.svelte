@@ -8,7 +8,11 @@
 	$: pagePath = $page.url.pathname;
 	// const isPortuguese = pagePath.startsWith('/pt-BR/');
 
+	// console.log(pagePath);
+
 	export let data;
+
+	// console.log(data);
 
 	function formatDateToISO(dateString) {
 		const date = new Date(dateString);

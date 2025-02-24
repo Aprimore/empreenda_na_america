@@ -14,8 +14,8 @@
 	// const blogHref = isPortuguese ? '/pt/v1/blog/' : '/es/v1/blog/';
 
 	// Reactive statement to update the blogHref dynamically
-	$: blogHref = $locale === 'pt' ? '/pt/v1/blog/' : '/es/v1/blog/';
-	$: logoUrl = $locale === 'pt' ? '/pt/' : '/es/';
+	// $: blogHref = $locale === 'pt' ? '/pt/v1/blog/' : '/es/v1/blog/';
+	// $: logoUrl = $locale === 'pt' ? '/pt/' : '/es/';
 
 	// const navItems = [{ href: '/v1/blog', label: 'Blog' }];
 	// $: navbarClasses = `bg-opacity-0 text-base text-[#17193B] p-3 transition-transform transform hover:-translate-y-1 hover:bg-[#20C997] rounded-lg hover:text-[#F1F1F9] Exo bg-[#F1F1F9] `;
@@ -34,7 +34,9 @@
 >
 	<div class="flex max-w-screen-xl mx-auto">
 		<div class="flex w-1/2 justify-start">
-			<a
+			<a href="/pt/v1/blog/">1</a>
+			<a href="/es/v1/blog/">2</a>
+			<!-- <a
 				href={logoUrl}
 				class=" mr-4 block cursor-pointer py-1.5 font-sans text-base font-semibold leading-relaxed tracking-normal text-inherit antialiased"
 			>
@@ -45,7 +47,7 @@
 					width="80"
 					height="80"
 				/>
-			</a>
+			</a> -->
 
 			<!-- <button
 			class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
@@ -72,13 +74,13 @@
 		</button> -->
 		</div>
 		<div class="flex w-1/2 justify-end items-center gap-3">
-			<a
+			<!-- <a
 				class="flex items-center bg-[#f1f1f9] border-none p-3 rounded-md cursor-pointer text-base px-6 py-3 transition-transform transform hover:-translate-y-0.5 hover:bg-[#baffd1]"
 				href={blogHref}>Blog</a
-			>
-			{#if !isBlogPost}
+			> -->
+			<!-- {#if !isBlogPost}
 				<LanguageSwitcher />
-			{/if}
+			{/if} -->
 		</div>
 	</div>
 </nav>

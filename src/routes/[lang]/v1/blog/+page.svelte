@@ -70,15 +70,13 @@
 	in:fade={{ delay: 0, duration: 150, easing: cubicInOut }}
 	class="blog-list sm:bg-[#F1F1F9] w-full rounded-lg max-sm:p-2 Exo"
 >
-	<div
-		class="max-sm:bg-[#F1F1F9] max-w-screen-2xl mx-auto flex-col lg:flex-row rounded-lg p-4 "
-	>
+	<div class="max-sm:bg-[#F1F1F9] max-w-screen-2xl mx-auto flex-col lg:flex-row rounded-lg p-4">
 		<h1 class="text-3xl font-bold mb-6">Blog Posts</h1>
 		{#if data.posts && data.posts.length > 0}
 			<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 				{#each data.posts as post}
 					<li class="group" in:fade={{ delay: 100, duration: 500, easing: cubicInOut }}>
-						<a href="{post.databaseId}/{post.slug}" class="block h-full">
+						<a href="{data.pathname}{post.databaseId}/{post.slug}/" class="block h-full">
 							<article
 								class="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col"
 							>
