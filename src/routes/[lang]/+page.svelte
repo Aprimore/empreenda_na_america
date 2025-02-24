@@ -19,6 +19,7 @@
 	import SEO from '$lib/components/SEO/index.svelte';
 	import { t } from '$lib/translations';
 
+	const test = 1;
 	// let loading = true;
 	// onMount(() => {
 	// 	loading = false;
@@ -90,7 +91,6 @@
 <!-- <SEO {...seoProps} /> -->
 <div in:fade={{ delay: 150, duration: 250 }}>
 	<main>
-		
 		<Section1 />
 		<Section2 />
 		<Section3 />

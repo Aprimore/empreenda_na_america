@@ -8,6 +8,7 @@ export const load: PageServerLoad = async ({ fetch, params, url }) => {
 	// const language = url.pathname.includes('/pt') ? 'PT' : 'ES';
 	const language = params.lang;
 
+	// ifelse
 	// if (language !== 'pt' && language !== 'es') {
 	// 	// Force a redirect to a default path if language is invalid
 	// 	throw redirect(302, '/pt/v1/blog'); // Redirect to the default language's blog page
