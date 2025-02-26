@@ -1,3 +1,5 @@
+// src/routes/[lang]/v1/blog/+page.server.ts
+
 // import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { WPQL_QUERY, sanitizePost } from './utils';

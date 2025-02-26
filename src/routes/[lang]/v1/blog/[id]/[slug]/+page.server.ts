@@ -1,3 +1,5 @@
+// src/routes/[lang]/v1/blog/[id]/[slug]/+page.server.ts
+
 import type { PageServerLoad } from './$types';
 import { sanitizeHtml } from '../../utils';
 
@@ -101,11 +103,11 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
 			data.post.content = sanitizeHtml(data.post.content);
 		}
 
-		// console.log(data.post);
+		// console.log(data);
 
 		return {
 			post: data.post,
-			lang: data.lang,
+			lang: params.lang || 'pt',
 			pathname: data.pathname
 		};
 	} catch (error) {

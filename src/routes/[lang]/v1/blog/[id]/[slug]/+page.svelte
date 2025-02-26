@@ -1,4 +1,6 @@
 <script lang="ts">
+	// src/routes/[lang]/v1/blog/[id]/[slug]/+page.svelte
+
 	// import { post } from '$app/stores';
 	// import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
@@ -80,6 +82,14 @@
 	// 	ogSquareImage,
 	// 	twitterImage
 	// };
+
+	const breadcrumbs = [
+		{ name: 'Home', slug: '' },
+		{ name: 'Blog', slug: 'blog' },
+		{ name: data.post?.title, slug: '' }
+	];
+
+	// console.log(document.documentElement.lang);
 </script>
 
 <!-- <SEO {...seoProps} /> -->
@@ -87,6 +97,28 @@
 	in:fade={{ delay: 0, duration: 150, easing: cubicInOut }}
 	class="sm:bg-[#F1F1F9] w-full items-center relative rounded-lg max-sm:p-2 py-5 Exo"
 >
+	<nav
+		aria-label="breadcrumb"
+		class="mb-4 max-sm:bg-[#F1F1F9] md:max-w-screen-xl flex flex-col lg:flex-row mx-auto md:pr-96 items-center rounded-lg"
+	>
+		<ul class="flex space-x-2 text-gray-600 text-sm">
+			{#each breadcrumbs as crumb, index}
+				<li>
+					{#if index < breadcrumbs.length - 1}
+						<a
+							href={index === 0 ? `/${data.lang}` : `/${data.lang}/v1/${crumb.slug}`}
+							class="text-black transition-colors duration-300 hover:!text-green-600"
+						>
+							{crumb.name}
+						</a>
+						<span class="mx-2 text-gray-400">/</span>
+					{:else}
+						<span class="text-gray-800">{crumb.name}</span>
+					{/if}
+				</li>
+			{/each}
+		</ul>
+	</nav>
 	<div
 		class="max-sm:bg-[#F1F1F9] md:max-w-screen-2xl flex flex-col lg:flex-row mx-auto md:pr-96 items-center rounded-lg"
 	>

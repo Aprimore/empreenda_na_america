@@ -1,9 +1,17 @@
 <script lang="ts">
+	// src/lib/components/LanguageSwitcher.svelte
 	import { t, locales, locale } from '$lib/translations';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import { brazil_svg, spain_svg, usa_svg } from '$lib';
 	import { browser } from '$app/environment';
+
+	// import { localeNav } from '$lib/stores/languageStore'; // Importe a store global
+
+	// export let currentLang = 'pt';
+	// $: currentLang = $localeNav; // Atualiza o idioma conforme a store
+
+	// console.log(currentLang);
 
 	const languages = [
 		// { code: 'en', name: 'English', flag: usa_svg },
@@ -22,9 +30,11 @@
 
 	function handleLanguageChange(langCode: string) {
 		// console.log(langCode);
-		// currentLocale.derived(langCode); // ✅ Update the global store
 		// console.log(langCode);
+		// currentLocale.derived(langCode); // ✅ Update the global store
 		locale.set(langCode);
+		// currentLang.set(langCode);
+		// console.log(langCode);
 		const currentPath = $page.data.route || '';
 		updateHtmlLang(langCode);
 		goto(`/${langCode}${currentPath}`);
