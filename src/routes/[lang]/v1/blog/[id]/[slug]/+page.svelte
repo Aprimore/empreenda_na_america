@@ -21,20 +21,9 @@
 		return date.toISOString();
 	}
 
-	// import SEO from '$lib/components/SEO/index.svelte';
-	// import website from '$lib/config/website';
-	// const { author, siteUrl } = website;
-
-	// const breadcrumbs = [
-	// 	{
-	// 		name: 'Home',
-	// 		slug: ''
-	// 	},
-	// 	{
-	// 		name: data.post.title,
-	// 		slug: pagePath.substring(1)
-	// 	}
-	// ];
+	import SEO from '$lib/components/SEO/index.svelte';
+	import website from '$lib/config/website';
+	const { author, siteUrl } = website;
 
 	// let metadescription = isPortuguese
 	// 	? 'O Blog da My Menthor traz mais de 20 anos de experiência em consultoria de gestão organizacional, compartilhando insights e estratégias sobre Gestão de Arquitetura Empresarial. Explore artigos sobre melhores práticas, tendências do setor e como aproveitar plataformas SaaS para impulsionar o sucesso empresarial.'
@@ -62,26 +51,26 @@
 	// 	url: data.post.featuredImage?.node?.sourceUrl,
 	// 	// alt: featuredImageAlt
 	// };
-	// const entityMeta = {
-	// 	url: `${siteUrl}/`,
-	// 	faviconWidth: 512,
-	// 	faviconHeight: 512,
-	// 	caption: author
-	// };
-	// const seoProps = {
-	// 	title: data.post.title,
-	// 	slug: pagePath.substring(1),
-	// 	entityMeta,
-	// 	datePublished: formatDateToISO(data.post.date),
-	// 	lastUpdated: formatDateToISO(data.post.modified),
-	// 	breadcrumbs,
-	// 	metadescription: data.post.seo.opengraphDescription,
-	// 	article: true,
-	// 	featuredImage,
-	// 	ogImage,
-	// 	ogSquareImage,
-	// 	twitterImage
-	// };
+	const entityMeta = {
+		url: `${siteUrl}/`,
+		faviconWidth: 512,
+		faviconHeight: 512,
+		caption: author
+	};
+	const seoProps = {
+		title: data.post.title,
+		slug: pagePath.substring(1),
+		entityMeta,
+		datePublished: formatDateToISO(data.post.date),
+		lastUpdated: formatDateToISO(data.post.modified),
+		// breadcrumbs,
+		// metadescription: data.post.seo.opengraphDescription,
+		article: true
+		// featuredImage,
+		// ogImage,
+		// ogSquareImage,
+		// twitterImage
+	};
 
 	const breadcrumbs = [
 		{ name: 'Home', slug: '' },
@@ -92,7 +81,7 @@
 	// console.log(document.documentElement.lang);
 </script>
 
-<!-- <SEO {...seoProps} /> -->
+<SEO {...seoProps} />
 <section
 	in:fade={{ delay: 0, duration: 150, easing: cubicInOut }}
 	class="sm:bg-[#F1F1F9] w-full items-center relative rounded-lg max-sm:p-2 py-5 Exo"

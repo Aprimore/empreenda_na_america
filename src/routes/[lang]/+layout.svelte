@@ -26,10 +26,10 @@
 	// let dataLang = data.lang;
 
 	const baseURL = 'https://www.empreendanaamerica.com';
-	// const hreflangs = [
-	// 	{ lang: 'es', url: `${baseURL}/es` },
-	// 	{ lang: 'pt', url: `${baseURL}/pt/` }
-	// ];
+	const hreflangs = [
+		{ lang: 'es', url: `${baseURL}/es` },
+		{ lang: 'pt', url: `${baseURL}/pt/` }
+	];
 	import { onMount } from 'svelte';
 	import CookieConsentComponent from '$lib/components/CookieConsentComponent.svelte';
 	import Navbar2 from '$lib/components/Navbar2.svelte';
@@ -44,10 +44,10 @@
 </script>
 
 <svelte:head>
-	<!-- <title>{getPageTitle(pagePath)}</title>
+	<title>{getPageTitle(pagePath)}</title>
 	{#each hreflangs as { lang, url }}
 		<link rel="alternate" hreflang={lang} href={url} />
-	{/each} -->
+	{/each}
 
 	<noscript>
 		<iframe

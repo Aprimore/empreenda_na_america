@@ -53,26 +53,26 @@
 	// 	url: twitterImageSrc,
 	// 	alt: featuredImageAlt
 	// };
-	// const entityMeta = {
-	// 	url: `${siteUrl}/`,
-	// 	faviconWidth: 512,
-	// 	faviconHeight: 512,
-	// 	caption: author
-	// };
-	// const seoProps = {
-	// 	title,
-	// 	slug: pagePath.substring(1),
-	// 	entityMeta,
-	// 	datePublished: '2024-05-07T14:19:33.000+0100',
-	// 	lastUpdated: '2024-09-08T14:19:33.000+0100',
-	// 	breadcrumbs,
-	// 	metadescription,
-	// 	article: true
-	// 	// featuredImage,
-	// 	// ogImage,
-	// 	// ogSquareImage,
-	// 	// twitterImage
-	// };
+	const entityMeta = {
+		url: `${siteUrl}/`,
+		faviconWidth: 512,
+		faviconHeight: 512,
+		caption: author
+	};
+	const seoProps = {
+		title,
+		slug: pagePath.substring(1),
+		entityMeta,
+		datePublished: '2024-05-07T14:19:33.000+0100',
+		lastUpdated: '2024-09-08T14:19:33.000+0100',
+		breadcrumbs,
+		metadescription,
+		article: true
+		// featuredImage,
+		// ogImage,
+		// ogSquareImage,
+		// twitterImage
+	};
 
 	// console.log(data.posts);
 	// console.log(data.pathname);
@@ -80,7 +80,7 @@
 	// console.log(document.documentElement.lang);
 </script>
 
-<!-- <SEO {...seoProps} /> -->
+<SEO {...seoProps} />
 
 <section
 	in:fade={{ delay: 0, duration: 150, easing: cubicInOut }}
